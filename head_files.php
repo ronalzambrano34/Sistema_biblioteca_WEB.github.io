@@ -35,7 +35,7 @@ if ($id == null || $id = '') {
 <body>
 
 <!-- Page Content  -->
-<?php require("header.php") ?>
+<?php require("header_files.php") ?>
 
   <div class="wrapper">
     <!-- Sidebar  -->

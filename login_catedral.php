@@ -56,7 +56,7 @@
 	<div class="container">
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
-				<a class="p-5" href="index.php"><img width="320" height="300" src="images/logo11.png" alt="logo"></a>
+				<a class="p-5" href="index.php"><img width="320" height="300" src="images/logo1.png" alt="logo"></a>
 			</div>
 			<div class="card">
 				<form class="validate-form p-5" method="POST" action="">

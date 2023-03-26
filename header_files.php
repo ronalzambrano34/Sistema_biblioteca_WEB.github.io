@@ -1,4 +1,5 @@
 <!-- Page Content  -->
+<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 <div class="menu">
     <nav class="p-2 navbar navbar-expand-lg navbar-light color">
         <div class="container-fluid">
@@ -26,7 +27,7 @@
                             href="#" title="Contactanos"><i class="mr-2 icofont-search-map"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white h5 nav-link" href="inicio.php"><i class="icofont-ui-home"
+                        <a class="text-white h5 nav-link" href="../inicio.php"><i class="icofont-ui-home"
                                 title="Inicio"></i></a>
                     </li>
                     <li class="nav-item">
@@ -48,7 +49,7 @@
                         <div class="btn-group">
                             <button type="button" id="perfil" class="btn dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img width="43" height="43" src="images/user.png" alt="">
+                                <img width="43" height="43" src="../images/user.png" alt="">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="usuarios/perfil.php"><button class="dropdown-item" type="button">Actualizar
