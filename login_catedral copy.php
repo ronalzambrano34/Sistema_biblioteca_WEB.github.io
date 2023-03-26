@@ -4,7 +4,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<title>Inicio de Sección</title>
@@ -12,6 +12,9 @@
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+	<link rel="icon" href="images/logo.png" sizes="32x32" />
+	<link rel="icon" href="images/logo.png" sizes="192x192" />
+	<link rel="apple-touch-icon" href="images/logo.png" />
 	<!--Made with love by Mutiullah Samim -->
 
 	<!--Bootsrap 4 CDN-->
@@ -55,57 +58,67 @@
 
 	<div class="container">
 		<div class="d-flex justify-content-center h-100">
-			<div class="card">
-				<a class="p-5" href="index.php"><img width="320" height="300" src="images/logo11.png" alt="logo"></a>
-			</div>
-			<div class="card">
-				<form class="validate-form p-5" method="POST" action="">
-					<div class="card-header">
-						<h3>Inicio de Sección.</h3>
-						<div class="d-flex justify-content-end social_icon">
-							<span><i class="fab fa-facebook-square"></i></span>
-							<span><i class="fab fa-google-plus-square"></i></span>
-							<span><i class="fab fa-twitter-square"></i></span>
-						</div>
+			<!-- <div class="card">
+				<div class="card-body d-flex justify-content-center align-content-center flex-wrap">
+					<div class="">
+						<img width="300" height="300" src="images/logo11.png" alt="logo">
 					</div>
-					<div class="card-body">
+				</div>
+			</div> -->
+
+			<div class="card">
+				<!-- <div class="card-header">
+					<div class="d-flex justify-content-end social_icon">
+						<span><i class="fab fa-facebook-square"></i></span>
+						<span><i class="fab fa-google-plus-square"></i></span>
+						<span><i class="fab fa-twitter-square"></i></span>
+					</div>
+					</div> -->
+
+				<div class="card-body">
+					<form class="p-5" method="POST" action="">
+						<div class="text-center justify-content-center text-light">
+							<h3>Inicio de Sección.</h3>
+						</div>
+
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input type="text" class="form-control" name="usuario" placeholder="username">
+							<input type="text" class="form-control" name="usuario" placeholder="Usuario">
 						</div>
 
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" class="form-control" name="pass" placeholder="password">
+							<input type="password" class="form-control" name="pass" placeholder="Contraseña">
 						</div>
 
 						<div class="row align-items-center remember">
 							<input type="checkbox">Recuérdame
 						</div>
+
 						<div class="form-group">
-							<!-- <input type="button" value="Acceder" name="acceder" class="btn float-right login_btn"> -->
+							<!-- <input type="submit" value="Acceder" name="acceder" class="btn float-right login_btn"> -->
 							<button class="btn float-right login_btn" name="acceder">
 								Acceder
 							</button>
 						</div>
+					</form>
+				</div>
+
+					<!-- <div class="card-footer">
+					<div class="d-flex justify-content-center links">
+					Don't have an account?<a href="#">Sign Up</a>
 					</div>
-					<div class="card-footer">
-						<!-- <div class="d-flex justify-content-center links">
-							Don't have an account?<a href="#">Sign Up</a>
-						</div>
-						<div class="d-flex justify-content-center">
-							<a href="#">Forgot your password?</a>
-						</div> -->
+					<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
 					</div>
-				</form>
+					</div> -->
 			</div>
 		</div>
 	</div>
-
 
 	<?php
 	if (isset($_POST['acceder'])) {
@@ -123,7 +136,7 @@
 			echo '<script>
                     swal({
                     title: "Operación Fallida",
-                    text: "Datos incorrectos, intente nuevamnte!",
+                    text: "Datos ",
                     type: "error",
                     confirmButtonClass: "btn-danger",
                     confirmButtonText: "Aceptar",
@@ -136,9 +149,10 @@
 	}
 	?>
 
+<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="vendor/jquery/main.js"></script>
 
 </body>
-
-
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Golden Library</title>
+	<title>Librería Catedral</title>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -21,12 +21,12 @@
 		<div class="d-none d-sm-none d-md-block d-lg-block  col-md-7 col-lg-8 p-0">
 			<img src="images/fondo.jpg" class="w-100 vh-100" alt="">
 			<div class="carousel-caption d-none d-md-block">
-				<h5>Golden Library</h5>
+				<h5>Librería Catedral</h5>
 				<p class="text-white">Deja que un libro descubra quien eres</p>
 			</div>
 		</div>
 		<div class="bg-white col-sm-12 col-md-5 col-lg-4 p-0">
-			<form class="login100-form validate-form p-5" method="POST" action="index.php">
+			<form class="login100-form validate-form p-5" method="POST" action="">
 				<span class="login100-form-title p-b-26">
 					<b>Inicio de sesión</b>
 				</span>

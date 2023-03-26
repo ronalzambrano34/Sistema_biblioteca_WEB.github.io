@@ -1,6 +1,6 @@
 <?php
+session_cache_expire(2);
 session_start();
-session_cache_expire();
 $id = $_SESSION['Id_usuario'];
 $usuario = $id;
 if ($id == null || $id = '') {
