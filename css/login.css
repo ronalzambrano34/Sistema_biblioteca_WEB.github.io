@@ -1,100 +1,100 @@
 /* Made with love by Mutiullah Samim*/
 
 /* @import url('https://fonts.googleapis.com/css?family=Numans'); */
-:root{
---login: #25669e;
+:root {
+    --login: #25669e;
 }
 
-html,body{
-background-image: url(../images/imagen4.jpg);
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
+html,
+body {
+    background-image: url(../images/imagen4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
 }
 
-.container{
-height: 100%;
-align-content: center;
+.container {
+    height: 100%;
+    align-content: center;
 }
 
-.card{
-height: 370px;
-margin-top: auto;
-margin-bottom: auto;
-width: 400px;
-background-color: rgba(0,0,0,0.7) !important;
+.card {
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
-.social_icon span{
-font-size: 60px;
-margin-left: 10px;
-color: var(--login);
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: var(--login);
 }
 
-.social_icon span:hover{
-color: white;
-cursor: pointer;
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
 }
 
-.card-header h3{
-color: white;
+.card-header h3 {
+    color: white;
 }
 
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
 }
 
-.input-group-prepend span{
-width: 50px;
-background-color: var(--login);
-color: rgb(255, 255, 255);
-border:0 !important;
+.input-group-prepend span {
+    width: 50px;
+    background-color: var(--login);
+    color: rgb(255, 255, 255);
+    border: 0 !important;
 }
 
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
 
 }
 
-.remember{
-color: whitesmoke;
+.remember {
+    color: whitesmoke;
 }
 
-.remember input
-{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
 }
 
-.login_btn{
-color: whitesmoke;
-background-color: var(--login);
-width: 100px;
-box-shadow: 1px 1px 30px -12px var(--login);
-border: none;
+.login_btn {
+    color: whitesmoke;
+    background-color: var(--login);
+    width: 100px;
+    box-shadow: 1px 1px 30px -12px var(--login);
+    border: none;
 }
 
-.login_btn:hover{
-color: whitesmoke;
-background-color: var(--login);
-/* background: linear-gradient(to bottom, white, whitesmoke ); */
-box-shadow: 1px 1px 30px -1px var(--login);
-border: none;
-transition: all 300ms;
+.login_btn:hover {
+    color: whitesmoke;
+    background-color: var(--login);
+    /* background: linear-gradient(to bottom, white, whitesmoke ); */
+    box-shadow: 1px 1px 30px -1px var(--login);
+    border: none;
+    transition: all 300ms;
 }
 
-.links{
-color: white;
+.links {
+    color: white;
 }
 
-.links a{
-margin-left: 4px;
+.links a {
+    margin-left: 4px;
 }
 
 .login100-form-bgbtn {
@@ -108,9 +108,9 @@ margin-left: 4px;
     background: -moz-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
     background: linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
     left: -100%;
-  
+
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
-    }
+}

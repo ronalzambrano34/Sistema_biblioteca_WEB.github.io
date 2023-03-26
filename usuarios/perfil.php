@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Golden Library</title>
+    <title>Librería Catedral</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -30,8 +30,8 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img width="45" height="45" src="../images/logo.png" alt="">
-                <small><b class="ml-2">GOLDEN </b>LIBRARY</small>
+                <img width="55" height="45" src="../images/logo.png" alt="">
+                <small>Librería <b>Catedral</b></small>
             </div>
             <ul class="list-unstyled components">
                 <li class="">
@@ -224,7 +224,7 @@
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <label for="validationCustom03">Barrio</label>
-                    <input type="text" class="form-control" id="validationCustom03" name="barrio" required value="<?php echo $fila['Barrio'] ?>" placeholder="Barrio" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="16">
+                    <input type="text" class="form-control" id="validationCustom03" name="barrio" disabled required value="<?php echo $fila['Barrio'] ?>" placeholder="Barrio" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="16">
                     <div class="valid-feedback">
                       Correcto!
                     </div>
@@ -234,7 +234,7 @@
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                     <label for="validationCustom04">Calle</label>
-                    <input type="text" class="form-control" id="validationCustom04" name="calle" required value="<?php echo $fila['Calle'] ?>" placeholder="Calle" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="16">
+                    <input type="text" class="form-control" id="validationCustom04" name="calle" disabled required value="<?php echo $fila['Calle'] ?>" placeholder="Calle" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="16">
                     <div class="valid-feedback">
                       Correcto!
                     </div>
@@ -245,8 +245,8 @@
                  </div>
                  <div class="form-row">
                       <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-                        <label for="validationCustom05">Número</label>
-                        <input type="text" class="form-control" id="validationCustom05" name="numero" required value="<?php echo $fila['Numero'] ?>" placeholder="Número de casa" pattern="[0-9]+" maxlength="3">
+                        <label for="validationCustom05">Número de casa</label>
+                        <input type="text" class="form-control" id="validationCustom05" name="numero" disabled required value="<?php echo $fila['Numero'] ?>" placeholder="Número de casa" pattern="[0-9]+" maxlength="3">
                         <div class="valid-feedback">
                           Correcto!
                         </div>
@@ -256,7 +256,7 @@
                       </div>
                       <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                         <label for="validationCustom06">Estado</label>
-                        <input type="text" class="form-control" id="validationCustom06" name="estado" required value="<?php echo $fila['Estado'] ?>" placeholder="Estado" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="18">
+                        <input type="text" class="form-control" id="validationCustom06" name="estado" disabled required value="<?php echo $fila['Estado'] ?>" placeholder="Estado" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="18">
                         <div class="valid-feedback">
                           Correcto!
                         </div>
@@ -266,7 +266,7 @@
                       </div>
                       <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                         <label for="validationCustom07">Ciudad</label>
-                        <input type="text" class="form-control" id="validationCustom07" name="ciudad" required value="<?php echo $fila['Ciudad'] ?>" placeholder="Ciudad" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="18">
+                        <input type="text" class="form-control" id="validationCustom07" name="ciudad" disabled required value="<?php echo $fila['Ciudad'] ?>" placeholder="Ciudad" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+" maxlength="18">
                         <div class="valid-feedback">
                           Correcto!
                         </div>
@@ -318,7 +318,7 @@
                       </div>
                       <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                         <label for="validationCustom11">Correo</label>
-                        <input type="text" class="form-control" id="validationCustom11" name="correo" required value="<?php echo $fila['Correo'] ?>" placeholder="Correo" maxlength="50" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                        <input type="text" class="form-control" id="validationCustom11" name="correo" disabled required value="<?php echo $fila['Correo'] ?>" placeholder="Correo" maxlength="50" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                         <div class="valid-feedback">
                           Correcto!
                         </div>
@@ -545,7 +545,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Golden Library todos los derechos reservados</small></p>
+                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Librería Catedral todos los derechos reservados</small></p>
                 </div>  
                 <div class="col-md-4 text-white mt-3 mb-2">
                     <div class="contaiter">

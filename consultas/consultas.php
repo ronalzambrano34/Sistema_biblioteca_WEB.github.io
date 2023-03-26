@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Golden Library</title>
+    <title>Librería Catedral</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
@@ -28,8 +28,8 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img width="45" height="45" src="../images/logo.png" alt="">
-                <small><b class="ml-2">GOLDEN </b>LIBRARY</small>
+                <img width="55" height="45" src="../images/logo.png" alt="">
+                <small>Librería <b>Catedral</b></small>
             </div>
             <ul class="list-unstyled components">
                 <li class="">
@@ -371,7 +371,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Golden Library todos los derechos reservados</small></p>
+                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Librería Catedral todos los derechos reservados</small></p>
                 </div>  
                 <div class="col-md-4 text-white mt-3 mb-2">
                     <div class="contaiter">

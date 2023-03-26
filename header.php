@@ -1,5 +1,5 @@
 <?php
-session_cache_expire(2);
+// session_cache_expire();
 session_start();
 $id = $_SESSION['Id_usuario'];
 $usuario = $id;
@@ -16,13 +16,14 @@ if ($id == null || $id = '') {
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Golden Library</title>
+    <title>Librería</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/style.css">
     <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 
 <body>
@@ -30,8 +31,7 @@ if ($id == null || $id = '') {
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <img width="45" height="45" src="images/logo.png" alt="">
-                <small><b>GOLDENl </b>LIBRARY</small>
+                <a href="inicio.php"><img width="55" height="45" src="images/logo.png" alt="">Librería <b>Catedral</b></a>
             </div>
             <ul class="list-unstyled components">
                 <li class="">
@@ -161,7 +161,7 @@ if ($id == null || $id = '') {
         
         <!-- Page Content  -->
         <div class="menu">
-            <nav style="background-color:#00A0DE" class="p-2 navbar navbar-expand-lg navbar-light">
+            <nav style="background-color:#25669e" class="p-2 navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <i class="fas fa-align-left"></i>
                     <a href="#"><span id="sidebarCollapse" class="text-white h3 icofont-navigation-menu"></span></a>

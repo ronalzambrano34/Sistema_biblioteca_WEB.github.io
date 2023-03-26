@@ -108,7 +108,7 @@
 					</form>
 				</div>
 
-					<!-- <div class="card-footer">
+				<!-- <div class="card-footer">
 					<div class="d-flex justify-content-center links">
 					Don't have an account?<a href="#">Sign Up</a>
 					</div>
@@ -149,7 +149,7 @@
 	}
 	?>
 
-<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="vendor/jquery/main.js"></script>
 
