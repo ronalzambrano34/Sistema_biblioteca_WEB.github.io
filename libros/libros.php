@@ -207,7 +207,7 @@
   </div>
 
  <!-- Footer -->
- <?php require_once("../footer_files.php") ?>
+ <?php require_once("../footer.php") ?>
 
   <!-- jQuery CDN - Slim version (=without AJAX) -->
   <script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>

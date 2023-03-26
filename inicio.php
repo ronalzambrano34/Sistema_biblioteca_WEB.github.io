@@ -91,4 +91,41 @@
 </div>
 
 
-<?php require_once("footer.php") ?>
+<!-- Footer -->
+<?php require("footer.php") ?>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="vendor/jquery/jquery.min.js" type="text/javascript"></script>
+<!-- Bootstrap JS -->
+<script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="vendor/bootstrap/js/counter.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        })
+    });
+</script>
+<script>
+    function abrirReporte() {
+        window.open("reporte_libros/index.php", "Reporte de libros", "directories=no location=no");
+    }
+    function abrirReporte1() {
+        window.open("reporte_personas/index.php", "Reporte de personas", "directories=no location=no");
+    }
+    function abrirReporte2() {
+        window.open("reporte_autores/index.php", "Reporte de autores", "directories=no location=no");
+    }
+    function abrirReporte3() {
+        window.open("reporte_empleados/index.php", "Reporte de empleados", "directories=no location=no");
+    }
+    function abrirReporte4() {
+        window.open("reporte_consultas/index.php", "Reporte de consultas", "directories=no location=no");
+    }
+    function abrirReporte5() {
+        window.open("reporte_prestamos/index.php", "Reporte de prestamos", "directories=no location=no");
+    }
+</script>
+</body>
+
+</html>
