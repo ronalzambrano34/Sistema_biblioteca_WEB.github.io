@@ -31,7 +31,7 @@
                                 title="Inicio"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="prestamos/pendientes.php" class="text-white h5 nav-link" href="#"><i
+                        <a href="../prestamos/pendientes.php" class="text-white h5 nav-link" href="#"><i
                                 class="icofont-notification" title="Notificaciones"><span
                                     style="position: relative; top: -8px;" class="bg-warning badge count">
                                     <?php

@@ -463,7 +463,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Ronal Zambrano Ferrer todos los derechos reservados</small></p>
+                    <p class="text-white pt-3"><small><b>Copyright &copy; 2023 </b>Ronal Zambrano Ferrer todos los derechos reservados</small></p>
                 </div>  
                 <div class="col-md-4 text-white mt-3 mb-2">
                     <div class="contaiter">
