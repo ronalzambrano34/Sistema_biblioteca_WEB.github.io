@@ -1,13 +1,6 @@
-<?php require_once("../header_files.php") ?>
+<?php require_once("../head_files.php") ?>
 
-<body>
-  <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-      <div class="sidebar-header">
-        <img width="55" height="45" src="../images/logo.png" alt="">
-        <small>Librería <b>Catedral</b></small>
-      </div>
+
       <ul class="list-unstyled components">
         <li class="">
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
@@ -435,7 +428,7 @@
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-md-4">
-          <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Librería Catedral todos los derechos
+          <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Ronal Zambrano Ferrer todos los derechos
               reservados</small></p>
         </div>
         <div class="col-md-4 text-white mt-3 mb-2">

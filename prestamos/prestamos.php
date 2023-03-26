@@ -23,14 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/sweetalert.css">
     <script src="../vendor/bootstrap/js/sweetalert.min.js" type="text/javascript"></script>
 </head>
-<body>
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <img width="55" height="45" src="../images/logo.png" alt="">
-                <small>Librería <b>Catedral</b></small>
-            </div>
+
             <ul class="list-unstyled components">
                 <li class="">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="icofont-library mr-3 h4 text-white"></span>Libros<i class="icofont-rounded-down text-white"></i></a>
@@ -390,7 +383,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Librería Catedral todos los derechos reservados</small></p>
+                    <p class="text-white pt-3"><small><b>Copyright &copy; 2020 </b>Ronal Zambrano Ferrer todos los derechos reservados</small></p>
                 </div>  
                 <div class="col-md-4 text-white mt-3 mb-2">
                     <div class="contaiter">

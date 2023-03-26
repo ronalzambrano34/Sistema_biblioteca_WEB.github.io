@@ -1,4 +1,4 @@
-<?php require_once("../header_files.php") ?>
+<?php require_once("../head_files.php") ?>
 <body>
   
   <?php 

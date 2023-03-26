@@ -1,13 +1,6 @@
-<?php require_once("../header_files.php") ?>
+<?php require_once("../head_files.php") ?>
 
-<body>
-  <div class="wrapper">
-    <!-- Sidebar  -->
-    <nav id="sidebar">
-      <div class="sidebar-header">
-        <img width="55" height="45" src="../images/logo.png" alt="">
-        <small>Librería <b>Catedral</b></small>
-      </div>
+
       <ul class="list-unstyled components">
         <li class="">
           <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
