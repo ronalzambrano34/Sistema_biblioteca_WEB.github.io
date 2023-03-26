@@ -1,6 +1,27 @@
 <?php require_once("../head_files.php") ?>
 
-        
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Librería Catedral</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/sweetalert.css">
+    <script src="../vendor/bootstrap/js/sweetalert.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+         <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img width="55" height="45" src="../images/logo.png" alt="">
+                <small>Librería <b>Catedral</b></small>
+            </div>
             <ul class="list-unstyled components">
                 <li class="">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span class="icofont-library mr-3 h4 text-white"></span>Libros<i class="icofont-rounded-down text-white"></i></a>
