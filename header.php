@@ -48,6 +48,7 @@
                         <div class="btn-group">
                             <button type="button" id="perfil" class="btn dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['Nombre_usuario']; ?></span>
                                 <img width="43" height="43" src="images/user.png" alt="">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">

@@ -15,15 +15,25 @@ body {
 }
 
 .container {
-    height: 100%;
-    align-content: center;
+    /* height: auto; */
+    /* align-content: center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; */
 }
 
 .card {
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
+    /* height: auto; */
+    /*370px*/
+    /* width: auto; */
+    /*400px*/
+    /* margin-top: auto;
+    margin-bottom: auto; */
     background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
@@ -84,7 +94,7 @@ input:focus {
     color: whitesmoke;
     background-color: var(--login);
     /* background: linear-gradient(to bottom, white, whitesmoke ); */
-    box-shadow: 1px 1px 30px -1px var(--login);
+    box-shadow: 1px 1px 30px -1px #ffc107;
     border: none;
     transition: all 300ms;
 }

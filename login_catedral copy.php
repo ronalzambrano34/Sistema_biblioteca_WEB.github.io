@@ -12,9 +12,12 @@
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+	<!--ICO-->
 	<link rel="icon" href="images/logo.png" sizes="32x32" />
 	<link rel="icon" href="images/logo.png" sizes="192x192" />
 	<link rel="apple-touch-icon" href="images/logo.png" />
+	
+	
 	<!--Made with love by Mutiullah Samim -->
 
 	<!--Bootsrap 4 CDN-->

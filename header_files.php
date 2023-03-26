@@ -35,7 +35,7 @@
                                 class="icofont-notification" title="Notificaciones"><span
                                     style="position: relative; top: -8px;" class="bg-warning badge count">
                                     <?php
-                                    require_once("conexion/conexion.php");
+                                    require_once("../conexion/conexion.php");
                                     $buscar_pend = "SELECT COUNT(Id_prestamo) AS numero FROM prestamos WHERE Fecha_devolucion<NOW() AND Estatus='Pendiente'";
                                     $confirmar = $conexion->query($buscar_pend);
                                     $rows = $confirmar->fetch_assoc();
@@ -52,12 +52,12 @@
                                 <img width="43" height="43" src="../images/user.png" alt="">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="usuarios/perfil.php"><button class="dropdown-item" type="button">Actualizar
+                                <a href="../usuarios/perfil.php"><button class="dropdown-item" type="button">Actualizar
                                         perfil</button></a>
-                                <a href="usuarios/modificar_contrasena.php"><button class="dropdown-item"
+                                <a href="../usuarios/modificar_contrasena.php"><button class="dropdown-item"
                                         type="button">Cambiar contraseña</button></a>
                                 <div class="dropdown-divider"></div>
-                                <a href="conexion/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar
+                                <a href="../conexion/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar
                                         sesión</button></a>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <?php
-session_cache_expire(1);
-$cache_expire = session_cache_expire();
+// session_cache_expire(1);
+// $cache_expire = session_cache_expire();
 session_start();
 $id = $_SESSION['Id_usuario'];
 $usuario = $id;
@@ -18,6 +18,11 @@ if ($id == null || $id = '') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Librería</title>
+
+    <!--ICO-->
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
