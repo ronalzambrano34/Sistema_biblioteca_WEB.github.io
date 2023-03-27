@@ -50,6 +50,9 @@
                             <button type="button" id="perfil" class="btn dropdown-toggle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <img width="43" height="43" src="../images/user.png" alt="">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small text-light">
+                                    <?php echo $_SESSION['Nombre_usuario']; ?>
+                                </span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="../usuarios/perfil.php"><button class="dropdown-item" type="button">Actualizar
@@ -57,7 +60,8 @@
                                 <a href="../usuarios/modificar_contrasena.php"><button class="dropdown-item"
                                         type="button">Cambiar contraseña</button></a>
                                 <div class="dropdown-divider"></div>
-                                <a href="../conexion/cerrar_sesion.php"><button class="dropdown-item" type="button">Cerrar
+                                <a href="../conexion/cerrar_sesion.php"><button class="dropdown-item"
+                                        type="button">Cerrar
                                         sesión</button></a>
                             </div>
                         </div>

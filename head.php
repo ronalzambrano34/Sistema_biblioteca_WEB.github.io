@@ -1,7 +1,20 @@
 <?php
-// session_cache_expire(1);
-// $cache_expire = session_cache_expire();
 session_start();
+// if (!isset($_SESSION['tiempo'])) {
+//     $_SESSION['tiempo'] = time();
+// } else if (time() - $_SESSION['tiempo'] > 30) {
+//     //Removemos sesión.
+//     session_unset();
+//     //Destruimos seción
+//     session_destroy();
+//     /* Aquí redireccionas a la url especifica */
+//     header("Location: login_catedral.php");
+//     die();
+//     //exit();
+// }
+// $_SESSION['tiempo'] = time(); //Si hay actividad seteamos el valor al tiempo actual
+
+
 $id = $_SESSION['Id_usuario'];
 $usuario = $id;
 if ($id == null || $id = '') {
@@ -17,7 +30,7 @@ if ($id == null || $id = '') {
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Librería</title>
+    <title>Librería Catedral</title>
 
     <!--ICO-->
     <link rel="icon" href="images/logo.png" sizes="32x32" />

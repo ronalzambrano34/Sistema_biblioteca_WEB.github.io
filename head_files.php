@@ -46,7 +46,7 @@ if ($id == null || $id = '') {
   <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
-      <div class="sidebar-header">
-        <img width="55" height="45" src="../images/logo.png" alt="">
-        <small>Librería <b>Catedral</b></small>
-      </div>
+    <div class="sidebar-header">
+                <a href="inicio.php"><img width="55" height="45" src="../images/logo.png" alt="">Librería
+                    <b>Catedral</b></a>
+            </div>
