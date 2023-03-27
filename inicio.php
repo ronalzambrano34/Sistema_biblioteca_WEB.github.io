@@ -61,7 +61,7 @@
                                 ?>
                             </b></small>
                         <br>
-                        <small class="ml-3 h6 text-secondary">Total de consultas</small>
+                        <small class="ml-3 h6 text-secondary">Total de visitas</small>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
         window.open("reporte_empleados/index.php", "Reporte de empleados", "directories=no location=no");
     }
     function abrirReporte4() {
-        window.open("reporte_consultas/index.php", "Reporte de consultas", "directories=no location=no");
+        window.open("reporte_visitas/index.php", "Reporte de visitas", "directories=no location=no");
     }
     function abrirReporte5() {
         window.open("reporte_prestamos/index.php", "Reporte de prestamos", "directories=no location=no");

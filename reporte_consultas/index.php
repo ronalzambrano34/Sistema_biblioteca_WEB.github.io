@@ -15,7 +15,7 @@ function Header()
     $this->Cell(40,10,'Librería Catedral',1,0,'C');
     // Salto de línea
     $this->Ln(20);
-    $this->Cell(50,10,'Consultas registradas',0,0,'C');
+    $this->Cell(50,10,'Visitas registradas',0,0,'C');
     $this->Ln(20);
     $this->cell(8,10,'ID',1,0,'C',0);
     $this->cell(52,10,'Nombre',1,0,'C',0);
