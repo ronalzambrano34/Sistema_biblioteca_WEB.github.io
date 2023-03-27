@@ -1,1 +1,1 @@
-revizar login (poner el de la tesis)
+consulta sql de los prestamos (persona y libros activos)
