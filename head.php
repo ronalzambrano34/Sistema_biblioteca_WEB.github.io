@@ -50,7 +50,7 @@ if ($id == null || $id = '') {
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <div class="card bg-transparent"><a href="inicio.php"><img width="55" height="45" src="images/logo.png"
+                <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45" src="images/logo.png"
                             alt="">Librería
                         <b>Catedral</b></a>
                 </div>
@@ -65,7 +65,7 @@ if ($id == null || $id = '') {
                             <a href="./libros/registrar_libros.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./libros/libros.php">Visitas</a>
+                            <a href="./libros/libros.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte()' href="#">Reportes</a>
@@ -81,7 +81,7 @@ if ($id == null || $id = '') {
                             <a href="./personas/registrar_personas.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./personas/personas.php">Visitas</a>
+                            <a href="./personas/personas.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte1()' href="#">Reportes</a>
@@ -97,7 +97,7 @@ if ($id == null || $id = '') {
                             <a href="./autores/registrar_autores.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./autores/autores.php">Visitas</a>
+                            <a href="./autores/autores.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte2()' href="#">Reportes</a>
@@ -113,7 +113,7 @@ if ($id == null || $id = '') {
                             <a href="./empleados/registrar_empleados.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./empleados/empleados.php">Visitas</a>
+                            <a href="./empleados/empleados.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte3()' href="#">Reportes</a>
@@ -129,7 +129,7 @@ if ($id == null || $id = '') {
                             <a href="./puestos/registrar_puesto.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./puestos/puestos.php">Visitas</a>
+                            <a href="./puestos/puestos.php">Consultar</a>
                         </li>
                     </ul>
                 </li>
@@ -142,7 +142,7 @@ if ($id == null || $id = '') {
                             <a href="./visitas/registrar_visitas.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./visitas/visitas.php">Visitas</a>
+                            <a href="./visitas/visitas.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte4()' href="#">Reportes</a>
@@ -158,7 +158,7 @@ if ($id == null || $id = '') {
                             <a href="./prestamos/registrar_prestamos.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./prestamos/prestamos.php">Visitas</a>
+                            <a href="./prestamos/prestamos.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte5()' href="#">Reportes</a>
@@ -174,7 +174,7 @@ if ($id == null || $id = '') {
                             <a href="./usuarios/registrar_usuarios.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="./usuarios/usuarios.php">Visitas</a>
+                            <a href="./usuarios/usuarios.php">Consultar</a>
                         </li>
                     </ul>
                 </li>

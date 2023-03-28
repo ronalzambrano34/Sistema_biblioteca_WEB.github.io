@@ -10,7 +10,7 @@
                             <a href="../libros/registrar_libros.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../libros/libros.php">Visitas</a>
+                            <a href="../libros/libros.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte()' href="#">Reportes</a>
@@ -24,7 +24,7 @@
                             <a href="../personas/registrar_personas.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../personas/personas.php">Visitas</a>
+                            <a href="../personas/personas.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte1()' href="#">Reportes</a>
@@ -38,7 +38,7 @@
                             <a href="../autores/registrar_autores.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../autores/autores.php">Visitas</a>
+                            <a href="../autores/autores.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte2()' href="#">Reportes</a>
@@ -52,7 +52,7 @@
                             <a href="registrar_empleados.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="empleados.php">Visitas</a>
+                            <a href="empleados.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte3()' href="#">Reportes</a>
@@ -66,7 +66,7 @@
                             <a href="../puestos/registrar_puesto.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../puestos/puestos.php">Visitas</a>
+                            <a href="../puestos/puestos.php">Consultar</a>
                         </li>
                     </ul>
                 </li>
@@ -77,7 +77,7 @@
                             <a href="../visitas/registrar_visitas.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../visitas/visitas.php">Visitas</a>
+                            <a href="../visitas/visitas.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte4()' href="#">Reportes</a>
@@ -91,7 +91,7 @@
                             <a href="../prestamos/registrar_prestamos.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../prestamos/prestamos.php">Visitas</a>
+                            <a href="../prestamos/prestamos.php">Consultar</a>
                         </li>
                         <li>
                             <a onClick='abrirReporte5()' href="#">Reportes</a>
@@ -105,7 +105,7 @@
                             <a href="../usuarios/registrar_usuarios.php">Registrar</a>
                         </li>
                         <li>
-                            <a href="../usuarios/usuarios.php">Visitas</a>
+                            <a href="../usuarios/usuarios.php">Consultar</a>
                         </li>
                     </ul>
                 </li>
@@ -138,13 +138,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                    <?php 
+                    <?php require_once("../conexion/conexion.php");
                         if (isset($_POST['buscar'])) {
-                            require_once("../conexion/conexion.php");
                             $dato=$_POST['dato'];
                             $query="SELECT empleados.Id_empleado,personas.Nombre,empleados.Fecha_contratacion,puesto.Descripcion
                                 FROM personas,empleados,puesto WHERE personas.Id_persona=empleados.Id_persona
                                 AND empleados.Id_puesto=puesto.Id_puesto AND personas.Nombre LIKE '$dato%' AND empleados.Activo=1";
+                        }else{
+                            $query="SELECT empleados.Id_empleado,personas.Nombre,empleados.Fecha_contratacion,puesto.Descripcion
+                                FROM personas,empleados,puesto WHERE personas.Id_persona=empleados.Id_persona
+                                AND empleados.Id_puesto=puesto.Id_puesto AND empleados.Activo=1";
+                        }
                             $resultado=$conexion->query($query);  
                                   while ($fila=$resultado->fetch_assoc()) {
                                     $id=$fila['Id_empleado'];
@@ -158,7 +162,6 @@
                                             <td><a class="bg-danger py-1 rounded-lg" href="#" onclick="confirmar(<?php echo $id; ?>)"><span class='h6 text-white icofont-ui-delete px-1'></span></a></td>
                                         </tr>
                         <?php 
-                            }
                             }
                          ?>
                         </tbody>

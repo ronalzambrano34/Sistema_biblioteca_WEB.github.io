@@ -5,3 +5,7 @@
 .color{
     background-color: var(--login);
 }
+
+.logo_nav{
+    border-style: none;
+}
