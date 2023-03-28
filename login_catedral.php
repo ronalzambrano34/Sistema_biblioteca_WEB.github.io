@@ -163,7 +163,11 @@ if (!empty($_SESSION['active'])) {
 	<div class="container">
 		<div class="d-flex justify-content-center align-content-center flex-wrap h-100">
 			<div class="card">
-				<a class="p-5" href="index.php"><img width="320" height="300" src="images/logo1.png" alt="logo"></a>
+				<div class="p-5 d-none d-lg-block">
+					<!-- <img class="img-profile" href="index.php" src="images/logo1.png" alt="" width="400"> -->
+					<a class="img-profile" href="index.php"><img width="320" height="300" src="images/logo1.png"
+							alt="logo"></a>
+				</div>
 			</div>
 			<div class="card">
 				<form class="validate-form p-5" method="POST" action="">
