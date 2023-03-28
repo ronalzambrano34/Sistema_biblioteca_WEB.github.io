@@ -12,10 +12,10 @@ function Header()
     $this->Cell(80);
     $this->Image('../images/logo1.png',10,8,20);
     // Título
-    $this->Cell(40,10,'Golden Library',1,0,'C');
+    $this->Cell(40,10,'Librería Catedral',1,0,'C');
     // Salto de línea
     $this->Ln(20);
-    $this->Cell(50,10,'Consultas registradas',0,0,'C');
+    $this->Cell(50,10,'Visitas registradas',0,0,'C');
     $this->Ln(20);
     $this->cell(8,10,'ID',1,0,'C',0);
     $this->cell(52,10,'Nombre',1,0,'C',0);

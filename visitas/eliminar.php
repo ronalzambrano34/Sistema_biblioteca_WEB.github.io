@@ -35,7 +35,7 @@
                   closeOnConfirm: false
                 },
                 function(){
-                 window.location="consultas.php";
+                 window.location="visitas.php";
                 });
                 </script>
                 ';
