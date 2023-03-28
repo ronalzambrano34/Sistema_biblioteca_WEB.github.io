@@ -50,8 +50,10 @@ if ($id == null || $id = '') {
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <a href="inicio.php"><img width="55" height="45" src="images/logo.png" alt="">Librería
-                    <b>Catedral</b></a>
+                <div class="card bg-transparent"><a href="inicio.php"><img width="55" height="45" src="images/logo.png"
+                            alt="">Librería
+                        <b>Catedral</b></a>
+                </div>
             </div>
             <ul class="list-unstyled components">
                 <li class="">
@@ -132,8 +134,8 @@ if ($id == null || $id = '') {
                     </ul>
                 </li>
                 <li class="">
-                    <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle"><span class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
+                    <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
                             class="icofont-rounded-down text-white"></i></a>
                     <ul class="collapse list-unstyled" id="visitaSubmenu">
                         <li>
