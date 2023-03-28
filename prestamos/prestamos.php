@@ -151,7 +151,7 @@
                                 prestamos.Fecha_prestamo,prestamos.Fecha_devolucion,libros.Titulo,detalle.Descripcion,
                                 prestamos.Estatus FROM libros,prestamos,detalle,personas WHERE
                                 prestamos.Id_persona=personas.Id_persona AND libros.Id_libro=detalle.Id_libro AND
-                                prestamos.Id_prestamo=detalle.Id_prestamo AND personas.Nombre AND personas.Activo=1 AND libros.Activo=1 LIKE '$dato%' ORDER BY Id_prestamo";
+                                prestamos.Id_prestamo=detalle.Id_prestamo AND personas.Nombre LIKE '$dato%' AND personas.Activo=1 AND libros.Activo=1 ORDER BY Id_prestamo";
                                     $resultado=$conexion->query($query);
 
                                     $query1="SELECT personas.Nombre FROM empleados,prestamos,personas WHERE empleados.Id_persona=personas.Id_persona
