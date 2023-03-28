@@ -36,7 +36,7 @@
                                     style="position: relative; top: -8px;" class="bg-warning badge count">
                                     <?php
                                     require_once("../conexion/conexion.php");
-                                    $buscar_pend = "SELECT COUNT(Id_prestamo) AS numero FROM prestamos WHERE Fecha_devolucion<NOW() AND Estatus='Pendiente'";
+                                    $buscar_pend = "SELECT COUNT(prestamos.Id_prestamo) AS numero FROM prestamos,personas WHERE prestamos.Fecha_devolucion < NOW() AND prestamos.Estatus = 'Pendiente' AND prestamos.Id_persona=personas.Id_persona AND personas.Activo=1";
                                     $confirmar = $conexion->query($buscar_pend);
                                     $rows = $confirmar->fetch_assoc();
                                     echo $rows['numero'];
