@@ -141,6 +141,11 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="bg-success text-white h4 py-10 rounded" href="./registrar_personas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
         <div class="container-fluid" id="datos">
@@ -149,15 +154,11 @@
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
                         <th class='text-center'><small>Nombre</small></th>
-                        <th class='text-center'><small>Barrio</small></th>
-                        <th class='text-center'><small>Calle</small></th>
-                        <th class='text-center'><small>Número</small></th>
-                        <th class='text-center'><small>Estado</small></th>
-                        <th class='text-center'><small>Ciudad</small></th>
+                        <th class='text-center'><small>CI</small></th>
                         <th class='text-center'><small>Sexo</small></th>
-                        <th class='text-center'><small>Fecha de nacimiento</small></th>
+                        <th class='text-center'><small>Fecha de inscripción</small></th>
+                        <th class='text-center'><small>Direción</small></th>
                         <th class='text-center'><small>Teléfono</small></th>
-                        <th class='text-center'><small>Correo</small></th>
                         <th colspan='2' class='text-center'><small>Acciones</small></th>
                     </tr>
                 </thead>
@@ -168,11 +169,11 @@
                         $dato = $_POST['dato'];
                         $salida = "";
                         $query = "SELECT * FROM personas WHERE Nombre LIKE '$dato%' AND Activo=1";
-                        
+
                     } else {
                         require_once("../conexion/conexion.php");
                         $query = "SELECT * FROM personas WHERE activo=1";
-                        
+
                     }
                     $resultado = $conexion->query($query);
                     while ($fila = $resultado->fetch_assoc()) {
@@ -186,31 +187,19 @@
                                     <?php echo $fila['Nombre']; ?>
                                 </small></td>
                             <td><small>
-                                    <?php echo $fila['Barrio']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Calle']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Numero']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Estado']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Ciudad']; ?>
+                                    <?php echo $fila['CI']; ?>
                                 </small></td>
                             <td><small>
                                     <?php echo $fila['Sexo']; ?>
                                 </small></td>
                             <td><small>
-                                    <?php echo $fila['Fecha_nacimiento']; ?>
+                                    <?php echo $fila['Fecha_inscripcion']; ?>
+                                </small></td>
+                            <td><small>
+                                    <?php echo $fila['Direccion']; ?>
                                 </small></td>
                             <td><small>
                                     <?php echo $fila['Telefono']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Correo']; ?>
                                 </small></td>
                             <td><a class="bg-primary py-1 rounded-lg"
                                     href="modificar_personas.php?id=<?php echo $fila['Id_persona'] ?>"><span
@@ -218,7 +207,7 @@
                             <td><a class="bg-danger py-1 rounded-lg" href="#" onclick="confirmar(<?php echo $id; ?>)"><span
                                         class='h6 text-white icofont-ui-delete px-1'></span></a></td>
                         </tr>
-                    <?php
+                        <?php
                     }
                     ?>
                 </tbody>

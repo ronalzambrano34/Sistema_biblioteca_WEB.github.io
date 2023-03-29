@@ -125,14 +125,16 @@
 
 <div class="container">
   <br><br><br><br>
-  <div class="container">
+  <!-- <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <strong>Nota:</strong> Si no cuenta con un número de casa colocar 0.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-  </div>
+  </div> -->
+
+
   <div class="bg-white rounded-lg formulario">
     <form class="p-4 needs-validation" action="registrar_personas.php" method="POST" novalidate>
       <center><label class="mt-2" for="">
@@ -152,60 +154,10 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-4">
-          <label for="validationCustom02">Barrio</label>
-          <input type="text" class="form-control" id="validationCustom02" required name="barrio" placeholder="Barrio"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="16">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-4">
-          <label for="validationCustom03">Calle</label>
-          <input type="text" class="form-control" id="validationCustom03" required name="calle" placeholder="Calle"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="16">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
         <div class="col-sm-6 col-md64 col-lg-3 mb-3">
-          <label for="validationCustom04">Número de casa</label>
-          <input type="text" class="form-control" id="validationCustom04" required name="numero"
-            placeholder="Número de casa" pattern="[0-9]+" maxlength="3">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom05">Estado</label>
-          <input type="text" class="form-control" id="validationCustom05" required name="estado" placeholder="Estado"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="18">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom06">Ciudad</label>
-          <input type="text" class="form-control" id="validationCustom06" required name="ciudad" placeholder="Ciudad"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="18">
+          <label for="validationCustom04">Carnet de Indentidad</label>
+          <input type="text" class="form-control" id="validationCustom04" required name="ci"
+            placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11" maxlength="11">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -228,10 +180,25 @@
           </div>
         </div>
       </div>
+
+      <!-- <script>
+        window.onload = function () {
+          var fecha = new Date(); //Fecha actual
+          var mes = fecha.getMonth() + 1; //obteniendo mes
+          var dia = fecha.getDate(); //obteniendo dia
+          var ano = fecha.getFullYear(); //obteniendo año
+          if (dia < 10)
+            dia = '0' + dia; //agrega cero si el menor de 10
+          if (mes < 10)
+            mes = '0' + mes //agrega cero si el menor de 10
+          document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
+        }
+      </script> -->
+
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-          <label for="validationCustom08">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="validationCustom08" required name="fecha">
+          <label for="validationCustom08">Fecha de inscripción</label>
+          <input type="date" class="form-control" id="validationCustom08" value="" required name="fecha">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -239,9 +206,22 @@
             Porfavor Coloca una fecha.
           </div>
         </div>
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+          <label for="validationCustom01">Dirección</label>
+          <input type="text" class="form-control" id="validationCustom01" name="direccion" placeholder="Opcional"
+            pattern="[0-9 a-z A-Z / # ,.'-]+" maxlength="40">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+
+
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom09">Teléfono</label>
-          <input type="tel" class="form-control" id="validationCustom09" required name="telefono" placeholder="Teléfono"
+          <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="telefono"
             pattern="[0-9]{8,10}">
           <div class="valid-feedback">
             Correcto!
@@ -250,7 +230,7 @@
             Profavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+        <!-- <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
           <label for="validationCustom10">Correo</label>
           <input type="email" class="form-control" id="validationCustom10" name="correo" placeholder="Correo"
             maxlength="50" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
@@ -260,7 +240,7 @@
           <div class="invalid-feedback">
             Profavor coloca un correo valido.
           </div>
-        </div>
+        </div> -->
       </div>
       <button class="btn btn-warning text-white" type="submit" name="registrar">Registrar</button>
     </form>
@@ -269,24 +249,24 @@
 </div>
 <script src="../push/push.min.js" type="text/javascript"></script>
 <script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function () {
-    'use strict';
-    window.addEventListener('load', function () {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function (form) {
-        form.addEventListener('submit', function (event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
 
 </script>
 </div>
@@ -294,17 +274,13 @@
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
   $nombre = $_POST['nombre'];
-  $calle = $_POST['calle'];
-  $barrio = $_POST['barrio'];
-  $numero = $_POST['numero'];
-  $estado = $_POST['estado'];
-  $ciudad = $_POST['ciudad'];
+  $ci = $_POST['ci'];
   $sexo = $_POST['sexo'];
   $fecha = $_POST['fecha'];
+  $direccion = $_POST['direccion'];
   $telefono = $_POST['telefono'];
-  $correo = $_POST['correo'];
 
-  $query = "INSERT INTO personas (Nombre,Calle,Barrio,Numero,Estado,Ciudad,Sexo,Fecha_nacimiento,Telefono,Correo) values('$nombre','$calle','$barrio',$numero,'$estado','$ciudad','$sexo','$fecha','$telefono','$correo')";
+  $query = "INSERT INTO personas (Nombre,CI,Sexo,Fecha_inscripcion,Direccion,Telefono) values('$nombre','$ci','$sexo','$fecha','$direccion','$telefono')";
   $verificar = $conexion->query($query);
   if ($verificar) {
     echo '<script>
@@ -410,6 +386,22 @@ if (isset($_POST['registrar'])) {
     window.open("../reporte_prestamos/index.php", "Reporte de prestamos", "directories=no location=no");
   }
 </script>
+
+<script>
+        window.onload = function () {
+          var fecha = new Date(); //Fecha actual
+          var mes = fecha.getMonth() + 1; //obteniendo mes
+          var dia = fecha.getDate(); //obteniendo dia
+          var ano = fecha.getFullYear(); //obteniendo año
+          if (dia < 10)
+            dia = '0' + dia; //agrega cero si el menor de 10
+          if (mes < 10)
+            mes = '0' + mes //agrega cero si el menor de 10
+          document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
+        }
+      </script>
+
+
 </body>
 
 </html>

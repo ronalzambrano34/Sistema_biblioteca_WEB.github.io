@@ -6,6 +6,7 @@
         header("location:../index.php");
     }
   ?>
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,16 +24,12 @@
                 require_once ("../conexion/conexion.php");
                 $id=$_REQUEST['id'];
                 $nombre = $_POST['nombre'];
-                $calle = $_POST['calle'];
-                $barrio = $_POST['barrio'];
-                $numero = $_POST['numero'];
-                $estado = $_POST['estado'];
-                $ciudad = $_POST['ciudad'];
+                $ci = $_POST['ci'];
                 $sexo = $_POST['sexo'];
-                $fecha = $_POST['fecha'];
+                $fecha_inscripcion = $_POST['fecha_inscripcion'];
+                $direccion = $_POST['direccion'];
                 $telefono = $_POST['telefono'];
-                $correo = $_POST['correo'];
-                $query = "UPDATE personas SET Nombre='$nombre',Barrio='$barrio',Calle='$calle',Numero=$numero,Estado='$estado',Ciudad='$ciudad',Sexo='$sexo',Fecha_nacimiento='$fecha',Telefono='$telefono',Correo='$correo' WHERE Id_persona=$id ";
+                $query = "UPDATE personas SET Nombre='$nombre',CI='$ci',Sexo='$sexo',Fecha_inscripcion='$fecha_inscripcion',Direccion='$direccion',Telefono='$telefono' WHERE Id_persona=$id ";
                 $verificar=$conexion->query($query);
                 if ($verificar) {
                     echo '<script>
