@@ -143,8 +143,8 @@
             </div>
         </div>
         <br>
-        <div class="container-fluid" id="datos">
-            <table class='table table-sm table-hover'>
+        <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
+            <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
                 <thead>
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
@@ -201,7 +201,7 @@
                             <td><a class="bg-danger py-1 rounded-lg" href="#" onclick="confirmar(<?php echo $id; ?>)"><span
                                         class='h6 text-white icofont-ui-delete px-1'></span></a></td>
                         </tr>
-                    <?php
+                        <?php
                     }
 
                     ?>
