@@ -140,10 +140,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="bg-success text-white h4 py-10 rounded" href="./registrar_prestamos.php"><i
+                            class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
-        <div class="container-fluid" id="datos">
-            <table class='table table-sm table-hover gb-white shadow-sm'>
+        <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
+                    <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
                 <thead>
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
