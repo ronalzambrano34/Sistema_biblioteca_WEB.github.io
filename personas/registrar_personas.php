@@ -21,6 +21,7 @@
   <li class="">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
+        class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="registrar_personas.php">Registrar</a>
@@ -141,18 +142,7 @@
           <h4>REGISTRAR ASOCIADO</h4>
         </label></center>
       <div class="form-row">
-        <div class="col-sm-3 col-md-3 col-lg-2 mb-4">
-          <label for="validationCustom04">ID</label>
-          <input type="text" class="form-control" id="validationCustom04" name="id" placeholder="ID"
-            pattern="[0-9]+">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-9 col-md-9 col-lg-4 mb-4">
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
