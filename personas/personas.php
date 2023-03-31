@@ -21,7 +21,7 @@
     </li>
     <li class="">
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                class="icofont-people mr-3 h4 text-white"></span>Personas<i
+                class="icofont-people mr-3 h4 text-white"></span>Asociados<i
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
@@ -133,7 +133,7 @@
         <div class="form-row container">
             <div class="col-md-6 col-lg-5">
                 <div class="input-group">
-                    <input type="search" name="dato" placeholder="Nobre de la persona"
+                    <input type="search" name="dato" placeholder="Nobre del asociado"
                         class="form-control shadow-sm border-0" autocomplete="off">
                     <div class="input-group-prepend bg-white p-0" style="z-index: 0;">
                         <button name="buscar" type="submit"
@@ -254,7 +254,7 @@
     function confirmar(id) {
         swal({
             title: "Advertecia!",
-            text: "¿Esta seguro de eliminar a la persona?",
+            text: "¿Esta seguro de eliminar al asociado?",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-primary ",
@@ -270,7 +270,7 @@
                 } else {
                     swal({
                         title: "Operación cancelada!",
-                        text: "La persona no fue eliminada",
+                        text: "El asociado no fue eliminado",
                         type: "error",
                         confirmButtonClass: "btn-primary",
                         confirmButtonText: "Volver",
@@ -285,7 +285,7 @@
         window.open("../reporte_libros/index.php", "Reporte de libros", "directories=no location=no");
     }
     function abrirReporte1() {
-        window.open("../reporte_personas/index.php", "Reporte de personas", "directories=no location=no");
+        window.open("../reporte_personas/index.php", "Reporte de asociado", "directories=no location=no");
     }
     function abrirReporte2() {
         window.open("../reporte_autores/index.php", "Reporte de autores", "directories=no location=no");
