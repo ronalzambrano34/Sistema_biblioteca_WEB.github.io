@@ -28,7 +28,7 @@
                 <script>
                 swal({
                   title: "Operación exitosa",
-                  text: "La persona fue eliminada correctamente!",
+                  text: "El asociado fue eliminada correctamente!",
                   type: "success",
                   confirmButtonClass: "btn-success",
                   confirmButtonText: "Aceptar",
@@ -45,7 +45,7 @@
                 <script
                 swal({
                   title: "Operación fallida",
-                  text: "Ocurrio un error al eliminar a la persona",
+                  text: "Ocurrio un error al eliminar a el asociado.",
                   type: "error",
                   confirmButtonClass: "btn-danger",
                   confirmButtonText: "Regresar",

@@ -20,7 +20,7 @@
   </li>
   <li class="">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-people mr-3 h4 text-white"></span>Personas<i class="icofont-rounded-down text-white"></i></a>
+        class="icofont-people mr-3 h4 text-white"></span>Asociados<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="registrar_personas.php">Registrar</a>
@@ -144,13 +144,13 @@
     <form class="p-4 needs-validation" action="realizar_edicion.php?id=<?php echo $fila['Id_persona'] ?>" method="POST"
       novalidate>
       <center><label class="mt-2" for="">
-          <h4>ACTUALIZAR PERSONAS</h4>
+          <h4>ACTUALIZAR ASOCIADO <sup class="btn bg-info">#<?php echo $fila['Id_persona'] ?></sup></h4>
         </label></center>
       <div class="form-row">
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Nombre completo</label>
-          <input type="text" class="form-control" id="validationCustom01" required name="nombre" value="<?php echo $fila['Nombre'] ?>" 
-            placeholder="Nombre completo"
+          <input type="text" class="form-control" id="validationCustom01" required name="nombre"
+            value="<?php echo $fila['Nombre'] ?>" placeholder="Nombre completo"
             pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="40">
           <div class="valid-feedback">
@@ -160,10 +160,11 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md64 col-lg-3 mb-3">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom04">Carnet de Indentidad</label>
-          <input type="text" class="form-control" id="validationCustom04" required name="ci" value="<?php echo $fila['CI'] ?>"
-            placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11" maxlength="11">
+          <input type="text" class="form-control" id="validationCustom04" required name="ci"
+            value="<?php echo $fila['CI'] ?>" placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11"
+            maxlength="11">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -172,31 +173,32 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-                    <label for="validationCustom07">Sexo</label>
-                    <select class="form-control" id="validationCustom07" required name="sexo">
-                        <option value="<?php echo $fila['Sexo'] ?>"><?php echo $fila['Sexo'] ?></option>
-                        <?php 
-                            $sexo=$fila['Sexo'];
-                            if ($sexo=="Masculino") {
-                                echo '<option value="Femenino">Femenino</option>';
-                            }elseif ($sexo="Femenino") {
-                                echo '<option value="Masculino">Masculino</option>';
-                            }
-                         ?>
-                    </select>
-                      <div class="valid-feedback">
-                        Correcto!
-                    </div>
-                    <div class="invalid-feedback">
-                        Porfavor rellena el campo.
-                    </div>
-                  </div>
+          <label for="validationCustom07">Sexo</label>
+          <select class="form-control" id="validationCustom07" required name="sexo">
+            <option value="<?php echo $fila['Sexo'] ?>"><?php echo $fila['Sexo'] ?></option>
+            <?php
+            $sexo = $fila['Sexo'];
+            if ($sexo == "Masculino") {
+              echo '<option value="Femenino">Femenino</option>';
+            } elseif ($sexo = "Femenino") {
+              echo '<option value="Masculino">Masculino</option>';
+            }
+            ?>
+          </select>
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
       </div>
 
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom08">Fecha de inscripción</label>
-          <input type="date" class="form-control" id="validationCustom08" required name="fecha_inscripcion" value="<?php echo $fila['Fecha_inscripcion'] ?>"> 
+          <input type="date" class="form-control" id="validationCustom08" required name="fecha_inscripcion"
+            value="<?php echo $fila['Fecha_inscripcion'] ?>">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -206,8 +208,9 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Dirección</label>
-          <input type="text" class="form-control" id="validationCustom01" name="direccion" value="<?php echo $fila['Direccion'] ?>"  placeholder="Opcional"
-            pattern="[0-9 a-z A-Z / # ,.'-]+" maxlength="40">
+          <input type="text" class="form-control" id="validationCustom01" name="direccion"
+            value="<?php echo $fila['Direccion'] ?>" placeholder="Opcional" pattern="[0-9 a-z A-Z / # ,.'-]+"
+            maxlength="40">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -217,8 +220,8 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom09">Teléfono</label>
-          <input type="tel" class="form-control" id="validationCustom09" name="telefono" value="<?php echo $fila['Telefono'] ?>" placeholder="Telefono"
-            pattern="[0-9]{8,10}" maxlength=8>
+          <input type="tel" class="form-control" id="validationCustom09" name="telefono"
+            value="<?php echo $fila['Telefono'] ?>" placeholder="Telefono" pattern="[0-9]{8,10}" maxlength=8>
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -226,7 +229,7 @@
             Profavor rellena el campo.
           </div>
         </div>
-        
+
         <!-- <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
           <label for="validationCustom10">Correo</label>
           <input type="email" class="form-control" id="validationCustom10" name="correo" placeholder="Correo"
@@ -311,7 +314,7 @@
     window.open("../reporte_libros/index.php", "Reporte de libros", "directories=no location=no");
   }
   function abrirReporte1() {
-    window.open("../reporte_personas/index.php", "Reporte de personas", "directories=no location=no");
+    window.open("../reporte_personas/index.php", "Reporte de asociados", "directories=no location=no");
   }
   function abrirReporte2() {
     window.open("../reporte_autores/index.php", "Reporte de autores", "directories=no location=no");

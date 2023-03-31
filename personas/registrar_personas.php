@@ -20,7 +20,7 @@
   </li>
   <li class="">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-people mr-3 h4 text-white"></span>Personas<i class="icofont-rounded-down text-white"></i></a>
+        class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="registrar_personas.php">Registrar</a>
@@ -138,10 +138,21 @@
   <div class="bg-white rounded-lg formulario">
     <form class="p-4 needs-validation" action="registrar_personas.php" method="POST" novalidate>
       <center><label class="mt-2" for="">
-          <h4>REGISTRAR PERSONAS</h4>
+          <h4>REGISTRAR ASOCIADO</h4>
         </label></center>
       <div class="form-row">
-        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+        <div class="col-sm-3 col-md-3 col-lg-2 mb-4">
+          <label for="validationCustom04">ID</label>
+          <input type="text" class="form-control" id="validationCustom04" name="id" placeholder="ID"
+            pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-4 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
@@ -154,7 +165,7 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md64 col-lg-3 mb-3">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
           <label for="validationCustom04">Carnet de Indentidad</label>
           <input type="text" class="form-control" id="validationCustom04" required name="ci"
             placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11" maxlength="11">
@@ -249,24 +260,24 @@
 </div>
 <script src="../push/push.min.js" type="text/javascript"></script>
 <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-      window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
 
 </script>
 </div>
@@ -279,20 +290,21 @@ if (isset($_POST['registrar'])) {
   $fecha = $_POST['fecha'];
   $direccion = $_POST['direccion'];
   $telefono = $_POST['telefono'];
+  $id = $_POST['id'];
 
-  $query = "INSERT INTO personas (Nombre,CI,Sexo,Fecha_inscripcion,Direccion,Telefono) values('$nombre','$ci','$sexo','$fecha','$direccion','$telefono')";
+  $query = "INSERT INTO personas (Id_persona,Nombre,CI,Sexo,Fecha_inscripcion,Direccion,Telefono) values('$id','$nombre','$ci','$sexo','$fecha','$direccion','$telefono')";
   $verificar = $conexion->query($query);
   if ($verificar) {
     echo '<script>
                     swal({
                     title: "Operación exitosa",
-                    text: "La persona fue registrada correctamente!",
+                    text: "El asociado fue registrado correctamente!",
                     type: "success",
                     showCancelButton: true,
                     cancelButtonClass: "btn-warning",
                     cancelButtonText: "Registrar",
                     confirmButtonClass: "btn-success",
-                    confirmButtonText: "Ver personas",
+                    confirmButtonText: "Ver asociados",
                     closeOnConfirm: false
                   },
                   function(isConfirm) {
@@ -307,13 +319,13 @@ if (isset($_POST['registrar'])) {
     echo '<script>
                     swal({
                     title: "Operación fallida",
-                    text: "Ocurrio un error al registrar a la persona!",
+                    text: "Ocurrio un error al registrar al asociado!",
                     type: "error",
                     showCancelButton: true,
                     cancelButtonClass: "btn-warning",
                     cancelButtonText: "Intentar de nuevo",
                     confirmButtonClass: "btn-success",
-                    confirmButtonText: "Ver personas",
+                    confirmButtonText: "Ver asociados",
                     closeOnConfirm: false
                   },
                   function(isConfirm) {
@@ -366,12 +378,13 @@ if (isset($_POST['registrar'])) {
     }
   }
 </script>
+
 <script>
   function abrirReporte() {
     window.open("../reporte_libros/index.php", "Reporte de libros", "directories=no location=no");
   }
   function abrirReporte1() {
-    window.open("../reporte_personas/index.php", "Reporte de personas", "directories=no location=no");
+    window.open("../reporte_personas/index.php", "Reporte de asociados", "directories=no location=no");
   }
   function abrirReporte2() {
     window.open("../reporte_autores/index.php", "Reporte de autores", "directories=no location=no");
@@ -388,18 +401,18 @@ if (isset($_POST['registrar'])) {
 </script>
 
 <script>
-        window.onload = function () {
-          var fecha = new Date(); //Fecha actual
-          var mes = fecha.getMonth() + 1; //obteniendo mes
-          var dia = fecha.getDate(); //obteniendo dia
-          var ano = fecha.getFullYear(); //obteniendo año
-          if (dia < 10)
-            dia = '0' + dia; //agrega cero si el menor de 10
-          if (mes < 10)
-            mes = '0' + mes //agrega cero si el menor de 10
-          document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
-        }
-      </script>
+  window.onload = function () {
+    var fecha = new Date(); //Fecha actual
+    var mes = fecha.getMonth() + 1; //obteniendo mes
+    var dia = fecha.getDate(); //obteniendo dia
+    var ano = fecha.getFullYear(); //obteniendo año
+    if (dia < 10)
+      dia = '0' + dia; //agrega cero si el menor de 10
+    if (mes < 10)
+      mes = '0' + mes //agrega cero si el menor de 10
+    document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
+  }
+</script>
 
 
 </body>
