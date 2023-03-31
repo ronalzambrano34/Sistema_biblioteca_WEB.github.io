@@ -158,7 +158,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar'])) {
+                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
                             FROM personas,empleados,usuarios WHERE personas.Id_persona=empleados.Id_persona

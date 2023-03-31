@@ -138,7 +138,7 @@
                         </thead>
                         <tbody>
                             <?php 
-                                if (isset($_POST['buscar'])) {
+                                if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                                     require_once("../conexion/conexion.php");
                                     $dato=$_POST['dato'];
                                     $query="SELECT * FROM consulta,personas,libros WHERE personas.Id_persona=consulta.Id_persona AND

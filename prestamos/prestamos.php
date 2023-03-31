@@ -142,7 +142,7 @@
             </div>
             <div class="col-md-6 col-lg-6">
                 <div class=" d-flex justify-content-end">
-                    <a class="bg-success text-white h4 py-10 rounded" href="./registrar_prestamos.php"><i
+                    <a class="bg-success text-white h4 py-10 rounded p-1" href="./registrar_prestamos.php"><i
                             class="p-2 icofont-plus">Nuevo</i></a>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar'])) {
+                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
 
                         $dato = $_POST['dato'];
                         $query = "SELECT prestamos.Id_prestamo,personas.Nombre,prestamos.Cantidad,prestamos.Identificacion,

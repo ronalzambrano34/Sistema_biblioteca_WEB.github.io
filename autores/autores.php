@@ -156,7 +156,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar'])) {
+                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         $dato = $_POST['dato'];
                         $salida = "";
                         $query = "SELECT * FROM autores,libros WHERE autores.Id_libro=libros.Id_libro AND Nombre LIKE '$dato%' AND autores.Activo=1";
