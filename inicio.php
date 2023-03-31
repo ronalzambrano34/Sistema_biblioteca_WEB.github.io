@@ -15,7 +15,7 @@
                             <small class="ml-3 h3 text-secondary border-danger"><b class="count">
                                     <?php
                                     require_once("conexion/conexion.php");
-                                    $query = "SELECT COUNT(Id_libro) AS Total FROM libros";
+                                    $query = "SELECT COUNT(Id_libro) AS Total FROM libros WHERE Activo=1";
                                     $resultado = $conexion->query($query);
                                     $fila = $resultado->fetch_assoc();
                                     echo $fila['Total'];
@@ -38,7 +38,7 @@
                             <small class="ml-3 h3 text-secondary border-info"><b class="count">
                                     <?php
                                     require_once("conexion/conexion.php");
-                                    $query = "SELECT COUNT(Id_persona) AS Total FROM personas";
+                                    $query = "SELECT COUNT(Id_persona) AS Total FROM personas WHERE Activo=1";
                                     $resultado = $conexion->query($query);
                                     $fila = $resultado->fetch_assoc();
                                     echo $fila['Total'];
