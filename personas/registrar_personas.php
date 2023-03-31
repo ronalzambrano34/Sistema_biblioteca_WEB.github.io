@@ -21,7 +21,6 @@
   <li class="">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
-        class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="registrar_personas.php">Registrar</a>
