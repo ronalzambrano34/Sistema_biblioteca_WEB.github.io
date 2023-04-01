@@ -141,6 +141,11 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="bg-success text-white h4 py-10 rounded" href="./registrar_autores.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
         <div class="container-fluid" id="datos">
@@ -149,7 +154,8 @@
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
                         <th class='text-center'><small>Nombre</small></th>
-                        <th class='text-center'><small>Titulo del libro</small></th>
+                        <th class='text-center'><small>Año de Naciemiento</small></th>
+                        <th class='text-center'><small>Año de Muerte</small></th>
                         <th colspan='2' class='text-center'><small>Acciones</small></th>
                     </tr>
                 </thead>
@@ -159,9 +165,9 @@
                     if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         $dato = $_POST['dato'];
                         $salida = "";
-                        $query = "SELECT * FROM autores,libros WHERE autores.Id_libro=libros.Id_libro AND Nombre LIKE '$dato%' AND autores.Activo=1";
+                        $query = "SELECT * FROM autores WHERE Nombre LIKE '$dato%' AND autores.Activo=1";
                     } else {
-                        $query = "SELECT * FROM autores,libros WHERE autores.Id_libro=libros.Id_libro AND autores.Activo=1";
+                        $query = "SELECT * FROM autores WHERE autores.Activo=1";
                     }
                     $resultado = $conexion->query($query);
                     while ($fila = $resultado->fetch_assoc()) {
@@ -175,7 +181,10 @@
                                     <?php echo $fila['Nombre']; ?>
                                 </small></td>
                             <td><small>
-                                    <?php echo $fila['Titulo']; ?>
+                                    <?php echo $fila['Nacimiento']; ?>
+                                </small></td>
+                            <td><small>
+                                    <?php echo $fila['Muerte']; ?>
                                 </small></td>
                             <td><a class="bg-primary py-1 rounded-lg"
                                     href="modificar_autores.php?id=<?php echo $fila['Id_autor'] ?>"><span
