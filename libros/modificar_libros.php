@@ -123,20 +123,20 @@
 
 <div class="container">
   <br><br><br><br>
-  <div class="container">
+  <!-- <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <strong>Nota:</strong> El número de copias no debe ser mayor a 3.
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-  </div>
+  </div> -->
   <br>
   <div class="bg-white rounded-lg formulario">
     <?php
     $id = $_REQUEST['id'];
     require_once("../conexion/conexion.php");
-    $query = "SELECT * FROM libros WHERE Id_libro=$id";
+    $query = "SELECT * FROM libros,autores WHERE libros.Id_libro=$id AND libros.Id_autor=autores.Id_autor";
     $resultado = $conexion->query($query);
     $fila = $resultado->fetch_assoc();
     ?>
@@ -146,11 +146,11 @@
           <h4>ACTUALIZAR LIBROS</h4>
         </label></center>
       <div class="form-row">
-        <div class="col-md-4 col-lg-6 mb-4">
-          <label for="validationCustom01">Titulo</label>
-          <input type="text" class="form-control" id="validationCustom01" required name="titulo" placeholder="Titulo"
-            value="<?php echo $fila['Titulo']; ?>"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom01">Clasificación</label>
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required
+            value="<?php echo $fila['Clasificacion']; ?>" name=" clasificacion" placeholder="Clasificacion del libro"
+            pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="50">
           <div class="valid-feedback">
             Correcto!
@@ -159,10 +159,19 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <label for="validationCustom02">Copias</label>
-          <input type="text" class="form-control" id="validationCustom02" required name="copias"
-            placeholder="Número de copias" value="<?php echo $fila['Copias']; ?>" pattern="[0-9]{1}">
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom01">Autor</label>
+          <select id="validationCustom02" name="autor" class="form-control" required>
+            <option value="<?php echo $fila['Id_autor'] ?>" disabled select><?php echo $fila['Nombre'] ?></option>
+            <?php
+            include('../conexion/conexion.php');
+            $query1 = "SELECT * FROM autores";
+            $resultado1 = $conexion->query($query1);
+            while ($filas = mysqli_fetch_array($resultado1)) {
+              echo '<option value="' . $filas["Id_autor"] . '">' . $filas["Nombre"] . '</option>';
+            }
+            ?>
+          </select>
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -170,10 +179,84 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-md-4 col-lg-3 mb-4">
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom01">Título</label>
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required value="<?php echo $fila['Titulo'] ?>" 
+            name="titulo" placeholder="Título del libro"
+            pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            maxlength="50">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom01">Edición</label>
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required value="<?php echo $fila['Edicion'] ?>" name="edicion"
+            placeholder="Edición del libro"
+            pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            maxlength="50">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom03">Editorial</label>
-          <input type="text" class="form-control" id="validationCustom03" required name="editorial"
-            placeholder="Editorial" value="<?php echo $fila['Editorial']; ?>"
+          <input type="text" class="form-control" id="validationCustom03" required value="<?php echo $fila['Editorial'] ?>" name="editorial"
+            placeholder="Editorial"
+            pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            maxlength="30">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom02">Año de edición</label>
+          <input type="text" class="form-control" id="validationCustom02" required value="<?php echo $fila['Anno'] ?>" name="anno"
+            placeholder="Año de edición" pattern="[0-9]{4}">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <!-- </div>
+      <div class="form-row"> -->
+        <div class="col-md-4 col-lg-4 mb-4">
+          <label for="validationCustom03">Lugar</label>
+          <input type="text" class="form-control" id="validationCustom03" required value="<?php echo $fila['Lugar'] ?>" name="lugar" placeholder="Lugar"
+            pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            maxlength="30">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-3">
+          <label for="validationCustom06">Cantidad de páginas</label>
+          <input type="text" class="form-control" id="validationCustom06" required value="<?php echo $fila['Cant_pag'] ?>" name="cant_pag"
+            placeholder="Cantidad de páginas" pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-3">
+          <label for="validationCustom05">Materia</label>
+          <input type="text" class="form-control" id="validationCustom05" required value="<?php echo $fila['Materia'] ?>" name="materia" placeholder="Materia"
             pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="30">
           <div class="valid-feedback">
@@ -183,43 +266,7 @@
             Porfavor rellena el campo.
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom04">Fecha de ultima edición</label>
-          <input type="date" class="form-control" id="validationCustom04" required name="fecha"
-            value="<?php echo $fila['Fecha_edicion']; ?>">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom05">Categoría</label>
-          <input type="text" class="form-control" id="validationCustom05" required name="cate" placeholder="Categoría"
-            value="<?php echo $fila['Categoria']; ?>"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="30">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom06">Número de Estante</label>
-          <input type="text" class="form-control" id="validationCustom06" required name="estante"
-            placeholder="Número de estante" value="<?php echo $fila['Estante']; ?>" pattern="[0-9]{1}">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
+
       </div>
       <button class="btn btn-warning text-white" type="submit" name="registrar">Actualizar</button>
     </form>
@@ -250,129 +297,6 @@
 </script>
 </div>
 
-<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
-  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Contáctanos</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body bg-light">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-map h1"></span>
-                <br>
-                <small>Barrio: Bonampack</small>
-                <br>
-                <small>Calle: Yaxchilan</small>
-                <br>
-                <small>Número: 18</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-envelope h1"></span>
-                <br>
-                <small>Email: winalllpz@gmail.com</small>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-brand-whatsapp h1"></span>
-                <br>
-                <small>Tel: 9191936817</small>
-                <br>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-facebook h1"></span>
-                <br>
-                <small>@GoldenLibrary</small>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog"
-  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalScrollableTitle">Quiénes somos</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body bg-light">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-hat h1"></span>
-                <p class="card-title">Misión</p>
-                <small>Nuestra misión es poder dar a conocer toda la sabiduría a través de nuestros libros. Tener un
-                  repertorio digno para todas las personas; clases sociales, edades, grados y campos de estudio. Que
-                  nuestros libros sean del mayor agrado de nuestros visitadores, contando la mejor calidad de servicio
-                  en préstamos de títulos. Siempre con el cello de la casa.</small>
-                <br>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-eye h1"></span>
-                <p class="card-title">Visión</p>
-                <small>Nuestra visión es tener siempre tener una atención del público a pesar del tiempo en la que
-                  estamos, ser una de las instituciones de títulos literarios más conocidos del mundo. Tener
-                  instalaciones de calidad para preservar el buen espacio para leer, contar con el mejor trato de
-                  visitador-empleado, ya que nuestro público lo merece.</small>
-                <br>
-              </div>
-            </div>
-          </div>
-          <br>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <span class="text-info icofont-chart-histogram-alt h1"></span>
-                <p class="card-title">Objetivo General</p>
-                <small>Tener un sistema para poder llevar a cabo la administración de los registros que se generan día
-                  con día y hacer más fácil la búsqueda de visitantes, las personas que tienen préstamos y los adeudos
-                  de libros. También llevar un registro de los libros que puedan estar dañados y así hacer una petición
-                  de cambios.</small>
-                <br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Footer -->
 <?php require("../footer.php") ?>
 

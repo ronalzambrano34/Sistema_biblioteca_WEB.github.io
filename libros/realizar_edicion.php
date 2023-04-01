@@ -4,14 +4,17 @@
   <?php 
                 require_once ("../conexion/conexion.php");
                 $id=$_REQUEST['id'];
-                $titulo = $_POST['titulo'];
-                $copias = $_POST['copias'];
-                $editorial = $_POST['editorial'];
-                $fecha = $_POST['fecha'];
-                $cate = $_POST['cate'];
-                $estante = $_POST['estante'];
+                $Clasificacion = $_POST['clasificacion'];
+                $Id_autor = $_POST['autor'];
+                $Titulo = $_POST['titulo'];
+                $Edicion = $_POST['edicion'];
+                $Editorial = $_POST['editorial'];
+                $Anno = $_POST['anno'];
+                $Lugar = $_POST['lugar'];
+                $Cant_pag = $_POST['cant_pag'];
+                $Materia = $_POST['materia'];
 
-                $query = "UPDATE libros SET Titulo='$titulo',Copias=$copias,Editorial='$editorial',Fecha_edicion='$fecha',Categoria='$cate',Estante='$estante' WHERE Id_libro=$id ";
+                $query = "UPDATE libros SET Clasificacion='$Clasificacion',Id_autor=$Id_autor,Titulo='$Titulo',Edicion='$Edicion',Editorial='$Editorial',Anno='$Anno',Lugar='$Lugar',Cant_pag='$Cant_pag',Materia='$Materia' WHERE Id_libro=$id ";
                 $verificar=$conexion->query($query);
                 if ($verificar) {
                     echo '<script>

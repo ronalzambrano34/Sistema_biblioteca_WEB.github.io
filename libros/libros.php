@@ -136,31 +136,39 @@
           </div>
         </div>
       </div>
+      <div class="col-md-6 col-lg-6">
+        <div class=" d-flex justify-content-end">
+          <a class="bg-success text-white h4 py-10 rounded p-1" href="./registrar_libros.php"><i
+              class="p-2 icofont-plus"> Nuevo</i></a>
+        </div>
+      </div>
     </div>
     <br>
     <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
-                    <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
+      <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
         <thead>
           <tr class='bg-warning text-white font-weight-bold'>
-            <th class='text-center'><small>ID</small></th>
-            <th class='text-center'><small>Titulo</small></th>
-            <th class='text-center'><small>Copias</small></th>
+            <th class='text-center'><small>id</small></th>
+            <th class='text-center'><small>Clasificación</small></th>
+            <th class='text-center'><small>Autor</small></th>
+            <th class='text-center'><small>Título</small></th>
+            <th class='text-center'><small>Edición</small></th>
             <th class='text-center'><small>Editorial</small></th>
-            <th class='text-center'><small>Fecha de edicion</small></th>
-            <th class='text-center'><small>Categoría</small></th>
-            <th class='text-center'><small>Estante</small></th>
+            <th class='text-center'><small>Año</small></th>
+            <th class='text-center'><small>Lugar</small></th>
+            <th class='text-center'><small>Páginas</small></th>
+            <th class='text-center'><small>Materia</small></th>
             <th colspan='2' class='text-center'><small>Acciones</small></th>
           </tr>
         </thead>
         <tbody>
           <?php
           require_once("../conexion/conexion.php");
-          if (isset($_POST['buscar'])) {            
+          if (isset($_POST['buscar']) && $_POST['buscar'] != '' && $_POST['buscar'] != '') {
             $dato = $_POST['dato'];
-            $query = "SELECT * FROM libros WHERE Titulo LIKE '$dato%' AND activo=1";
-            
+            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Titulo LIKE '$dato' AND libros.Id_autor=autores.Id_autor AND libros.activo =1 AND autores.Activo=1 ORDER BY libros.Titulo";
           } else {
-            $query = "SELECT * FROM libros WHERE activo=1";
+            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Id_autor=autores.Id_autor AND libros.activo=1 AND autores.Activo=1 ORDER BY libros.Titulo";
 
           }
           $resultado = $conexion->query($query);
@@ -168,29 +176,38 @@
             $id = $fila['Id_libro'];
             ?>
             <tr class='text-center'>
+
               <td><small>
                   <?php echo $fila['Id_libro']; ?>
+                </small></td>
+              <td><small>
+                  <?php echo $fila['Clasificacion']; ?>
+                </small></td>
+              <td><small>
+                  <?php echo $fila['Nombre']; ?>
                 </small></td>
               <td><small>
                   <?php echo $fila['Titulo']; ?>
                 </small></td>
               <td><small>
-                  <?php echo $fila['Copias']; ?>
+                  <?php echo $fila['Edicion']; ?>
                 </small></td>
               <td><small>
                   <?php echo $fila['Editorial']; ?>
                 </small></td>
               <td><small>
-                  <?php echo $fila['Fecha_edicion']; ?>
+                  <?php echo $fila['Anno']; ?>
                 </small></td>
               <td><small>
-                  <?php echo $fila['Categoria']; ?>
+                  <?php echo $fila['Lugar']; ?>
                 </small></td>
               <td><small>
-                  <?php echo $fila['Estante']; ?>
+                  <?php echo $fila['Cant_pag']; ?>
                 </small></td>
-              <td><a class="bg-primary py-1 rounded-lg"
-                  href="modificar_libros.php?id=<?php echo $fila['Id_libro'] ?>"><span
+              <td><small>
+                  <?php echo $fila['Materia']; ?>
+                </small></td>
+              <td><a class="bg-primary py-1 rounded-lg" href="modificar_libros.php?id=<?php echo $id ?>"><span
                     class='h6 text-white icofont-ui-edit px-1'></small></a></td>
               <td><a class="bg-danger py-1 rounded-lg" href="#" onclick="confirmar(<?php echo $id; ?>)"><span
                     class='h6 text-white icofont-ui-delete px-1'></span></a></td>
