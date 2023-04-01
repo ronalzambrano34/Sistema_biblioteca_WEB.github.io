@@ -12,7 +12,8 @@
         <a href="libros.php">Consultar</a>
       </li>
       <li>
-        <a onClick='abrirReporte()' href="#">Reportes</a>
+        <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
@@ -27,7 +28,8 @@
         <a href="../personas/personas.php">Consultar</a>
       </li>
       <li>
-        <a onClick='abrirReporte1()' href="#">Reportes</a>
+        <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
@@ -43,7 +45,8 @@
         <a href="../autores/autores.php">Consultar</a>
       </li>
       <li>
-        <a onClick='abrirReporte2()' href="#">Reportes</a>
+        <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
@@ -86,7 +89,8 @@
         <a href="../visitas/visitas.php">Consultar</a>
       </li>
       <li>
-        <a onClick='abrirReporte4()' href="#">Reportes</a>
+        <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
@@ -101,7 +105,8 @@
         <a href="../prestamos/prestamos.php">Consultar</a>
       </li>
       <li>
-        <a onClick='abrirReporte5()' href="#">Reportes</a>
+        <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
