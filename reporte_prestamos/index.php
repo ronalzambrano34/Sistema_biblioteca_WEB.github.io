@@ -38,13 +38,15 @@ $resultado1 = $conexion->query($query1);
 $pdf = new FPDF('L', 'mm', 'A4');
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 8);
+$pdf->Image('../images/logo1.png', 10, 8, 40);
 // Movernos a la derecha
 $pdf->Cell(80);
 // Título
-$pdf->Image('../images/logo1.png', 10, 8, 20);
-$pdf->Cell(110, 10, 'Libreria Catedral', 1, 0, 'C');
+$pdf->Cell(110, 10, utf8_decode('Librería Catedral'), 1, 0, 'C');
 // Salto de línea
 $pdf->Ln(20);
+// Movernos a la derecha
+$pdf->Cell(40);
 $pdf->Cell(50, 10, 'Prestamos registrados', 0, 0, 'C');
 $pdf->Ln(20);
 $pdf->cell(8, 10, 'ID', 1, 0, 'C', 0);

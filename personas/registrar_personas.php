@@ -129,7 +129,7 @@
 </nav>
 
 <div class="container">
-  <br><br><br><br>
+  <br><br><br><br><br>
   <!-- <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <strong>Nota:</strong> Si no cuenta con un número de casa colocar 0.

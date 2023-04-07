@@ -68,14 +68,13 @@ if ($id == null || $id = '') {
                             <a href="./libros/libros.php">Consultar</a>
                         </li>
                         <li>
-                            <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                            <a onClick='abrirReporte()' href="#">Reportes</a>
                         </li>
                     </ul>
                 </li>
                 <li class="">
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                            class="icofont-people mr-3 h4 text-white"></span>Personas<i
+                            class="icofont-people mr-3 h4 text-white"></span>Asociados<i
                             class="icofont-rounded-down text-white"></i></a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
