@@ -142,8 +142,8 @@
       <center><label class="mt-2" for="">
           <h4>REGISTRAR AUTORES</h4>
         </label></center>
-      <div class="form-row">
-        <div class="col-sm-6 col-md-4 col-lg-5 mb-4">
+      <div class="form-row justify-content-between">
+        <div class="col-sm-6 col-md-12 col-lg-5 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre del autor"
@@ -156,8 +156,8 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-2 mb-4">
-          <label for="validationCustom02">Nacimiento</label>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+          <label for="validationCustom02">Año de Nacimiento</label>
           <input type="number" class="form-control" id="validationCustom02" name="Nacimiento"
             placeholder="Nacimiento" pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
@@ -167,8 +167,8 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-2 mb-4">
-          <label for="validationCustom02">Muerte</label>
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+          <label for="validationCustom02">Año de Muerte</label>
           <input type="number" class="form-control" id="validationCustom02" name="Muerte" placeholder="Muerte"
             pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">

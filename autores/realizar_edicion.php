@@ -6,7 +6,9 @@
                 require_once ("../conexion/conexion.php");
                 $id=$_REQUEST['id'];
                 $nombre=$_POST['nombre'];
-                $query = "UPDATE autores SET Nombre='$nombre' WHERE Id_autor=$id ";
+                $Nacimiento=$_POST['Nacimiento'];
+                $Muerte=$_POST['Muerte'];
+                $query = "UPDATE autores SET Nombre='$nombre',Nacimiento='$Nacimiento',Muerte='$Muerte' WHERE Id_autor=$id ";
                 $verificar=$conexion->query($query);
                 if ($verificar) {
                     echo '<script>
