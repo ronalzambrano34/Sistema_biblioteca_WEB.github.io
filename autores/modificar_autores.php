@@ -127,8 +127,8 @@
 </ul>
 </nav>
 <div class="container">
-  <br><br><br><br>
-  <div class="container">
+  <br><br><br><br><br>
+  <!-- <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       <strong>Nota:</strong> Dar clic en buscar libros para saber el ID del libro. <a class="text-dark"
         data-toggle="modal" data-target="#staticBackdrop" href=""><b> Ver libros</b></a>
@@ -136,7 +136,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-  </div>
+  </div> -->
   <div class="bg-white rounded-lg formulario">
     <?php
     $id = $_REQUEST['id'];

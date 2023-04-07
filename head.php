@@ -50,13 +50,13 @@ if ($id == null || $id = '') {
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45" src="images/logo.png"
-                            alt="">Librería
+                <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45"
+                            src="images/logo.png" alt="">Librería
                         <b>Catedral</b></a>
                 </div>
             </div>
             <ul class="list-unstyled components">
-                <li class="">
+                <li class="Libros">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-library mr-3 h4 text-white"></span>Libros<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -72,7 +72,7 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="Asociados">
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-people mr-3 h4 text-white"></span>Asociados<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -89,7 +89,7 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="Autores">
                     <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -106,7 +106,7 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="Empleados" hidden>
                     <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle"><span class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -122,20 +122,8 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
-                    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                            class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i
-                            class="icofont-rounded-down text-white"></i></a>
-                    <ul class="collapse list-unstyled" id="puestoSubmenu">
-                        <li>
-                            <a href="./puestos/registrar_puesto.php">Registrar</a>
-                        </li>
-                        <li>
-                            <a href="./puestos/puestos.php">Consultar</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="">
+
+                <li class="Visitas">
                     <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -152,7 +140,7 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="Prestamos">
                     <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle"><span class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i
                             class="icofont-rounded-down text-white"></i></a>
@@ -169,7 +157,21 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-                <li class="">
+<hr style="border-top: 1px dotted white;">
+                <li class="Puestos">
+                    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="puestoSubmenu">
+                        <li>
+                            <a href="./puestos/registrar_puesto.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./puestos/puestos.php">Consultar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Usuarios">
                     <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
                             class="icofont-rounded-down text-white"></i></a>

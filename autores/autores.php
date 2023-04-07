@@ -53,7 +53,7 @@
             </li>
         </ul>
     </li>
-    <li class="">
+    <li class="Empleados" hidden>
         <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
                 class="icofont-rounded-down text-white"></i></a>
