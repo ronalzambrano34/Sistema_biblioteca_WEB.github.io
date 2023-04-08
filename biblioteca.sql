@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 01/04/2023 13:11:43
+ Date: 07/04/2023 23:29:28
 */
 
 SET NAMES utf8mb4;
@@ -27,16 +27,15 @@ CREATE TABLE `autores`  (
   `Nacimiento` int NULL DEFAULT NULL,
   `Muerte` int NULL DEFAULT NULL,
   `Activo` int NOT NULL DEFAULT 1,
-  PRIMARY KEY (`Id_autor`) USING BTREE,
-  INDEX `FK_autores_libros`(`Nacimiento` ASC) USING BTREE,
-  CONSTRAINT `FK_autores_libros` FOREIGN KEY (`Nacimiento`) REFERENCES `libros` (`Id_libro`) ON DELETE NO ACTION ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+  PRIMARY KEY (`Id_autor`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of autores
 -- ----------------------------
-INSERT INTO `autores` VALUES (6, 'Gabriel Garcia Marquez', 3, NULL, 1);
+INSERT INTO `autores` VALUES (6, 'Gabriel Garcia Marquez', 3333, 0, 1);
 INSERT INTO `autores` VALUES (7, 'Pedro Lopez', 6, NULL, 1);
+INSERT INTO `autores` VALUES (9, 'a', NULL, NULL, 0);
 
 -- ----------------------------
 -- Table structure for consulta
