@@ -145,6 +145,11 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="btn boton_nuevo" href="registrar_visitas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
         <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
