@@ -1,3 +1,0 @@
-consulta sql de los prestamos (agregar a la condicion persona y libros activos)
-
-ajustar las tablas como la de visitas.php

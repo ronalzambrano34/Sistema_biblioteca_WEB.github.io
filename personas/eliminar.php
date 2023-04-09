@@ -1,22 +1,5 @@
- <?php
-    session_start();
-    $id=$_SESSION['Id_usuario'];
-    $usuario=$id;
-    if ($id == null || $id='') {
-        header("location:../index.php");
-    }
-  ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/sweetalert.css">
-    <script src="../vendor/bootstrap/js/sweetalert.min.js" type="text/javascript"></script>
-</head>
+<?php require_once("../head_files.php") ?>
+
 <body>
         <?php 
               require_once ("../conexion/conexion.php");
@@ -28,7 +11,7 @@
                 <script>
                 swal({
                   title: "Operación exitosa",
-                  text: "La persona fue eliminada correctamente!",
+                  text: "El asociado fue eliminada correctamente!",
                   type: "success",
                   confirmButtonClass: "btn-success",
                   confirmButtonText: "Aceptar",
@@ -45,7 +28,7 @@
                 <script
                 swal({
                   title: "Operación fallida",
-                  text: "Ocurrio un error al eliminar a la persona",
+                  text: "Ocurrio un error al eliminar a el asociado.",
                   type: "error",
                   confirmButtonClass: "btn-danger",
                   confirmButtonText: "Regresar",

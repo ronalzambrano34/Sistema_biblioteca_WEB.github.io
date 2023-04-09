@@ -12,26 +12,28 @@
                 <a href="../libros/registrar_libros.php">Registrar</a>
             </li>
             <li>
-                <a href="../libros/libros.php">Visitas</a>
+                <a href="../libros/libros.php">Consultar</a>
             </li>
             <li>
-                <a onClick='abrirReporte()' href="#">Reportes</a>
+                <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
     <li class="">
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                class="icofont-people mr-3 h4 text-white"></span>Personas<i
+                class="icofont-people mr-3 h4 text-white"></span>Asociados<i
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
                 <a href="registrar_personas.php">Registrar</a>
             </li>
             <li>
-                <a href="personas.php">Visitas</a>
+                <a href="personas.php">Consultar</a>
             </li>
             <li>
-                <a onClick='abrirReporte1()' href="#">Reportes</a>
+                <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
@@ -44,14 +46,15 @@
                 <a href="../autores/registrar_autores.php">Registrar</a>
             </li>
             <li>
-                <a href="../autores/autores.php">Visitas</a>
+                <a href="../autores/autores.php">Consultar</a>
             </li>
             <li>
-                <a onClick='abrirReporte2()' href="#">Reportes</a>
+                <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
-    <li class="">
+    <li class="Empleados" hidden>
         <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -60,7 +63,7 @@
                 <a href="../empleados/registrar_empleados.php">Registrar</a>
             </li>
             <li>
-                <a href="../empleados/empleados.php">Visitas</a>
+                <a href="../empleados/empleados.php">Consultar</a>
             </li>
             <li>
                 <a onClick='abrirReporte3()' href="#">Reportes</a>
@@ -76,7 +79,7 @@
                 <a href="../puestos/registrar_puesto.php">Registrar</a>
             </li>
             <li>
-                <a href="../puestos/puestos.php">Visitas</a>
+                <a href="../puestos/puestos.php">Consultar</a>
             </li>
         </ul>
     </li>
@@ -89,10 +92,11 @@
                 <a href="../visitas/registrar_visitas.php">Registrar</a>
             </li>
             <li>
-                <a href="../visitas/visitas.php">Visitas</a>
+                <a href="../visitas/visitas.php">Consultar</a>
             </li>
             <li>
-                <a onClick='abrirReporte4()' href="#">Reportes</a>
+                <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
@@ -105,10 +109,11 @@
                 <a href="../prestamos/registrar_prestamos.php">Registrar</a>
             </li>
             <li>
-                <a href="../prestamos/prestamos.php">Visitas</a>
+                <a href="../prestamos/prestamos.php">Consultar</a>
             </li>
             <li>
-                <a onClick='abrirReporte5()' href="#">Reportes</a>
+                <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
@@ -121,7 +126,7 @@
                 <a href="../usuarios/registrar_usuarios.php">Registrar</a>
             </li>
             <li>
-                <a href="../usuarios/usuarios.php">Visitas</a>
+                <a href="../usuarios/usuarios.php">Consultar</a>
             </li>
         </ul>
     </li>
@@ -133,7 +138,7 @@
         <div class="form-row container">
             <div class="col-md-6 col-lg-5">
                 <div class="input-group">
-                    <input type="search" name="dato" placeholder="Nobre de la persona"
+                    <input type="search" name="dato" placeholder="Nobre del asociado"
                         class="form-control shadow-sm border-0" autocomplete="off">
                     <div class="input-group-prepend bg-white p-0" style="z-index: 0;">
                         <button name="buscar" type="submit"
@@ -141,38 +146,39 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="bg-success text-white h4 py-10 rounded" href="./registrar_personas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
-        <div class="container-fluid" id="datos">
-            <table class='table table-sm table-hover gb-white shadow-sm'>
+                <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
+                    <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
                 <thead>
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
                         <th class='text-center'><small>Nombre</small></th>
-                        <th class='text-center'><small>Barrio</small></th>
-                        <th class='text-center'><small>Calle</small></th>
-                        <th class='text-center'><small>Número</small></th>
-                        <th class='text-center'><small>Estado</small></th>
-                        <th class='text-center'><small>Ciudad</small></th>
+                        <th class='text-center'><small>CI</small></th>
                         <th class='text-center'><small>Sexo</small></th>
-                        <th class='text-center'><small>Fecha de nacimiento</small></th>
+                        <th class='text-center'><small>Fecha de inscripción</small></th>
+                        <th class='text-center'><small>Direción</small></th>
                         <th class='text-center'><small>Teléfono</small></th>
-                        <th class='text-center'><small>Correo</small></th>
                         <th colspan='2' class='text-center'><small>Acciones</small></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    if (isset($_POST['buscar'])) {
+                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         require_once("../conexion/conexion.php");
                         $dato = $_POST['dato'];
                         $salida = "";
                         $query = "SELECT * FROM personas WHERE Nombre LIKE '$dato%' AND Activo=1";
-                        
+
                     } else {
                         require_once("../conexion/conexion.php");
                         $query = "SELECT * FROM personas WHERE activo=1";
-                        
+
                     }
                     $resultado = $conexion->query($query);
                     while ($fila = $resultado->fetch_assoc()) {
@@ -186,31 +192,19 @@
                                     <?php echo $fila['Nombre']; ?>
                                 </small></td>
                             <td><small>
-                                    <?php echo $fila['Barrio']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Calle']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Numero']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Estado']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Ciudad']; ?>
+                                    <?php echo $fila['CI']; ?>
                                 </small></td>
                             <td><small>
                                     <?php echo $fila['Sexo']; ?>
                                 </small></td>
                             <td><small>
-                                    <?php echo $fila['Fecha_nacimiento']; ?>
+                                    <?php echo $fila['Fecha_inscripcion']; ?>
+                                </small></td>
+                            <td><small>
+                                    <?php echo $fila['Direccion']; ?>
                                 </small></td>
                             <td><small>
                                     <?php echo $fila['Telefono']; ?>
-                                </small></td>
-                            <td><small>
-                                    <?php echo $fila['Correo']; ?>
                                 </small></td>
                             <td><a class="bg-primary py-1 rounded-lg"
                                     href="modificar_personas.php?id=<?php echo $fila['Id_persona'] ?>"><span
@@ -218,7 +212,7 @@
                             <td><a class="bg-danger py-1 rounded-lg" href="#" onclick="confirmar(<?php echo $id; ?>)"><span
                                         class='h6 text-white icofont-ui-delete px-1'></span></a></td>
                         </tr>
-                    <?php
+                        <?php
                     }
                     ?>
                 </tbody>
@@ -265,7 +259,7 @@
     function confirmar(id) {
         swal({
             title: "Advertecia!",
-            text: "¿Esta seguro de eliminar a la persona?",
+            text: "¿Esta seguro de eliminar al asociado?",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-primary ",
@@ -281,7 +275,7 @@
                 } else {
                     swal({
                         title: "Operación cancelada!",
-                        text: "La persona no fue eliminada",
+                        text: "El asociado no fue eliminado",
                         type: "error",
                         confirmButtonClass: "btn-primary",
                         confirmButtonText: "Volver",
@@ -296,7 +290,7 @@
         window.open("../reporte_libros/index.php", "Reporte de libros", "directories=no location=no");
     }
     function abrirReporte1() {
-        window.open("../reporte_personas/index.php", "Reporte de personas", "directories=no location=no");
+        window.open("../reporte_personas/index.php", "Reporte de asociado", "directories=no location=no");
     }
     function abrirReporte2() {
         window.open("../reporte_autores/index.php", "Reporte de autores", "directories=no location=no");

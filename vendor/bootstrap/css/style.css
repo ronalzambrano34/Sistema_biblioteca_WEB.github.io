@@ -184,6 +184,7 @@ a.article:hover {
     position: fixed;
     width: 100%;
     z-index: 1;
+    height: 10px;
 }
 .formulario{
  -webkit-box-shadow: 3px 6px 16px -8px rgba(0,0,0,0.75);

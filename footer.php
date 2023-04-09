@@ -8,7 +8,8 @@
       </div>
       <div class="col-md-4 text-white mt-3 mb-2">
         <div class="contaiter">
-          <a href="../conexion/desarolladores.php">Ronal Zambrano Ferrer</a>
+          <!-- <a href="../conexion/desarolladores.php">Ronal Zambrano Ferrer</a> -->
+          <a>Ronal Zambrano Ferrer</a>
           <br>
           <small>Version 3.1</small>
         </div>
