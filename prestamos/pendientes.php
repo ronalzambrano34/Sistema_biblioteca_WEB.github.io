@@ -7,10 +7,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="homeSubmenu">
             <li>
-                <a href="./libros/registrar_libros.php">Registrar</a>
+                <a href="../libros/registrar_libros.php">Registrar</a>
             </li>
             <li>
-                <a href="./libros/libros.php">Consultar</a>
+                <a href="../libros/libros.php">Consultar</a>
             </li>
             <li>
                 <a onClick='abrirReporte()' href="#">Reportes</a>
@@ -23,10 +23,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
-                <a href="./personas/registrar_personas.php">Registrar</a>
+                <a href="../personas/registrar_personas.php">Registrar</a>
             </li>
             <li>
-                <a href="./personas/personas.php">Consultar</a>
+                <a href="../personas/personas.php">Consultar</a>
             </li>
             <li>
                 <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
@@ -40,10 +40,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="autoresSubmenu">
             <li>
-                <a href="./autores/registrar_autores.php">Registrar</a>
+                <a href="../autores/registrar_autores.php">Registrar</a>
             </li>
             <li>
-                <a href="./autores/autores.php">Consultar</a>
+                <a href="../autores/autores.php">Consultar</a>
             </li>
             <li>
                 <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
@@ -57,10 +57,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="empleadosSubmenu">
             <li>
-                <a href="./empleados/registrar_empleados.php">Registrar</a>
+                <a href="../empleados/registrar_empleados.php">Registrar</a>
             </li>
             <li>
-                <a href="./empleados/empleados.php">Consultar</a>
+                <a href="../empleados/empleados.php">Consultar</a>
             </li>
             <li>
                 <a onClick='abrirReporte3()' href="#">Reportes</a>
@@ -74,10 +74,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="visitaSubmenu">
             <li>
-                <a href="./visitas/registrar_visitas.php">Registrar</a>
+                <a href="../visitas/registrar_visitas.php">Registrar</a>
             </li>
             <li>
-                <a href="./visitas/visitas.php">Consultar</a>
+                <a href="../visitas/visitas.php">Consultar</a>
             </li>
             <li>
                 <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
@@ -109,10 +109,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="puestoSubmenu">
             <li>
-                <a href="./puestos/registrar_puesto.php">Registrar</a>
+                <a href="../puestos/registrar_puesto.php">Registrar</a>
             </li>
             <li>
-                <a href="./puestos/puestos.php">Consultar</a>
+                <a href="../puestos/puestos.php">Consultar</a>
             </li>
         </ul>
     </li>
@@ -122,10 +122,10 @@
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="userSubmenu">
             <li>
-                <a href="./usuarios/registrar_usuarios.php">Registrar</a>
+                <a href="../usuarios/registrar_usuarios.php">Registrar</a>
             </li>
             <li>
-                <a href="./usuarios/usuarios.php">Consultar</a>
+                <a href="../usuarios/usuarios.php">Consultar</a>
             </li>
         </ul>
     </li>
