@@ -132,8 +132,8 @@
   <br><br><br><br>
   <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Nota:</strong> Dar clic en buscar empleados para saber el ID del empleado. <a class="text-dark"
-        data-toggle="modal" data-target="#staticBackdrop" href=""><b> Ver empleados</b></a>
+      <strong>Nota:</strong> Dar clic en buscar Asociados para saber el ID del Asociado. <a class="text-dark"
+        data-toggle="modal" data-target="#staticBackdrop" href=""><b> Ver Asociados</b></a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -146,7 +146,7 @@
         </label></center>
       <div class="form-row">
         <div class="col-sm-6 col-md-6 col-lg-2 mb-4">
-          <label for="validationCustom01">ID empleado</label>
+          <label for="validationCustom01">ID Asociados</label>
           <input type="number" class="form-control" id="validationCustom01" required name="id" placeholder="ID"
             maxlength="11">
           <div class="valid-feedback">
@@ -217,7 +217,7 @@ if (isset($_POST['registrar'])) {
   $usuario = $_POST['usuario'];
   $pass = $_POST['pass'];
 
-  $query = "INSERT INTO usuarios (Id_empleado,Nombre_usuario,Password) values($id,'$usuario','$pass')";
+  $query = "INSERT INTO usuarios (Id_persona,Nombre_usuario,Password) values($id,'$usuario','$pass')";
   $verificar = $conexion->query($query);
   if ($verificar) {
     echo '<script>
@@ -270,7 +270,7 @@ if (isset($_POST['registrar'])) {
   <div style="max-width: 90%;" class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Buscar Empleados</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Buscar Asociados</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -278,7 +278,7 @@ if (isset($_POST['registrar'])) {
       <div class="modal-body">
         <div class="row">
           <div class="col-md-4">
-            <label for="">Nombre del empleado</label>
+            <label for="">Nombre del asociado</label>
             <input type="search" class="form-control" name="buscar" id="buscar" placeholder="Jesús López"
               autocomplete="off">
           </div>
@@ -298,8 +298,8 @@ if (isset($_POST['registrar'])) {
 <script src="../vendor/jquery/jquery.min.js" type="text/javascript"></script>
 <!-- Bootstrap JS -->
 <script src="../vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../vendor/bootstrap/js/buscar_empleado.js" type="text/javascript"></script>
-<script src="../vendor/bootstrap/js/buscar_empleado1.js" type="text/javascript"></script>
+<script src="../vendor/bootstrap/js/buscar_persona.js" type="text/javascript"></script>
+<script src="../vendor/bootstrap/js/buscar_persona1.js" type="text/javascript"></script>
 <script>
   $(document).ready(function () {
     $('.toast').toast('show');

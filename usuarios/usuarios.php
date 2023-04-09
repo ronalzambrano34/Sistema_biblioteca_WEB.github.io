@@ -147,6 +147,11 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-6">
+                <div class=" d-flex justify-content-end">
+                    <a class="btn boton_nuevo" href="registrar_usuarios.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+                </div>
+            </div>
         </div>
         <br>
         <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
@@ -167,12 +172,10 @@
                     if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,empleados,usuarios WHERE personas.Id_persona=empleados.Id_persona
-                            AND usuarios.Id_empleado=empleados.Id_empleado AND personas.Nombre LIKE '$dato%'";
+                            FROM personas,usuarios WHERE usuarios.Id_usuario=personas.Id_persona AND personas.Nombre LIKE '$dato%'";
                     } else {
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,empleados,usuarios WHERE personas.Id_persona=empleados.Id_persona
-                            AND usuarios.Id_empleado=empleados.Id_empleado";
+                            FROM personas,usuarios WHERE usuarios.Id_usuario=personas.Id_persona";
                     }
                     $resultado = $conexion->query($query);
                     while ($fila = $resultado->fetch_assoc()) {

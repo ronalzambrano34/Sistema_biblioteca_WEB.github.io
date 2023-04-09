@@ -148,11 +148,10 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6">
-                <div class=" d-flex justify-content-end">
-                    <a class="bg-success text-white h4 py-10 rounded" href="../registrar_personas.php"><i
-                            class="p-2 icofont-plus">Nuevo</i></a>
-                </div>
-            </div>
+        <div class=" d-flex justify-content-end">
+          <a class="btn boton_nuevo" href="registrar_presonas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+        </div>
+      </div>
         </div>
         <br>
         <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">

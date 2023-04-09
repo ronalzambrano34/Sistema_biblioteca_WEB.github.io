@@ -140,8 +140,7 @@
         $id = $_REQUEST['id'];
         require_once("../conexion/conexion.php");
         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,empleados,usuarios WHERE personas.Id_persona=empleados.Id_persona
-                            AND usuarios.Id_empleado=empleados.Id_empleado AND usuarios.Id_usuario=$id";
+                            FROM personas,usuarios WHERE usuarios.Id_usuario=$id";
         $resultado = $conexion->query($query);
         $fila = $resultado->fetch_assoc();
         ?>

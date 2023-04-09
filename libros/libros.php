@@ -144,8 +144,7 @@
       </div>
       <div class="col-md-6 col-lg-6">
         <div class=" d-flex justify-content-end">
-          <a class="bg-success text-white h4 py-10 rounded p-1" href="../registrar_libros.php"><i
-              class="p-2 icofont-plus"> Nuevo</i></a>
+          <a class="btn boton_nuevo" href="registrar_libros.php"><i class="p-2 icofont-plus">Nuevo</i></a>
         </div>
       </div>
     </div>
