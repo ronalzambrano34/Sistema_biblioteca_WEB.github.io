@@ -65,7 +65,7 @@ if (!empty($_SESSION['active'])) {
 			require('conexion/conexion.php');
 			$user = mysqli_real_escape_string($conexion, $_POST['usuario']);
 			$pass = mysqli_real_escape_string($conexion, $_POST['pass']);
-			$query = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Nombre_usuario = '$user' AND Password = '$pass'");
+			$query = mysqli_query($conexion, "SELECT * FROM usuarios WHERE Nombre_usuario = '$user' AND Password = '$pass' AND Activo=1");
 			mysqli_close($conexion);
 			$resultado = mysqli_num_rows($query);
 			if ($resultado > 0) {
