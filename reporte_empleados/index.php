@@ -19,7 +19,7 @@ class PDF extends FPDF
         $this->Ln(20);
         $this->cell(25, 10, 'ID', 1, 0, 'C', 0);
         $this->cell(65, 10, 'Nombre', 1, 0, 'C', 0);
-        $this->cell(40, 10, utf8_decode('Contratación'), 1, 0, 'C', 0);
+        $this->cell(40, 10, iconv('UTF-8','windows-1252','Contratación'), 1, 0, 'C', 0);
         $this->cell(45, 10, 'Puesto', 1, 1, 'C', 0);
     }
 
@@ -31,7 +31,7 @@ class PDF extends FPDF
         // Arial italic 8
         $this->SetFont('Arial', 'I', 8);
         // Número de página
-        $this->Cell(0, 10, utf8_decode('Pagína ') . $this->PageNo() . '', 0, 0, 'C');
+        $this->Cell(0, 10, iconv('UTF-8','windows-1252','Pagína ') . $this->PageNo() . '', 0, 0, 'C');
     }
 }
 
@@ -46,9 +46,9 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'I', 9);
 while ($row = $resultado->fetch_assoc()) {
     $pdf->cell(25, 10, $row['Id_empleado'], 1, 0, 'C', 0);
-    $pdf->cell(65, 10, utf8_decode($row['Nombre']), 1, 0, 'C', 0);
+    $pdf->cell(65, 10, iconv('UTF-8','windows-1252',$row['Nombre']), 1, 0, 'C', 0);
     $pdf->cell(40, 10, $row['Fecha_contratacion'], 1, 0, 'C', 0);
-    $pdf->cell(45, 10, utf8_decode($row['Descripcion']), 1, 1, 'C', 0);
+    $pdf->cell(45, 10, iconv('UTF-8','windows-1252',$row['Descripcion']), 1, 1, 'C', 0);
 }
 $pdf->Output();
 ?>

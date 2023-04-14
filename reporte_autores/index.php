@@ -30,7 +30,7 @@ class PDF extends FPDF
         // Arial italic 8
         $this->SetFont('Arial', 'I', 8);
         // Número de página
-        $this->Cell(0, 10, utf8_decode('Pagína ') . $this->PageNo() . '', 0, 0, 'C');
+        $this->Cell(0, 10, iconv('UTF-8','windows-1252','Pagína ') . $this->PageNo() . '', 0, 0, 'C');
     }
 }
 
@@ -43,8 +43,8 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'I', 9);
 while ($row = $resultado->fetch_assoc()) {
     $pdf->cell(25, 10, $row['Id_autor'], 1, 0, 'C', 0);
-    $pdf->cell(65, 10, utf8_decode($row['Nombre']), 1, 0, 'C', 0);
-    $pdf->cell(75, 10, utf8_decode($row['Titulo']), 1, 1, 'C', 0);
+    $pdf->cell(65, 10, iconv('UTF-8','windows-1252',$row['Nombre']), 1, 0, 'C', 0);
+    $pdf->cell(75, 10, iconv('UTF-8','windows-1252',$row['Titulo']), 1, 1, 'C', 0);
 }
 $pdf->Output();
 ?>
