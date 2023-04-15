@@ -122,7 +122,6 @@ if ($id == null || $id = '') {
                         </li>
                     </ul>
                 </li>
-
                 <li class="Visitas">
                     <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                             class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
