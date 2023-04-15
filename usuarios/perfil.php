@@ -133,8 +133,8 @@
   <div class="bg-white rounded-lg formulario">
     <?php
     require_once("../conexion/conexion.php");
-    $query = "SELECT * FROM empleados,personas,usuarios WHERE personas.Id_persona=empleados.Id_persona AND
-                usuarios.Id_empleado=empleados.Id_empleado AND usuarios.Id_usuario=$usuario";
+    $id = $_SESSION['Id_usuario'];
+    $query = "SELECT	usuarios.Id_usuario, personas.* FROM	personas,	usuarios WHERE	usuarios.Id_usuario=$id";
     $resultado = $conexion->query($query);
     $fila = $resultado->fetch_assoc();
     ?>
@@ -143,10 +143,10 @@
           <h4>INFORMACIÓN PERSONAL</h4>
         </label></center>
       <div class="form-row">
-        <div class="col-sm-12 col-md-12 col-lg-6 mb-4">
-          <label for="validationCustom01">Nombre</label>
-          <input type="text" class="form-control" id="validationCustom01" required name="nombre" placeholder="Nombre"
-            value="<?php echo $fila['Nombre'] ?>"
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+          <label for="validationCustom01">Nombre completo</label>
+          <input type="text" class="form-control" id="validationCustom01" required name="nombre"
+            value="<?php echo $fila['Nombre'] ?>" placeholder="Nombre completo"
             pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="40">
           <div class="valid-feedback">
@@ -156,64 +156,11 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom03">Barrio</label>
-          <input type="text" class="form-control" id="validationCustom03" name="barrio" disabled required
-            value="<?php echo $fila['Barrio'] ?>" placeholder="Barrio"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="16">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom04">Calle</label>
-          <input type="text" class="form-control" id="validationCustom04" name="calle" disabled required
-            value="<?php echo $fila['Calle'] ?>" placeholder="Calle"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="16">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom05">Número de casa</label>
-          <input type="text" class="form-control" id="validationCustom05" name="numero" disabled required
-            value="<?php echo $fila['Numero'] ?>" placeholder="Número de casa" pattern="[0-9]+" maxlength="3">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom06">Estado</label>
-          <input type="text" class="form-control" id="validationCustom06" name="estado" disabled required
-            value="<?php echo $fila['Estado'] ?>" placeholder="Estado"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="18">
-          <div class="valid-feedback">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom07">Ciudad</label>
-          <input type="text" class="form-control" id="validationCustom07" name="ciudad" disabled required
-            value="<?php echo $fila['Ciudad'] ?>" placeholder="Ciudad"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="18">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+          <label for="validationCustom04">Carnet de Indentidad</label>
+          <input type="text" class="form-control" id="validationCustom04" required name="ci"
+            value="<?php echo $fila['CI'] ?>" placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11"
+            maxlength="11">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -222,8 +169,8 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom08">Sexo</label>
-          <select class="form-control" id="validationCustom08" required name="sexo">
+          <label for="validationCustom07">Sexo</label>
+          <select class="form-control" id="validationCustom07" required name="sexo">
             <option value="<?php echo $fila['Sexo'] ?>"><?php echo $fila['Sexo'] ?></option>
             <?php
             $sexo = $fila['Sexo'];
@@ -242,11 +189,24 @@
           </div>
         </div>
       </div>
+
       <div class="form-row">
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom09">Fecha de nacimiento</label>
-          <input type="date" class="form-control" id="validationCustom09" name="fecha" required
-            value="<?php echo $fila['Fecha_nacimiento'] ?>">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+          <label for="validationCustom08">Fecha de inscripción</label>
+          <input type="date" class="form-control" id="validationCustom08" disabled required name="fecha_inscripcion"
+            value="<?php echo $fila['Fecha_inscripcion'] ?>">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor Coloca una fecha.
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+          <label for="validationCustom01">Dirección</label>
+          <input type="text" class="form-control" id="validationCustom01" name="direccion"
+            value="<?php echo $fila['Direccion'] ?>" placeholder="Opcional" pattern="[0-9 a-z A-Z / # ,.'-]+"
+            maxlength="40">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -254,40 +214,29 @@
             Porfavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom10">Teléfono</label>
-          <input type="tel" class="form-control" id="validationCustom10" name="telefono" required
-            value="<?php echo $fila['Telefono'] ?>" placeholder="Teléfono" pattern="[0-9]{8,10}">
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+          <label for="validationCustom09">Teléfono</label>
+          <input type="tel" class="form-control" id="validationCustom09" name="telefono"
+            value="<?php echo $fila['Telefono'] ?>" placeholder="Telefono" pattern="[0-9]{8,10}" maxlength=8>
           <div class="valid-feedback">
             Correcto!
           </div>
           <div class="invalid-feedback">
-            Porfavor rellena el campo.
+            Profavor rellena el campo.
           </div>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom11">Correo</label>
-          <input type="text" class="form-control" id="validationCustom11" name="correo" disabled required
-            value="<?php echo $fila['Correo'] ?>" placeholder="Correo" maxlength="50"
-            pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+
+        <!-- <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
+          <label for="validationCustom10">Correo</label>
+          <input type="email" class="form-control" id="validationCustom10" name="correo" placeholder="Correo"
+            maxlength="50" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
           <div class="valid-feedback">
             Correcto!
           </div>
           <div class="invalid-feedback">
-            Porfavor rellena el campo.
+            Profavor coloca un correo valido.
           </div>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
-          <label for="validationCustom12">Usuario</label>
-          <input type="text" class="form-control" id="validationCustom12" name="usuario" required
-            value="<?php echo $fila['Nombre_usuario'] ?>" autocomplete="off">
-          <div class="valid-feedback" placeholder="Usuario" pattern="[a-zA-Z0-9]+" maxlength="16">
-            Correcto!
-          </div>
-          <div class="invalid-feedback">
-            Porfavor rellena el campo.
-          </div>
-        </div>
+        </div> -->
       </div>
       <button class="btn btn-warning text-white" type="submit" name="registrar">Actualizar</button>
     </form>
