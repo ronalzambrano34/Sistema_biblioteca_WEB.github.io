@@ -1,1 +1,27 @@
-ajustar las tablas como la de visitas.php
+V1 GRATIS
+Mostrar a los clientes, las ventajas de los sistemas informatizados.
+Ayudar al trabajador en el control de la biblioteca.
+
+
+-Permitir la gestión de préstamos y devoluciones de manera más eficiente y precisa.
+-Ofrecer una búsqueda rápida y precisa de los materiales disponibles en la biblioteca.
+-Proporcionar estadísticas precisas sobre el uso de los materiales de la biblioteca.
+-Facilitar la gestión de compras y adquisiciones de nuevos materiales para la biblioteca.
+-Permitir la personalización de las búsquedas y recomendaciones de materiales para cada usuario.
+-Facilitar la comunicación entre los usuarios y el personal de la biblioteca a través de la plataforma en línea.
+-Ofrecer una experiencia más moderna y actualizada a los usuarios de la biblioteca.
+
+
+Mejorar la gestión de la biblioteca a través de un sistema informático eficiente, ofreciendo una experiencia moderna y actualizada a los usuarios, permitiendo una búsqueda rápida y precisa de los materiales disponibles, estadísticas precisas sobre su uso, personalización de las búsquedas y recomendaciones para cada usuario, comunicación fácil entre usuarios y personal, y facilitando la gestión de préstamos, devoluciones, compras y adquisiciones de nuevos materiales. Además, se ayuda al personal de la biblioteca en el control y gestión de los materiales.
+
+V2 PAGO
+Funcionalidad de Roles de usuarios activos:
+Los usuarios admin podrán elegir los permisos de lectura (ver) y escritura (modificar) de los trabajadores.
+
+Encriptar las contraseñas en la base de datos.
+
+Adaptar/modificar el sistema para las necesidades del cliente.
+
+
+V3 IDEAS FUTURAS
+implementar la venta gestion y venta de libros electrónicos
