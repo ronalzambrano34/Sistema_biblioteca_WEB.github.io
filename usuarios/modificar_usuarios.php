@@ -146,7 +146,9 @@
         <form class="p-4 needs-validation" action="realizar_edicion.php?id=<?php echo $fila['Id_usuario'] ?>"
             method="POST" novalidate>
             <center><label for="">
-                    <h4>ACTUALIZAR USUARIOS</h4>
+                    <h4>ACTUALIZAR USUARIOS <sup class="btn bg-info">#
+              <?php echo $fila['Id_persona'] ?>
+            </sup></h4>
                 </label></center>
             <div class="form-row">
                 <div class="col-md-6 col-lg-5 mb-4" id="caja">

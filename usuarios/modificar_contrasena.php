@@ -192,6 +192,7 @@ if (isset($_POST['registrar'])) {
   $pass = $_POST['pass'];
   $pass1 = $_POST['pass1'];
   if ($pass == $pass1) {
+    $usuario = $_SESSION['Id_usuario'];
     $query = "UPDATE usuarios SET Password='$pass1' WHERE Id_usuario=$usuario";
     $verificar = $conexion->query($query);
     if ($verificar) {

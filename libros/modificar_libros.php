@@ -148,7 +148,9 @@
     <form class="p-4 needs-validation" action="realizar_edicion.php?id=<?php echo $fila['Id_libro'] ?>" method="POST"
       novalidate>
       <center><label for="">
-          <h4>ACTUALIZAR LIBROS</h4>
+          <h4>ACTUALIZAR LIBROS <sup class="btn bg-info">#
+              <?php echo $fila['Id_libro'] ?>
+            </sup></h4>
         </label></center>
       <div class="form-row">
         <div class="col-md-4 col-lg-4 mb-4">

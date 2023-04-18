@@ -148,7 +148,9 @@
         <form class="p-4 needs-validation" action="realizar_edicion.php?id=<?php echo $fila['Id_empleado'] ?>"
             method="POST" novalidate>
             <center><label class="mt-2" for="">
-                    <h4>ACTUALIZAR EMPLEADOS</h4>
+                    <h4>ACTUALIZAR EMPLEADOS<sup class="btn bg-info">#
+              <?php echo $fila['Id_empleado'] ?>
+            </sup></h4>
                 </label></center>
             <div class="form-row">
                 <div class="col-md-6 col-lg-6 mb-4">

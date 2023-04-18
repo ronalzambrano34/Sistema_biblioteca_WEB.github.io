@@ -153,7 +153,9 @@
             method="POST" novalidate>
             <div class="bg-white bg-white rounded-lg shadow-sm p-3">
                 <center><label for="">
-                        <h4>ACTUALIZAR PRESTAMOS</h4>
+                        <h4>ACTUALIZAR PRESTAMOS <sup class="btn bg-info">#
+              <?php echo $fila['Id_prestamo'] ?>
+            </sup></h4>
                     </label></center>
                 <div class="form-row">
                     <div class="col-sm-12 col-md-6 col-lg-6 mb-4">
