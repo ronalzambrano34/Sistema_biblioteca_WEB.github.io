@@ -19,6 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a data-toggle="modal" data-target="#exampleModalScrollable2" class="text-white h5 nav-link"
+                            href="#" title="white list"><i class="mr-2 icofont-chart-histogram-alt "></i></a>
+                    </li>
+                    <li class="nav-item">
                         <a data-toggle="modal" data-target="#exampleModalScrollable1" class="text-white h5 nav-link"
                             href="#" title="Nuestra empresa"><i class="mr-2 icofont-building-alt"></i></a>
                     </li>

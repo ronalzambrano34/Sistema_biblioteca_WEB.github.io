@@ -1,18 +1,16 @@
 V1 GRATIS
-Mostrar a los clientes, las ventajas de los sistemas informatizados.
-Ayudar al trabajador en el control de la biblioteca.
+MISION: Dar a conocer al personal de la biblioteca, la ventaja de la tecnología y los Sistemas informatizados.
+
+OBJETIVO: Mejorar la gestión de la biblioteca a través de un sistema informático eficiente, ofreciendo una experiencia moderna y actualizada a los usuarios, permitiendo una búsqueda rápida y precisa de los materiales disponibles, estadísticas precisas sobre su uso, personalización de las búsquedas y recomendaciones para cada usuario, comunicación fácil entre usuarios y personal, y facilitando la gestión de préstamos, devoluciones, compras y adquisiciones de nuevos materiales. Además, se ayuda al personal de la biblioteca en el control y gestión de los materiales.
 
 
 -Permitir la gestión de préstamos y devoluciones de manera más eficiente y precisa.
 -Ofrecer una búsqueda rápida y precisa de los materiales disponibles en la biblioteca.
 -Proporcionar estadísticas precisas sobre el uso de los materiales de la biblioteca.
 -Facilitar la gestión de compras y adquisiciones de nuevos materiales para la biblioteca.
--Permitir la personalización de las búsquedas y recomendaciones de materiales para cada usuario.
+<!-- -Permitir la personalización de las búsquedas y recomendaciones de materiales para cada usuario. -->
 -Facilitar la comunicación entre los usuarios y el personal de la biblioteca a través de la plataforma en línea.
 -Ofrecer una experiencia más moderna y actualizada a los usuarios de la biblioteca.
-
-
-Mejorar la gestión de la biblioteca a través de un sistema informático eficiente, ofreciendo una experiencia moderna y actualizada a los usuarios, permitiendo una búsqueda rápida y precisa de los materiales disponibles, estadísticas precisas sobre su uso, personalización de las búsquedas y recomendaciones para cada usuario, comunicación fácil entre usuarios y personal, y facilitando la gestión de préstamos, devoluciones, compras y adquisiciones de nuevos materiales. Además, se ayuda al personal de la biblioteca en el control y gestión de los materiales.
 
 V2 PAGO
 Funcionalidad de Roles de usuarios activos:
@@ -24,4 +22,53 @@ Adaptar/modificar el sistema para las necesidades del cliente.
 
 
 V3 IDEAS FUTURAS
-implementar la venta gestion y venta de libros electrónicos
+Implementar la venta gestión y venta de libros digitales.
+Agregar monedero virtual a los asociados.
+
+
+reloj
+							<div class="clock">
+								<div class="date">
+									<script type="text/javascript">
+										//<![CDATA[
+										function makeArray() {
+											for (i = 0; i < makeArray.arguments.length; i++)
+												this[i + 1] = makeArray.arguments[i];
+										}
+										var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo',
+											'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+										var date = new Date();
+										var day = date.getDate();
+										var month = date.getMonth() + 1;
+										var yy = date.getYear();
+										var year = (yy < 1000) ? yy + 1900 : yy;
+										document.write(day + " / " + months[month] + " / " + year);
+										//]]>
+									</script>
+								</div>
+
+								<div id="time">
+									<script type="text/javascript">
+										function startTime() {
+											today = new Date();
+											h = today.getHours();
+											m = today.getMinutes();
+											s = today.getSeconds();
+											m = checkTime(m);
+											s = checkTime(s);
+											document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+											t = setTimeout('startTime()', 500);
+										}
+
+										function checkTime(i) {
+											if (i < 10) {
+												i = "0" + i;
+											}
+											return i;
+										}
+										window.onload = function() {
+											startTime();
+										}
+									</script>
+								</div>
+							</div>

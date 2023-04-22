@@ -1,4 +1,3 @@
-
 <footer class=" ">
   <div class="container-fluid text-center">
     <div class="row">
@@ -94,6 +93,7 @@
     </div>
   </div>
 </div>
+
 <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog"
   aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -152,6 +152,121 @@
                   registro de los libros que puedan estar dañados y así hacer una petición de
                   cambios.</small>
                 <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-light">
+        <h5 class="modal-title icofont-abc h2" id="exampleModalScrollableTitle"> Acerca de ...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-light">
+        <div class="row">
+          <div class="col-sm-12 mb-3">
+
+            <div class="card bg-white">
+              <div class="card-header text-white bg-info icofont-tree h2"><small> Misión</small></div>
+              <div class="card-body">
+                <!-- <h5 class="card-title"></h5> -->
+                <small class="card-text"><b> Dar a conocer</b> al personal de la biblioteca, las <b>ventajas</b> de la
+                  tecnología
+                  y los <b>Sistemas informatizados</b>.</small>
+              </div>
+            </div>
+
+            <div class="card bg-white">
+              <div class="card-header text-white bg-info icofont-chart-histogram h2"><small> Objetivo</small></div>
+              <div class="card-body">
+                <!-- <h5 class="card-title"></h5> -->
+                <small class="card-text">Mejorar la gestión de la biblioteca a través de un sistema informático
+                  eficiente, ofreciendo
+                  una experiencia moderna y actualizada a los usuarios, permitiendo una búsqueda rápida y precisa de los
+                  materiales disponibles, estadísticas precisas sobre su uso, personalización de las búsquedas y
+                  recomendaciones para cada usuario, comunicación fácil entre usuarios y personal, y facilitando la
+                  gestión de préstamos, devoluciones, compras y adquisiciones de nuevos materiales. Además, se ayuda al
+                  personal de la biblioteca en el control y gestión de los materiales..</small>
+              </div>
+            </div>
+
+          </div>
+          <!-- <div class="m-2"></div> -->
+
+          <div class="col-sm-12">
+            <div class="card bg-dark">
+              <div class="card-header text-white bg-dark text-center icofont-tasks h2"><small> Lista Blanca</small>
+              </div>
+              <div class="row">
+
+                <div class="col-sm-6">
+                  <div class="card m-1 mb-3 text-white bg-danger">
+                    <div class="card-header icofont-telescope h2"><small> Versión 1.</small></div>
+                    <div class="card-body">
+                      <!-- <h5 class="card-title"></h5> -->
+                      <p class="card-text">
+                        <summary>Permitir la gestion de libros, prestamos y asociados.</b></summary>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="card m-1 mb-3 text-white bg-warning">
+                    <div class="card-header icofont-telescope h2"><small> Versión 2.</small></div>
+                    <div class="card-body">
+                      <!-- <h5 class="card-title"></h5> -->
+                      <p class="card-text">
+                      <summary>Arreglar errores encontrados.</summary>
+                        <summary>Ofrecer una búsqueda rápida y precisa de los materiales disponibles en la
+                          biblioteca.</b></summary>
+                        <summary>Proporcionar <b>estadísticas precisas</b>  sobre el uso de los materiales de la biblioteca.</summary>
+                        <summary>Mejorar <b>disaño</b>, para ofrecer un entorno <b>más agradable</b> para el usuario.</summary>
+                        <summary>Agregar portal de usuario con <b>usuario y contraseña</b>.</summary>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="card m-1 mb-3 text-white bg-success ">
+                    <div class="card-header icofont-brainstorming h2"><small> V4</small></div>
+                    <div class="card-body  text-white">
+                      <!-- <h5 class="card-title"></h5> -->
+                      <p class="card-text">
+                        <summary>Desbloquear la funcionalidad <b>Reportes</b>.</summary>
+                        <summary><b>Funcionalidad de Roles de usuarios activos:</b><br>
+                          <cite> Los usuarios <b>Admin</b> podrán elegir los permisos de <b>lectura (Ver)</b> y
+                            <b>escritura (Modificar/Eliminar)</b> de los trabajadores.</cite>
+                        </summary>
+                        <summary>Encriptar las contraseñas en la base de datos.</summary>
+                        <summary>Adaptar/modificar el sistema para las necesidades del cliente.</summary>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card m-1 mb-3 text-white bg-primary">
+                    <div class="card-header icofont-telescope h2"><small> Futuro.</small></div>
+                    <div class="card-body">
+                      <!-- <h5 class="card-title"></h5> -->
+                      <p class="card-text">
+                        <summary>Implementar la gestión y venta de <b>libros digitales.</b></summary>
+                        <summary>Agregar <b>monedero virtual</b> a los asociados.</summary>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
