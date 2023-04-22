@@ -194,7 +194,7 @@
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
           <label for="validationCustom06">Hora de entrada</label>
-          <input type="time" class="form-control" id="validationCustom06" required name="entrada">
+          <input type="time" class="form-control" id="validationCustom06" name="entrada">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -204,7 +204,7 @@
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
           <label for="validationCustom07">Hora de salida</label>
-          <input type="time" class="form-control" id="validationCustom07" required name="salida">
+          <input type="time" class="form-control" id="validationCustom07" name="salida">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -459,6 +459,20 @@ if (isset($_POST['registrar'])) {
   }
   function abrirReporte5() {
     window.open("../reporte_prestamos/index.php", "Reporte de prestamos", "directories=no location=no");
+  }
+</script>
+
+<script>
+  window.onload = function () {
+    var fecha = new Date(); //Fecha actual
+    var mes = fecha.getMonth() + 1; //obteniendo mes
+    var dia = fecha.getDate(); //obteniendo dia
+    var ano = fecha.getFullYear(); //obteniendo año
+    if (dia < 10)
+      dia = '0' + dia; //agrega cero si el menor de 10
+    if (mes < 10)
+      mes = '0' + mes //agrega cero si el menor de 10
+    document.getElementById('validationCustom05').value = ano + "-" + mes + "-" + dia;
   }
 </script>
 </body>
