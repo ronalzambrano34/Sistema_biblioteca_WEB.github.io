@@ -148,7 +148,7 @@
             </div>
             <div class="col-md-6 col-lg-6">
         <div class=" d-flex justify-content-end">
-          <a class="btn boton_nuevo" href="registrar_presonas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
+          <a class="btn boton_nuevo" href="registrar_personas.php"><i class="p-2 icofont-plus">Nuevo</i></a>
         </div>
       </div>
         </div>

@@ -146,7 +146,19 @@
           <h4>REGISTRAR ASOCIADO</h4>
         </label></center>
       <div class="form-row">
-        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+
+        <div class="col-sm-6 col-md-4 col-lg-1 mb-3">
+          <label for="validationCustom04">ID</label>
+          <input type="text" class="form-control" id="validationCustom04" required name="id"
+            placeholder="ID" pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-4 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
@@ -186,20 +198,6 @@
         </div>
       </div>
 
-      <!-- <script>
-        window.onload = function () {
-          var fecha = new Date(); //Fecha actual
-          var mes = fecha.getMonth() + 1; //obteniendo mes
-          var dia = fecha.getDate(); //obteniendo dia
-          var ano = fecha.getFullYear(); //obteniendo año
-          if (dia < 10)
-            dia = '0' + dia; //agrega cero si el menor de 10
-          if (mes < 10)
-            mes = '0' + mes //agrega cero si el menor de 10
-          document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
-        }
-      </script> -->
-
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom08">Fecha de inscripción</label>
@@ -222,8 +220,6 @@
             Porfavor rellena el campo.
           </div>
         </div>
-
-
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom09">Teléfono</label>
           <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="telefono"
