@@ -219,7 +219,7 @@
             Porfavor rellena el campo.
           </div>
         </div>
-      <!-- </div>
+        <!-- </div>
       <div class="form-row"> -->
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom03">Lugar</label>
@@ -298,10 +298,37 @@ if (isset($_POST['registrar'])) {
   $Cant_pag = $_POST['cant_pag'];
   $Materia = $_POST['materia'];
 
-  $query = "INSERT INTO libros (Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
-  $verificar = $conexion->query($query);
-  if ($verificar) {
+  // Validar que el ID no exista en la tabla
+  $sql = "SELECT * FROM libros WHERE Titulo = '$Titulo'";
+  $result = mysqli_query($conexion, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    // El ID ya existe en la tabla, mostrar mensaje de error
     echo '<script>
+    swal({
+    title: "Operación fallida",
+    text: "El Titulo ya existe en la tabla!",
+    type: "error",
+    showCancelButton: true,
+    cancelButtonClass: "btn-warning",
+    cancelButtonText: "Intentar de nuevo",
+    confirmButtonClass: "btn-success",
+    confirmButtonText: "Ver asociados",
+    closeOnConfirm: false
+  },
+  function(isConfirm) {
+      if (isConfirm) {
+        window.location="personas.php";
+      } else {
+        window.location="registrar_personas.php";
+      }
+    });
+    </script>';
+  } else {
+    // Insertar los datos en la tabla
+    $query = "INSERT INTO libros (Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
+    $verificar = $conexion->query($query);
+    if ($verificar) {
+      echo '<script>
                     swal({
                     title: "Operación exitosa",
                     text: "El libro fue registrado correctamente!",
@@ -321,8 +348,8 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
-  } else {
-    echo '<script>
+    } else {
+      echo '<script>
                     swal({
                     title: "Operación fallida",
                     text: "Ocurrio un error al registrar el libro!",
@@ -342,6 +369,7 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
+    }
   }
 }
 ?>
