@@ -234,9 +234,9 @@ if (isset($_POST['registrar'])) {
   },
   function(isConfirm) {
       if (isConfirm) {
-        window.location="personas.php";
+        window.location="autores.php";
       } else {
-        window.location="registrar_personas.php";
+        window.location="registrar_autores.php";
       }
     });
     </script>';
