@@ -146,7 +146,6 @@
           <h4>REGISTRAR ASOCIADO</h4>
         </label></center>
       <div class="form-row">
-
         <div class="col-sm-6 col-md-4 col-lg-1 mb-3">
           <label for="validationCustom04">ID</label>
           <input type="text" class="form-control" id="validationCustom04" required name="id" placeholder="ID"
@@ -197,7 +196,6 @@
           </div>
         </div>
       </div>
-
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom08">Fecha de inscripción</label>

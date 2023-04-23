@@ -134,7 +134,7 @@
     <?php
     require_once("../conexion/conexion.php");
     $id = $_SESSION['Id_usuario'];
-    $query = "SELECT	usuarios.Id_usuario, personas.* FROM	personas,	usuarios WHERE	usuarios.Id_usuario=$id";
+    $query = "SELECT usuarios.Id_usuario,personas.* FROM personas, usuarios WHERE usuarios.Id_persona = personas.Id_persona AND usuarios.Id_usuario = $id";
     $resultado = $conexion->query($query);
     $fila = $resultado->fetch_assoc();
     ?>
@@ -269,28 +269,28 @@
 <?php
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
+  // $nombre = $_POST['nombre'];
+  // $sexo = $_POST['sexo'];
+  // $fecha = $_POST['fecha'];
+  // $correo = $_POST['correo'];
+  // $telefono = $_POST['telefono'];
   $nombre = $_POST['nombre'];
-  $calle = $_POST['calle'];
-  $barrio = $_POST['barrio'];
-  $numero = $_POST['numero'];
-  $estado = $_POST['estado'];
-  $ciudad = $_POST['ciudad'];
+  $ci = $_POST['ci'];
   $sexo = $_POST['sexo'];
-  $fecha = $_POST['fecha'];
+  $fecha = $_POST['fecha_inscripcion'];
+  $direccion = $_POST['direccion'];
   $telefono = $_POST['telefono'];
-  $correo = $_POST['correo'];
   $user = $_POST['usuario'];
   //se hace la busqueda del ID de la persona
-  $buscar = "SELECT personas.Id_persona FROM personas,empleados,usuarios WHERE
-                personas.Id_persona=empleados.Id_persona AND empleados.Id_empleado=usuarios.Id_empleado
-                AND usuarios.Id_usuario=$usuario";
+  $id_usuario = $_SESSION['Id_usuario'];
+  $buscar = "SELECT personas.Id_persona FROM personas,usuarios WHERE personas.Id_persona = usuarios.Id_persona AND usuarios.Id_usuario =$id_usuario";
   $resultado = $conexion->query($buscar);
   $fila = $resultado->fetch_assoc();
   $persona_id = $fila['Id_persona'];
   //fin
-  $query = "UPDATE personas SET Nombre='$nombre',Calle='$calle',Barrio='$barrio',Numero='$numero',Estado='$estado',Ciudad='$ciudad',Sexo='$sexo',Fecha_nacimiento='$fecha',Telefono='$telefono',Correo='$correo' WHERE Id_persona=$persona_id";
+  $query = "UPDATE personas SET Nombre='$nombre',CI='$ci',Sexo='$sexo',Fecha_inscripcion='$fecha',Direccion='$direccion',Telefono='$telefono' WHERE Id_persona=$persona_id";
   $verificar = $conexion->query($query);
-  $query1 = "UPDATE usuarios SET Nombre_usuario='$user' WHERE Id_usuario=$usuario";
+  $query1 = "UPDATE usuarios SET Nombre_usuario='$user' WHERE Id_usuario=$id_usuario";
   $verificar1 = $conexion->query($query1);
   if ($verificar) {
     echo '<script>
