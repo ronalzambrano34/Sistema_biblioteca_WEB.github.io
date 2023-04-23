@@ -229,7 +229,7 @@
                     <div class="card-body">
                       <!-- <h5 class="card-title"></h5> -->
                       <p class="card-text">
-                        <summary>Mejorar <b>disaño</b>, para ofrecer un entorno <b>más agradable</b> para el usuario.
+                        <summary>Mejorar <b>diseño</b>, para ofrecer un entorno <b>más agradable</b> para el usuario.
                         </summary>
                         <summary>Ofrecer una búsqueda rápida y precisa de los materiales disponibles en la
                           biblioteca.</b></summary>

@@ -42,7 +42,7 @@ $pdf->Image('../images/logo1.png', 10, 8, 40);
 // Movernos a la derecha
 $pdf->Cell(80);
 // Título
-$pdf->Cell(110, 10, iconv('UTF-8','windows-1252','Librería Catedral'), 1, 0, 'C');
+$pdf->Cell(110, 10, iconv('UTF-8','windows-1252','Biblioteca Catedral'), 1, 0, 'C');
 // Salto de línea
 $pdf->Ln(20);
 // Movernos a la derecha

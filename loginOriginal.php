@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Librería Catedral</title>
+	<title>Biblioteca Catedral</title>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -21,7 +21,7 @@
 		<div class="d-none d-sm-none d-md-block d-lg-block  col-md-7 col-lg-8 p-0">
 			<img src="images/fondo.jpg" class="w-100 vh-100" alt="">
 			<div class="carousel-caption d-none d-md-block">
-				<h5>Librería Catedral</h5>
+				<h5>Biblioteca Catedral</h5>
 				<p class="text-white">Deja que un libro descubra quien eres</p>
 			</div>
 		</div>

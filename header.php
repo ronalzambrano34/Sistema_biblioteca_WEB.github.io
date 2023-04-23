@@ -15,9 +15,6 @@
                 <i class="fas fa-align-justify"></i>
                 <span class="text-white h3 icofont-circled-down"></span>
             </button>
-
-
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <!-- <?php require_once("conexion/clock.php") ?> -->

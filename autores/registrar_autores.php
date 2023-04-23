@@ -169,7 +169,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <label for="validationCustom02">Año de Muerte</label>
-          <input type="number" class="form-control" id="validationCustom02" name="Muerte" placeholder="Muerte"
+          <input type="number" class="form-control" id="validationCustom03" name="Muerte" placeholder="Muerte"
             pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
             Correcto!

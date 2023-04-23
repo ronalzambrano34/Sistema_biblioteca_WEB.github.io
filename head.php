@@ -30,7 +30,7 @@ if ($id == null || $id = '') {
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Librería Catedral</title>
+    <title>Biblioteca Catedral</title>
 
     <!--ICO-->
     <link rel="icon" href="images/logo.png" sizes="32x32" />
@@ -51,7 +51,7 @@ if ($id == null || $id = '') {
         <nav id="sidebar">
             <div class="sidebar-header">
                 <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45"
-                            src="images/logo.png" alt="">Librería
+                            src="images/logo.png" alt="">Biblioteca
                         <b>Catedral</b></a>
                 </div>
             </div>

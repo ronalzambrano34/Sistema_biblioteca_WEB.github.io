@@ -172,16 +172,15 @@
                     if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,usuarios WHERE usuarios.Id_usuario=personas.Id_persona AND personas.Nombre LIKE '$dato%'";
+                            FROM personas,usuarios WHERE usuarios.Id_persona=personas.Id_persona AND personas.Nombre LIKE '$dato%'";
                     } else {
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,usuarios WHERE usuarios.Id_usuario=personas.Id_persona";
+                            FROM personas,usuarios WHERE usuarios.Id_persona=personas.Id_persona";
                     }
                     $resultado = $conexion->query($query);
                     while ($fila = $resultado->fetch_assoc()) {
                         $id = $fila['Id_usuario'];
                         ?>
-
                         <tr class='text-center'>
                             <?php
                             $activo = $fila['Activo'];
@@ -212,7 +211,6 @@
                         </tr>
                         <?php
                     }
-
                     ?>
                 </tbody>
             </table>
