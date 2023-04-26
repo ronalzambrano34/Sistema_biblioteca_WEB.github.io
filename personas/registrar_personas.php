@@ -148,13 +148,13 @@
     <form class="p-4 needs-validation" action="registrar_personas.php" method="POST">
       <center><label class="mt-2" for="">
           <h4>REGISTRAR ASOCIADO <sup class="btn color text-white">#
-              <?php echo $next_id[0] ?>
+              <?php echo $next_id[0]+1 ?>
             </sup></h4>
         </label></center>
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-1 mb-3">
           <label for="validationCustom04">ID</label>
-          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] ?>" required
+          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] +1?>" required
             name="id" placeholder="ID" pattern="[0-9]+">
           <div class="valid-feedback">
             Correcto!
