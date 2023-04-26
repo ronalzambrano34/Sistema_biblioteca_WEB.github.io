@@ -211,7 +211,7 @@
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom02">Año de edición</label>
           <input type="text" class="form-control" id="validationCustom02" required name="anno"
-            placeholder="Año de edición" pattern="[0-9]{4}">
+            placeholder="Año de edición" pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
             Correcto!
           </div>
