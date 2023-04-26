@@ -206,7 +206,7 @@
           </div>
           <div class="col-sm-6 col-md-4 mb-3">
             <label for="validationCustom07">Estatus</label>
-            <select class="form-control" name="estatus" id="validationCustom07" required>
+            <select class="form-control" name="estatus" id="validationCustom07" disabled required>
               <option value="" disabled>Elige una opción</option>
               <option value="Pendiente" selected>Pendiente</option>
 
