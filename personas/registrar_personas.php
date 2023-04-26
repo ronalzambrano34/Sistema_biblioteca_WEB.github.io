@@ -140,7 +140,7 @@
   </div> -->
   <?php
   require_once("../conexion/conexion.php");
-  $sql = "SELECT Id_persona FROM personas WHERE Activo = 1 ORDER BY Id_persona DESC LIMIT 1";
+  $sql = "SELECT MAX(Id_persona) FROM personas WHERE Activo = 1";
   $result = mysqli_query($conexion, $sql);
   $next_id = mysqli_fetch_row($result);
   ?>
