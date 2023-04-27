@@ -138,8 +138,7 @@
         <?php
         $id = $_REQUEST['id'];
         require_once("../conexion/conexion.php");
-        $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
-                            FROM personas,usuarios WHERE usuarios.Id_usuario=$id";
+        $query = "SELECT * FROM personas,usuarios WHERE usuarios.Id_persona=personas.Id_persona AND usuarios.Id_usuario=$id";
         $resultado = $conexion->query($query);
         $fila = $resultado->fetch_assoc();
         ?>
@@ -147,7 +146,7 @@
             method="POST" novalidate>
             <center><label for="">
                     <h4>ACTUALIZAR USUARIOS <sup class="btn color text-white">#
-              <?php echo $fila['Id_persona'] ?>
+              <?php echo $fila['Id_usuario'] ?>
             </sup></h4>
                 </label></center>
             <div class="form-row">

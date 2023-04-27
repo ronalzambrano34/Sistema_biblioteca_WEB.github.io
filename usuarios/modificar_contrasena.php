@@ -136,7 +136,18 @@
         </label></center>
       <div class="form-row">
         <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
-          <label for="validationCustom01">Contraseña</label>
+          <label for="validationCustom01">Contraseña actual</label>
+          <input type="password" class="form-control" id="validationCustom01" required name="password"
+            placeholder="Contraseña Actual" minlength="5" maxlength="16">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 mb-4">
+          <label for="validationCustom01">Nueva Contraseña</label>
           <input type="password" class="form-control" id="validationCustom01" required name="pass"
             placeholder="Nueva contraseña" minlength="5" maxlength="16">
           <div class="valid-feedback">
@@ -189,68 +200,95 @@
 <?php
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
-  $pass = $_POST['pass'];
-  $pass1 = $_POST['pass1'];
-  if ($pass == $pass1) {
-    $usuario = $_SESSION['Id_usuario'];
-    $query = "UPDATE usuarios SET Password='$pass1' WHERE Id_usuario=$usuario";
-    $verificar = $conexion->query($query);
-    if ($verificar) {
-      echo '<script>
-                    swal({
-                    title: "Operación exitosa",
-                    text: "La actualización se realizo con exitó!",
-                    type: "success",
-                    confirmButtonClass: "btn-success",
-                    confirmButtonText: "Aceptar",
-                  },
-                  function(){
-                    window.location="../inicio.php";
-                  });
-                    </script>';
+  $usuario = $_SESSION['Id_usuario'];
+  $password = $_POST['password'];
+  $qq = "SELECT	Password FROM	usuarios WHERE	Id_usuario = $usuario";
+  $r = $conexion->query($qq);
+  $f = $r->fetch_assoc();
+  if ($password != $f['Password']) {
+    echo '<script>
+    swal({
+    title: "Operación fallida",
+    text: "Contraseña actual INCORRECTA!",
+    type: "error",
+    showCancelButton: true,
+    cancelButtonClass: "btn-warning",
+    cancelButtonText: "Intentar de nuevo",
+    confirmButtonClass: "btn-success",
+    confirmButtonText: "Volver al inicio",
+    closeOnConfirm: false
+  },
+  function(isConfirm) {
+      if (isConfirm) {
+        window.location="../inicio.php";
+      } else {
+        window.location="modificar_contrasena.php";
+      }
+    });
+    </script>';
+  } else {
+    $pass = $_POST['pass'];
+    $pass1 = $_POST['pass1'];
+    if ($pass == $pass1) {
+      $query = "UPDATE usuarios SET Password='$pass1' WHERE Id_usuario=$usuario";
+      $verificar = $conexion->query($query);
+      if ($verificar) {
+        echo '<script>
+                      swal({
+                      title: "Operación exitosa",
+                      text: "La actualización se realizo con exitó!",
+                      type: "success",
+                      confirmButtonClass: "btn-success",
+                      confirmButtonText: "Aceptar",
+                    },
+                    function(){
+                      window.location="../conexion/cerrar_sesion.php";
+                    });
+                      </script>';
+      } else {
+        echo '<script>
+                      swal({
+                      title: "Operación fallida",
+                      text: "Ocurrio un error al actualizar los datos!",
+                      type: "error",
+                      showCancelButton: true,
+                      cancelButtonClass: "btn-warning",
+                      cancelButtonText: "Intentar de nuevo",
+                      confirmButtonClass: "btn-success",
+                      confirmButtonText: "Volver al inicio",
+                      closeOnConfirm: false
+                    },
+                    function(isConfirm) {
+                        if (isConfirm) {
+                          window.location="../inicio.php";
+                        } else {
+                          window.location="modificar_contrasena.php";
+                        }
+                      });
+                      </script>';
+      }
     } else {
       echo '<script>
-                    swal({
-                    title: "Operación fallida",
-                    text: "Ocurrio un error al actualizar los datos!",
-                    type: "error",
-                    showCancelButton: true,
-                    cancelButtonClass: "btn-warning",
-                    cancelButtonText: "Intentar de nuevo",
-                    confirmButtonClass: "btn-success",
-                    confirmButtonText: "Volver al inicio",
-                    closeOnConfirm: false
-                  },
-                  function(isConfirm) {
-                      if (isConfirm) {
-                        window.location="../inicio.php";
-                      } else {
-                        window.location="modificar_contrasena.php";
-                      }
-                    });
-                    </script>';
+                      swal({
+                      title: "Advertencia",
+                      text: "Las contraseñas no son iguales!",
+                      type: "warning",
+                      showCancelButton: true,
+                      cancelButtonClass: "btn-warning",
+                      cancelButtonText: "Intentar de nuevo",
+                      confirmButtonClass: "btn-success",
+                      confirmButtonText: "Volver al inicio",
+                      closeOnConfirm: false
+                    },
+                    function(isConfirm) {
+                        if (isConfirm) {
+                          window.location="../inicio.php";
+                        } else {
+                          window.location="modificar_contrasena.php";
+                        }
+                      });
+                      </script>';
     }
-  } else {
-    echo '<script>
-                    swal({
-                    title: "Advertencia",
-                    text: "Las contraseñas no son iguales!",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonClass: "btn-warning",
-                    cancelButtonText: "Intentar de nuevo",
-                    confirmButtonClass: "btn-success",
-                    confirmButtonText: "Volver al inicio",
-                    closeOnConfirm: false
-                  },
-                  function(isConfirm) {
-                      if (isConfirm) {
-                        window.location="../inicio.php";
-                      } else {
-                        window.location="modificar_contrasena.php";
-                      }
-                    });
-                    </script>';
   }
 }
 ?>
