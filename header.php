@@ -17,7 +17,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <!-- <?php require_once("conexion/clock.php") ?> -->
 
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">

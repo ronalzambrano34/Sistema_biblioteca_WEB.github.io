@@ -167,8 +167,7 @@
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="40">
+            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -216,7 +215,7 @@
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Dirección</label>
           <input type="text" class="form-control" id="validationCustom01" name="direccion" placeholder="Opcional"
-            pattern="[0-9 a-z A-Z / % # ,.'-]+" maxlength="40">
+            pattern="[0-9 a-z A-Z & / % # ,.'-]+" >
           <div class="valid-feedback">
             Correcto!
           </div>
