@@ -63,11 +63,13 @@ if (!empty($_SESSION['active'])) {
 <html lang="es">
 
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
 	<title>Inicio de Sección</title>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+	
 	<!--ICO-->
 	<link rel="icon" href="images/logo.png" sizes="32x32" />
 	<link rel="icon" href="images/logo.png" sizes="192x192" />
@@ -83,6 +85,7 @@ if (!empty($_SESSION['active'])) {
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
 
 	<!-- <script src="js/jquery-3.3.1.min.js"></script>  -->
 	<!-- <script src="js/bootstrap-4.3.1.js"></script>  -->
@@ -109,23 +112,23 @@ if (!empty($_SESSION['active'])) {
 					<div class="card-header">
 						<h3>Inicio de Sección.</h3>
 						<?php echo (isset($alert)) ? $alert : ''; ?>
-						<div class="d-flex justify-content-between social_icon">
+						<!-- <div class="d-flex justify-content-between social_icon">
 							<span><i class="fab fa-facebook-square"></i></span>
 							<span><i class="fab fa-google-plus-square"></i></span>
 							<span><i class="fab fa-twitter-square"></i></span>
-						</div>
+						</div> -->
 					</div>
 					<div class="card-body">
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
+								<span class="input-group-text icofont-user"></span>
 							</div>
 							<input type="text" class="form-control" name="usuario" placeholder="Usuario">
 						</div>
 
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
+								<span class="input-group-text icofont-key"></span>
 							</div>
 							<input type="password" class="form-control" name="pass" placeholder="Contraseña">
 						</div>
