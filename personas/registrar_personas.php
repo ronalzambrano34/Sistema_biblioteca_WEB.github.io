@@ -145,7 +145,7 @@
   $next_id = mysqli_fetch_row($result);
   ?>
   <div class="bg-white rounded-lg formulario">
-    <form class="p-4 needs-validation" action="registrar_personas.php" method="POST">
+    <form class="p-4 needs-validation" action="registrar_personas.php" method="POST" novalidate>
       <center><label class="mt-2" for="">
           <h4>REGISTRAR ASOCIADO <sup class="btn color text-white">#
               <?php echo $next_id[0]+1 ?>
@@ -167,7 +167,7 @@
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
+            pattern="[a-z A-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -225,7 +225,7 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom09">Teléfono</label>
-          <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="telefono"
+          <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="Teléfono"
             pattern="[0-9]{8,10}">
           <div class="valid-feedback">
             Correcto!

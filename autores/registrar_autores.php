@@ -158,7 +158,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <label for="validationCustom02">Año de Nacimiento</label>
-          <input type="number" class="form-control" id="validationCustom02" name="Nacimiento" placeholder="Nacimiento"
+          <input type="text" class="form-control" id="validationCustom02" name="Nacimiento" placeholder="Nacimiento"
             pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
             Correcto!
@@ -169,7 +169,7 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
           <label for="validationCustom02">Año de Muerte</label>
-          <input type="number" class="form-control" id="validationCustom03" name="Muerte" placeholder="Muerte"
+          <input type="text" class="form-control" id="validationCustom03" name="Muerte" placeholder="Muerte"
             pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
             Correcto!
@@ -213,6 +213,8 @@
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
   $nombre = $_POST['nombre'];
+  $Nacimiento = $_POST['Nacimiento'];
+  $Muerte = $_POST['Muerte'];
   $id = $_POST['id'];
 
   // Validar que el ID no exista en la tabla
@@ -242,7 +244,7 @@ if (isset($_POST['registrar'])) {
     </script>';
   } else {
     // Insertar los datos en la tabla
-    $query = "INSERT INTO autores (nombre) VALUES ('$nombre')";
+    $query = "INSERT INTO autores (nombre, Nacimiento, Muerte) VALUES ('$nombre', '$Nacimiento', '$Muerte')";
     $verificar = $conexion->query($query);
     if ($verificar) {
       echo '<script>

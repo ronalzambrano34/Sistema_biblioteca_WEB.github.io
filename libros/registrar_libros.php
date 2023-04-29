@@ -130,13 +130,35 @@
 <div class="container">
   <br><br><br><br>
   <br>
+  <?php
+  require_once("../conexion/conexion.php");
+  $sql = "SELECT MAX(Id_libro) FROM libros WHERE Activo = 1";
+  $result = mysqli_query($conexion, $sql);
+  $next_id = mysqli_fetch_row($result);
+  ?>
   <div class="bg-white rounded-lg formulario">
     <form class="p-4 needs-validation" action="registrar_libros.php" method="POST" novalidate>
       <center><label for="">
-          <h4>REGISTRAR LIBROS</h4>
+          <h4>REGISTRAR LIBROS <sup class="btn color text-white">#
+              <?php echo $next_id[0] + 1 ?>
+            </sup></h4>
         </label></center>
+      <div class="form-row d-flex justify-content-center">
+
+      </div>
       <div class="form-row">
-        <div class="col-md-4 col-lg-4 mb-4">
+        <div class="col-md-2 col-lg-1 mb-2">
+          <label for="validationCustom04">Id. Reg</label>
+          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] + 1 ?>" required
+            name="id" placeholder="ID" pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-3">
           <label for="validationCustom01">Clasificación</label>
           <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required
             name="clasificacion" placeholder="Clasificacion del libro"
@@ -184,7 +206,7 @@
         </div>
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom01">Edición</label>
-          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required name="edicion"
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" 3 name="edicion"
             placeholder="Edición del libro"
             pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="50">
@@ -247,7 +269,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <label for="validationCustom05">Materia</label>
           <input type="text" class="form-control" id="validationCustom05" required name="materia" placeholder="Materia"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            pattern="[0-9a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="30">
           <div class="valid-feedback">
             Correcto!
@@ -288,6 +310,7 @@
 <?php
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
+  $id = $_POST['id'];
   $Clasificacion = $_POST['clasificacion'];
   $Id_autor = $_POST['autor'];
   $Titulo = $_POST['titulo'];
@@ -325,7 +348,7 @@ if (isset($_POST['registrar'])) {
     </script>';
   } else {
     // Insertar los datos en la tabla
-    $query = "INSERT INTO libros (Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
+    $query = "INSERT INTO libros (Id_libro,Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$id','$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
     $verificar = $conexion->query($query);
     if ($verificar) {
       echo '<script>

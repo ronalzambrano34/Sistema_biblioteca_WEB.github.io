@@ -201,7 +201,7 @@
         </div>
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom01">Edición</label>
-          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required value="<?php echo $fila['Edicion'] ?>" name="edicion"
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" value="<?php echo $fila['Edicion'] ?>" name="edicion"
             placeholder="Edición del libro"
             pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="50">
@@ -264,7 +264,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <label for="validationCustom05">Materia</label>
           <input type="text" class="form-control" id="validationCustom05" required value="<?php echo $fila['Materia'] ?>" name="materia" placeholder="Materia"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            pattern="[0-9a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="30">
           <div class="valid-feedback">
             Correcto!
