@@ -162,7 +162,7 @@
                 </thead>
                 <tbody>
                     <?php require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
+                    if (isset($_POST['buscar']) && $_POST['dato'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT empleados.Id_empleado,personas.Nombre,empleados.Fecha_contratacion
                                 FROM personas,empleados,puesto WHERE personas.Id_persona=empleados.Id_persona

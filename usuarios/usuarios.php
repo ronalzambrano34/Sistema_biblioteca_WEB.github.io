@@ -169,7 +169,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
+                    if (isset($_POST['buscar']) && $_POST['dato'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT usuarios.Id_usuario,personas.Nombre,usuarios.Nombre_usuario,usuarios.Password,usuarios.Activo
                             FROM personas,usuarios WHERE usuarios.Id_persona=personas.Id_persona AND personas.Nombre LIKE '$dato%'";

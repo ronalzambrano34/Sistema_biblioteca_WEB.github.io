@@ -168,12 +168,11 @@
         <tbody>
           <?php
           require_once("../conexion/conexion.php");
-          if (isset($_POST['buscar']) && $_POST['buscar'] != '' && $_POST['buscar'] != '') {
+          if (isset($_POST['buscar']) ) {
             $dato = $_POST['dato'];
-            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Titulo LIKE '$dato' AND libros.Id_autor=autores.Id_autor AND libros.activo =1 AND autores.Activo=1 ORDER BY libros.Titulo";
+            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Titulo LIKE '$dato%' AND libros.Id_autor=autores.Id_autor AND libros.activo =1 AND autores.Activo=1 ORDER BY libros.Id_libro";
           } else {
-            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Id_autor=autores.Id_autor AND libros.activo=1 AND autores.Activo=1 ORDER BY libros.Titulo";
-
+            $query = "SELECT libros.*, autores.Nombre  FROM libros, autores WHERE libros.Id_autor=autores.Id_autor AND libros.activo=1 AND autores.Activo=1 ORDER BY libros.Id_libro";
           }
           $resultado = $conexion->query($query);
           while ($fila = $resultado->fetch_assoc()) {

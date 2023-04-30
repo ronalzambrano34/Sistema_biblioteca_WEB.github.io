@@ -167,7 +167,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
+                    if (isset($_POST['buscar']) && $_POST['dato'] != '') {
                         $dato = $_POST['dato'];
                         $query = "SELECT * FROM puesto WHERE Descripcion LIKE '$dato%' AND Activo=1";
                     } else {

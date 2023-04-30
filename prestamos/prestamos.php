@@ -172,7 +172,7 @@
                 <tbody>
                     <?php
                     require_once("../conexion/conexion.php");
-                    if (isset($_POST['buscar']) && $_POST['buscar'] != '') {
+                    if (isset($_POST['buscar']) && $_POST['dato'] != '') {
 
                         $dato = $_POST['dato'];
                         $query = "SELECT prestamos.Id_prestamo,personas.Nombre,prestamos.Cantidad,prestamos.Identificacion,

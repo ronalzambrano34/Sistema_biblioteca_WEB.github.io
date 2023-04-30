@@ -322,14 +322,14 @@ if (isset($_POST['registrar'])) {
   $Materia = $_POST['materia'];
 
   // Validar que el ID no exista en la tabla
-  $sql = "SELECT * FROM libros WHERE Titulo = '$Titulo'";
+  $sql = "SELECT * FROM libros WHERE Id_libro = '$id'";
   $result = mysqli_query($conexion, $sql);
   if (mysqli_num_rows($result) > 0) {
     // El ID ya existe en la tabla, mostrar mensaje de error
     echo '<script>
     swal({
     title: "Operación fallida",
-    text: "El Titulo ya existe en la tabla!",
+    text: "El Id. Reg ya existe en la tabla!",
     type: "error",
     showCancelButton: true,
     cancelButtonClass: "btn-warning",
