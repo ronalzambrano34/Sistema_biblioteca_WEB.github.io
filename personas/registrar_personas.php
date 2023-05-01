@@ -3,7 +3,7 @@
 
 
 <ul class="list-unstyled components">
-  <li class="">
+  <li class="Libros">
     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-library mr-3 h4 text-white"></span>Libros<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -14,14 +14,13 @@
         <a href="../libros/libros.php">Consultar</a>
       </li>
       <li>
-        <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a onClick='abrirReporte()' href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Asociados">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-people mr-3 h4 text-white"></span>Asociado<i class="icofont-rounded-down text-white"></i></a>
+        class="icofont-people mr-3 h4 text-white"></span>Asociados<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="registrar_personas.php">Registrar</a>
@@ -31,11 +30,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Autores">
     <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
         class="icofont-rounded-down text-white"></i></a>
@@ -48,11 +47,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Empleados" hidden>
     <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
         class="icofont-rounded-down text-white"></i></a>
@@ -68,19 +67,7 @@
       </li>
     </ul>
   </li>
-  <li class="">
-    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
-    <ul class="collapse list-unstyled" id="puestoSubmenu">
-      <li>
-        <a href="../puestos/registrar_puesto.php">Registrar</a>
-      </li>
-      <li>
-        <a href="../puestos/puestos.php">Consultar</a>
-      </li>
-    </ul>
-  </li>
-  <li class="">
+  <li class="Visitas">
     <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-learn mr-3 h4 text-white"></span>Visitas<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="visitaSubmenu">
@@ -92,11 +79,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Prestamos">
     <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="prestamoSubmenu">
@@ -108,11 +95,24 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <hr style="border-top: 1px dotted white;">
+  <li class="Puestos">
+    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
+    <ul class="collapse list-unstyled" id="puestoSubmenu">
+      <li>
+        <a href="../puestos/registrar_puesto.php">Registrar</a>
+      </li>
+      <li>
+        <a href="../puestos/puestos.php">Consultar</a>
+      </li>
+    </ul>
+  </li>
+  <li class="Usuarios">
     <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
         class="icofont-rounded-down text-white"></i></a>
@@ -138,20 +138,36 @@
       </button>
     </div>
   </div> -->
-
-
+  <?php
+  require_once("../conexion/conexion.php");
+  $sql = "SELECT MAX(Id_persona) FROM personas WHERE Activo = 1";
+  $result = mysqli_query($conexion, $sql);
+  $next_id = mysqli_fetch_row($result);
+  ?>
   <div class="bg-white rounded-lg formulario">
     <form class="p-4 needs-validation" action="registrar_personas.php" method="POST" novalidate>
       <center><label class="mt-2" for="">
-          <h4>REGISTRAR ASOCIADO</h4>
+          <h4>REGISTRAR ASOCIADO <sup class="btn color text-white">#
+              <?php echo $next_id[0]+1 ?>
+            </sup></h4>
         </label></center>
       <div class="form-row">
-        <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
+        <div class="col-sm-6 col-md-4 col-lg-1 mb-3">
+          <label for="validationCustom04">ID</label>
+          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] +1?>" required
+            name="id" placeholder="ID" pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-4 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="40">
+            pattern="[a-z A-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -185,21 +201,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <script>
-        window.onload = function () {
-          var fecha = new Date(); //Fecha actual
-          var mes = fecha.getMonth() + 1; //obteniendo mes
-          var dia = fecha.getDate(); //obteniendo dia
-          var ano = fecha.getFullYear(); //obteniendo año
-          if (dia < 10)
-            dia = '0' + dia; //agrega cero si el menor de 10
-          if (mes < 10)
-            mes = '0' + mes //agrega cero si el menor de 10
-          document.getElementById('validationCustom08').value = ano + "-" + mes + "-" + dia;
-        }
-      </script> -->
-
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom08">Fecha de inscripción</label>
@@ -214,7 +215,7 @@
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Dirección</label>
           <input type="text" class="form-control" id="validationCustom01" name="direccion" placeholder="Opcional"
-            pattern="[0-9 a-z A-Z / # ,.'-]+" maxlength="40">
+            pattern="[0-9 a-z A-Z & / % # ,.'-]+" >
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -222,11 +223,9 @@
             Porfavor rellena el campo.
           </div>
         </div>
-
-
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
           <label for="validationCustom09">Teléfono</label>
-          <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="telefono"
+          <input type="tel" class="form-control" id="validationCustom09" name="telefono" placeholder="Teléfono"
             pattern="[0-9]{8,10}">
           <div class="valid-feedback">
             Correcto!
@@ -286,10 +285,37 @@ if (isset($_POST['registrar'])) {
   $telefono = $_POST['telefono'];
   $id = $_POST['id'];
 
-  $query = "INSERT INTO personas (Id_persona,Nombre,CI,Sexo,Fecha_inscripcion,Direccion,Telefono) values('$id','$nombre','$ci','$sexo','$fecha','$direccion','$telefono')";
-  $verificar = $conexion->query($query);
-  if ($verificar) {
+  // Validar que el ID no exista en la tabla
+  $sql = "SELECT * FROM personas WHERE Id_persona = '$id'";
+  $result = mysqli_query($conexion, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    // El ID ya existe en la tabla, mostrar mensaje de error
     echo '<script>
+    swal({
+    title: "Operación fallida",
+    text: "El ID ya existe en la tabla!",
+    type: "error",
+    showCancelButton: true,
+    cancelButtonClass: "btn-warning",
+    cancelButtonText: "Intentar de nuevo",
+    confirmButtonClass: "btn-success",
+    confirmButtonText: "Ver asociados",
+    closeOnConfirm: false
+  },
+  function(isConfirm) {
+      if (isConfirm) {
+        window.location="personas.php";
+      } else {
+        window.location="registrar_personas.php";
+      }
+    });
+    </script>';
+  } else {
+    // Insertar los datos en la tabla
+    $query = "INSERT INTO personas (Id_persona,Nombre,CI,Sexo,Fecha_inscripcion,Direccion,Telefono) values('$id','$nombre','$ci','$sexo','$fecha','$direccion','$telefono')";
+    $verificar = $conexion->query($query);
+    if ($verificar) {
+      echo '<script>
                     swal({
                     title: "Operación exitosa",
                     text: "El asociado fue registrado correctamente!",
@@ -309,8 +335,8 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
-  } else {
-    echo '<script>
+    } else {
+      echo '<script>
                     swal({
                     title: "Operación fallida",
                     text: "Ocurrio un error al registrar al asociado!",
@@ -330,6 +356,7 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
+    }
   }
 }
 ?>

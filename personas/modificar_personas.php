@@ -3,7 +3,7 @@
 
 
 <ul class="list-unstyled components">
-  <li class="">
+  <li class="Libros">
     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-library mr-3 h4 text-white"></span>Libros<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -14,12 +14,11 @@
         <a href="../libros/libros.php">Consultar</a>
       </li>
       <li>
-        <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a onClick='abrirReporte()' href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Asociados">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-people mr-3 h4 text-white"></span>Asociados<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
@@ -31,11 +30,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Autores">
     <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
         class="icofont-rounded-down text-white"></i></a>
@@ -48,11 +47,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Empleados" hidden>
     <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
         class="icofont-rounded-down text-white"></i></a>
@@ -68,19 +67,7 @@
       </li>
     </ul>
   </li>
-  <li class="">
-    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
-    <ul class="collapse list-unstyled" id="puestoSubmenu">
-      <li>
-        <a href="../puestos/registrar_puesto.php">Registrar</a>
-      </li>
-      <li>
-        <a href="../puestos/puestos.php">Consultar</a>
-      </li>
-    </ul>
-  </li>
-  <li class="">
+  <li class="Visitas">
     <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-learn mr-3 h4 text-white"></span>Visitas<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="visitaSubmenu">
@@ -92,11 +79,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Prestamos">
     <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="prestamoSubmenu">
@@ -108,11 +95,24 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <hr style="border-top: 1px dotted white;">
+  <li class="Puestos">
+    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
+    <ul class="collapse list-unstyled" id="puestoSubmenu">
+      <li>
+        <a href="../puestos/registrar_puesto.php">Registrar</a>
+      </li>
+      <li>
+        <a href="../puestos/puestos.php">Consultar</a>
+      </li>
+    </ul>
+  </li>
+  <li class="Usuarios">
     <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
         class="icofont-rounded-down text-white"></i></a>
@@ -149,15 +149,16 @@
     <form class="p-4 needs-validation" action="realizar_edicion.php?id=<?php echo $fila['Id_persona'] ?>" method="POST"
       novalidate>
       <center><label class="mt-2" for="">
-          <h4>ACTUALIZAR ASOCIADO <sup class="btn bg-info">#<?php echo $fila['Id_persona'] ?></sup></h4>
+          <h4>ACTUALIZAR ASOCIADO <sup class="btn color text-white">#
+              <?php echo $fila['Id_persona'] ?>
+            </sup></h4>
         </label></center>
       <div class="form-row">
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Nombre completo</label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             value="<?php echo $fila['Nombre'] ?>" placeholder="Nombre completo"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
-            maxlength="40">
+            pattern="[a-z A-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -214,8 +215,7 @@
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Dirección</label>
           <input type="text" class="form-control" id="validationCustom01" name="direccion"
-            value="<?php echo $fila['Direccion'] ?>" placeholder="Opcional" pattern="[0-9 a-z A-Z / # ,.'-]+"
-            maxlength="40">
+            value="<?php echo $fila['Direccion'] ?>" placeholder="Opcional" pattern="[0-9 a-z A-Z & / # ,.'-]+" >
           <div class="valid-feedback">
             Correcto!
           </div>

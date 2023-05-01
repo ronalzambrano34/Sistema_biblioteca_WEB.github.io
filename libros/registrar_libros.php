@@ -2,7 +2,7 @@
 
 
 <ul class="list-unstyled components">
-  <li class="">
+  <li class="Libros">
     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-library mr-3 h4 text-white"></span>Libros<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -13,14 +13,13 @@
         <a href="libros.php">Consultar</a>
       </li>
       <li>
-        <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a onClick='abrirReporte()' href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Asociados">
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-people mr-3 h4 text-white"></span>Personas<i class="icofont-rounded-down text-white"></i></a>
+        class="icofont-people mr-3 h4 text-white"></span>Asociados<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
       <li>
         <a href="../personas/registrar_personas.php">Registrar</a>
@@ -30,11 +29,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Autores">
     <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
         class="icofont-rounded-down text-white"></i></a>
@@ -47,11 +46,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Empleados" hidden>
     <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
         class="icofont-rounded-down text-white"></i></a>
@@ -67,19 +66,7 @@
       </li>
     </ul>
   </li>
-  <li class="">
-    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
-    <ul class="collapse list-unstyled" id="puestoSubmenu">
-      <li>
-        <a href="../puestos/registrar_puesto.php">Registrar</a>
-      </li>
-      <li>
-        <a href="../puestos/puestos.php">Consultar</a>
-      </li>
-    </ul>
-  </li>
-  <li class="">
+  <li class="Visitas">
     <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-learn mr-3 h4 text-white"></span>Visitas<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="visitaSubmenu">
@@ -91,11 +78,11 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <li class="Prestamos">
     <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i class="icofont-rounded-down text-white"></i></a>
     <ul class="collapse list-unstyled" id="prestamoSubmenu">
@@ -107,11 +94,24 @@
       </li>
       <li>
         <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+        <a href="#">Reportes</a>
       </li>
     </ul>
   </li>
-  <li class="">
+  <hr style="border-top: 1px dotted white;">
+  <li class="Puestos">
+    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+        class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i class="icofont-rounded-down text-white"></i></a>
+    <ul class="collapse list-unstyled" id="puestoSubmenu">
+      <li>
+        <a href="../puestos/registrar_puesto.php">Registrar</a>
+      </li>
+      <li>
+        <a href="../puestos/puestos.php">Consultar</a>
+      </li>
+    </ul>
+  </li>
+  <li class="Usuarios">
     <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
         class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
         class="icofont-rounded-down text-white"></i></a>
@@ -130,13 +130,35 @@
 <div class="container">
   <br><br><br><br>
   <br>
+  <?php
+  require_once("../conexion/conexion.php");
+  $sql = "SELECT MAX(Id_libro) FROM libros WHERE Activo = 1";
+  $result = mysqli_query($conexion, $sql);
+  $next_id = mysqli_fetch_row($result);
+  ?>
   <div class="bg-white rounded-lg formulario">
     <form class="p-4 needs-validation" action="registrar_libros.php" method="POST" novalidate>
       <center><label for="">
-          <h4>REGISTRAR LIBROS</h4>
+          <h4>REGISTRAR LIBROS <sup class="btn color text-white">#
+              <?php echo $next_id[0] + 1 ?>
+            </sup></h4>
         </label></center>
+      <div class="form-row d-flex justify-content-center">
+
+      </div>
       <div class="form-row">
-        <div class="col-md-4 col-lg-4 mb-4">
+        <div class="col-md-2 col-lg-1 mb-2">
+          <label for="validationCustom04">Id. Reg</label>
+          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] + 1 ?>" required
+            name="id" placeholder="ID" pattern="[0-9]+">
+          <div class="valid-feedback">
+            Correcto!
+          </div>
+          <div class="invalid-feedback">
+            Porfavor rellena el campo.
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-3">
           <label for="validationCustom01">Clasificación</label>
           <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required
             name="clasificacion" placeholder="Clasificacion del libro"
@@ -184,7 +206,7 @@
         </div>
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom01">Edición</label>
-          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" required name="edicion"
+          <input type="text" class="form-control" autocomplete="off" id="validationCustom01" 3 name="edicion"
             placeholder="Edición del libro"
             pattern="[0-9-a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="50">
@@ -211,7 +233,7 @@
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom02">Año de edición</label>
           <input type="text" class="form-control" id="validationCustom02" required name="anno"
-            placeholder="Año de edición" pattern="[0-9]{4}">
+            placeholder="Año de edición" pattern="[0-9]{4}" maxlength="4">
           <div class="valid-feedback">
             Correcto!
           </div>
@@ -219,7 +241,7 @@
             Porfavor rellena el campo.
           </div>
         </div>
-      <!-- </div>
+        <!-- </div>
       <div class="form-row"> -->
         <div class="col-md-4 col-lg-4 mb-4">
           <label for="validationCustom03">Lugar</label>
@@ -247,7 +269,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
           <label for="validationCustom05">Materia</label>
           <input type="text" class="form-control" id="validationCustom05" required name="materia" placeholder="Materia"
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
+            pattern="[0-9a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+"
             maxlength="30">
           <div class="valid-feedback">
             Correcto!
@@ -288,6 +310,7 @@
 <?php
 if (isset($_POST['registrar'])) {
   require_once("../conexion/conexion.php");
+  $id = $_POST['id'];
   $Clasificacion = $_POST['clasificacion'];
   $Id_autor = $_POST['autor'];
   $Titulo = $_POST['titulo'];
@@ -298,10 +321,37 @@ if (isset($_POST['registrar'])) {
   $Cant_pag = $_POST['cant_pag'];
   $Materia = $_POST['materia'];
 
-  $query = "INSERT INTO libros (Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
-  $verificar = $conexion->query($query);
-  if ($verificar) {
+  // Validar que el ID no exista en la tabla
+  $sql = "SELECT * FROM libros WHERE Id_libro = '$id'";
+  $result = mysqli_query($conexion, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    // El ID ya existe en la tabla, mostrar mensaje de error
     echo '<script>
+    swal({
+    title: "Operación fallida",
+    text: "El Id. Reg ya existe en la tabla!",
+    type: "error",
+    showCancelButton: true,
+    cancelButtonClass: "btn-warning",
+    cancelButtonText: "Intentar de nuevo",
+    confirmButtonClass: "btn-success",
+    confirmButtonText: "Ver asociados",
+    closeOnConfirm: false
+  },
+  function(isConfirm) {
+      if (isConfirm) {
+        window.location="libros.php";
+      } else {
+        window.location="registrar_libros.php";
+      }
+    });
+    </script>';
+  } else {
+    // Insertar los datos en la tabla
+    $query = "INSERT INTO libros (Id_libro,Clasificacion,Id_autor,Titulo,Edicion,Editorial,Anno,Lugar,Cant_pag,Materia) values('$id','$Clasificacion','$Id_autor','$Titulo','$Edicion','$Editorial','$Anno','$Lugar','$Cant_pag','$Materia')";
+    $verificar = $conexion->query($query);
+    if ($verificar) {
+      echo '<script>
                     swal({
                     title: "Operación exitosa",
                     text: "El libro fue registrado correctamente!",
@@ -321,8 +371,8 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
-  } else {
-    echo '<script>
+    } else {
+      echo '<script>
                     swal({
                     title: "Operación fallida",
                     text: "Ocurrio un error al registrar el libro!",
@@ -342,6 +392,7 @@ if (isset($_POST['registrar'])) {
                       }
                     });
                     </script>';
+    }
   }
 }
 ?>

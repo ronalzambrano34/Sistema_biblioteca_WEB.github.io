@@ -1,7 +1,7 @@
 <?php require("../head_files.php") ?>
 
 <ul class="list-unstyled components">
-    <li class="">
+    <li class="Libros">
         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-library mr-3 h4 text-white"></span>Libros<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -13,14 +13,13 @@
                 <a href="../libros/libros.php">Consultar</a>
             </li>
             <li>
-                <!-- <a onClick='abrirReporte()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                <a onClick='abrirReporte()' href="#">Reportes</a>
             </li>
         </ul>
     </li>
-    <li class="">
+    <li class="Asociados">
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                class="icofont-people mr-3 h4 text-white"></span>Personas<i
+                class="icofont-people mr-3 h4 text-white"></span>Asociados<i
                 class="icofont-rounded-down text-white"></i></a>
         <ul class="collapse list-unstyled" id="pageSubmenu">
             <li>
@@ -31,11 +30,11 @@
             </li>
             <li>
                 <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
-    <li class="">
+    <li class="Autores">
         <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -48,7 +47,7 @@
             </li>
             <li>
                 <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
@@ -68,20 +67,7 @@
             </li>
         </ul>
     </li>
-    <li class="">
-        <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
-                class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i
-                class="icofont-rounded-down text-white"></i></a>
-        <ul class="collapse list-unstyled" id="puestoSubmenu">
-            <li>
-                <a href="../puestos/registrar_puesto.php">Registrar</a>
-            </li>
-            <li>
-                <a href="../puestos/puestos.php">Consultar</a>
-            </li>
-        </ul>
-    </li>
-    <li class="">
+    <li class="Visitas">
         <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -94,11 +80,11 @@
             </li>
             <li>
                 <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
-    <li class="">
+    <li class="Prestamos">
         <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -111,11 +97,25 @@
             </li>
             <li>
                 <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
-                            <a href="#">Reportes</a>
+                <a href="#">Reportes</a>
             </li>
         </ul>
     </li>
-    <li class="">
+    <hr style="border-top: 1px dotted white;">
+    <li class="Puestos">
+        <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i
+                class="icofont-rounded-down text-white"></i></a>
+        <ul class="collapse list-unstyled" id="puestoSubmenu">
+            <li>
+                <a href="../puestos/registrar_puesto.php">Registrar</a>
+            </li>
+            <li>
+                <a href="../puestos/puestos.php">Consultar</a>
+            </li>
+        </ul>
+    </li>
+    <li class="Usuarios">
         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
                 class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
                 class="icofont-rounded-down text-white"></i></a>
@@ -143,8 +143,8 @@
                 </button>
             </div>
         </div>
-                <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
-                    <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
+        <div class="container-fluid table-responsive p-0" style="height: 480px" id="datos">
+            <table class='table table-sm table-hover table-head-fixed gb-white shadow-sm'>
                 <thead>
                     <tr class='bg-warning text-white font-weight-bold'>
                         <th class='text-center'><small>ID</small></th>
