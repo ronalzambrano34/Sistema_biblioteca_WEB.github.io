@@ -16,8 +16,6 @@
                 <span class="text-white h3 icofont-circled-down"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
                         <a data-toggle="modal" data-target="#exampleModalScrollable2" class="text-white h5 nav-link"

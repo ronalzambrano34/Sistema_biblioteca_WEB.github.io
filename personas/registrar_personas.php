@@ -148,13 +148,13 @@
     <form class="p-4 needs-validation" action="registrar_personas.php" method="POST" novalidate>
       <center><label class="mt-2" for="">
           <h4>REGISTRAR ASOCIADO <sup class="btn color text-white">#
-              <?php echo $next_id[0]+1 ?>
+              <?php echo $next_id[0] + 1 ?>
             </sup></h4>
         </label></center>
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-1 mb-3">
-          <label for="validationCustom04">ID</label>
-          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] +1?>" required
+          <label for="validationCustom04">ID <a class="text-danger">*</a></label>
+          <input type="text" class="form-control" id="validationCustom04" value="<?php echo $next_id[0] + 1 ?>" required
             name="id" placeholder="ID" pattern="[0-9]+">
           <div class="valid-feedback">
             Correcto!
@@ -164,7 +164,7 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-8 col-lg-4 mb-4">
-          <label for="validationCustom01">Nombre completo</label>
+          <label for="validationCustom01">Nombre completo <a class="text-danger">*</a></label>
           <input type="text" class="form-control" id="validationCustom01" required name="nombre"
             placeholder="Nombre completo"
             pattern="[a-z A-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]+">
@@ -176,7 +176,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom04">Carnet de Indentidad</label>
+          <label for="validationCustom04">Carnet de Indentidad <a class="text-danger">*</a></label>
           <input type="text" class="form-control" id="validationCustom04" required name="ci"
             placeholder="Carnet de Indentidad" pattern="[0-9]+" minlength="11" maxlength="11">
           <div class="valid-feedback">
@@ -187,7 +187,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
-          <label for="validationCustom07">Sexo</label>
+          <label for="validationCustom07">Sexo <a class="text-danger">*</a></label>
           <select class="form-control" id="validationCustom07" required name="sexo">
             <option value="" disabled selected>Elige una opción</option>
             <option value="Masculino">Masculino</option>
@@ -203,7 +203,7 @@
       </div>
       <div class="form-row">
         <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
-          <label for="validationCustom08">Fecha de inscripción</label>
+          <label for="validationCustom08">Fecha de inscripción <a class="text-danger">*</a></label>
           <input type="date" class="form-control" id="validationCustom08" value="" required name="fecha">
           <div class="valid-feedback">
             Correcto!
@@ -213,9 +213,9 @@
           </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
-          <label for="validationCustom01">Dirección</label>
-          <input type="text" class="form-control" id="validationCustom01" name="direccion" placeholder="Opcional"
-            pattern="[0-9 a-z A-Z & / % # ,.'-]+" >
+          <label for="validationCustom01">Dirección <a class="text-danger">*</a></label>
+          <input type="text" class="form-control" id="validationCustom01" name="direccion" required
+            placeholder="Dirección" pattern="[0-9 a-z A-Z ÁÉÍÓÚáéíóú Ññ & / % # ,.'-]+">
           <div class="valid-feedback">
             Correcto!
           </div>

@@ -205,7 +205,7 @@
         <div class="col-sm-12 col-md-4 col-lg-6 mb-4">
           <label for="validationCustom01">Dirección</label>
           <input type="text" class="form-control" id="validationCustom01" name="direccion"
-            value="<?php echo $fila['Direccion'] ?>" placeholder="Opcional" pattern="[0-9 a-z A-Z & / # ,.'-]+">
+            value="<?php echo $fila['Direccion'] ?>" placeholder="Dirección" pattern="[0-9 a-z A-Z ÁÉÍÓÚáéíóú Ññ & / # ,.'-]+">
           <div class="valid-feedback">
             Correcto!
           </div>
