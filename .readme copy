@@ -6,12 +6,12 @@ Swal.fire({
 	title: 'Your work has been saved',
 	showConfirmButton: false,
 	timer: 1500
-  })
+})
 
 
 
 reloj
-							<div class="clock">
+	< div class="clock" >
 								<div class="date">
 									<script type="text/javascript">
 										//<![CDATA[
@@ -55,4 +55,4 @@ reloj
 										}
 									</script>
 								</div>
-							</div>
+							</div >
