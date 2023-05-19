@@ -2,6 +2,10 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
+<!-- para los mensajes de alerta -->
+<!-- <link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+<script src="js/sweetalert2.all.min.js" type="text/javascript"></script> -->
+
 <?php
 session_start();
 if (!empty($_SESSION['active'])) {
@@ -46,6 +50,7 @@ if (!empty($_SESSION['active'])) {
 				#$_SESSION['user'] = $dato['usuario'];
 				header('Location: inicio.php');
 			} else {
+
 				$alert = '<div class="alert alert-danger text-center alert-dismissible fade show" role="alert">
 				    		    Credenciales incorrectas.
 				    		    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -64,12 +69,12 @@ if (!empty($_SESSION['active'])) {
 
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport"
-	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	<title>Inicio de Sección</title>
-	
+
 	<!--ICO-->
 	<link rel="icon" href="images/logo.png" sizes="32x32" />
 	<link rel="icon" href="images/logo.png" sizes="192x192" />
@@ -94,6 +99,10 @@ if (!empty($_SESSION['active'])) {
 	<!-- para los mensajes de alerta -->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/sweetalert.css">
 	<script src="vendor/bootstrap/js/sweetalert.js" type="text/javascript"></script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/sweetalert2.min.css">
+	<script src="js/sweetalert2.all.min.js" type="text/javascript"></script> -->
+
 </head>
 
 
@@ -155,7 +164,19 @@ if (!empty($_SESSION['active'])) {
 			</div>
 		</div>
 	</div>
-
+	<?php
+	// echo '<script>
+	// 		Swal.fire({
+	// 		toast: true,
+	// 		timerProgressBar: true,
+	// 		position: "bottom-end",
+	// 		icon: "success",
+	// 		title: "Your work has been saved",
+	// 		showConfirmButton: false,
+	// 		timer: 1500
+	//   		});
+	// 	</script>';
+	?>
 
 </body>
 

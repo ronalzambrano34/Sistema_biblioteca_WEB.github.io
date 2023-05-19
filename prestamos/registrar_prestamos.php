@@ -303,14 +303,14 @@ if (isset($_POST['registrar'])) {
   $desc1 = $_POST['desc1'];
 
   //busco el id del empleado qu hara el prestamo
-  $buscar = "SELECT empleados.Id_empleado FROM empleados,personas,usuarios WHERE personas.Id_persona=empleados.Id_persona AND
-                usuarios.Id_empleado=empleados.Id_empleado AND usuarios.Id_usuario=$usuario";
+  // $buscar = "SELECT empleados.Id_empleado FROM empleados,personas,usuarios WHERE personas.Id_persona=empleados.Id_persona AND
+  //               usuarios.Id_empleado=empleados.Id_empleado AND usuarios.Id_usuario=$usuario";
   $resultado = $conexion->query($buscar);
   $fila = $resultado->fetch_assoc();
   $empleado = $fila['Id_empleado'];
   //inserto los datos en la tabla prestamos
 
-  $query = "INSERT INTO prestamos (Id_empleado,Id_persona,Cantidad,Identificacion,Fecha_prestamo,Fecha_devolucion,Estatus) values($empleado,$id_per,$cantidad,'$iden','$fecha','$fecha1','$estatus')";
+  $query = "INSERT INTO prestamos (Id_empleado,Id_persona,Cantidad,Identificacion,Fecha_prestamo,Fecha_devolucion,Estatus) values($usuario,$id_per,$cantidad,'$iden','$fecha','$fecha1','$estatus')";
   $verificar = $conexion->query($query);
 
   //busco el ultimo ID del prestamo

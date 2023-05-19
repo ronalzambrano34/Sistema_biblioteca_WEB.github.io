@@ -33,3 +33,35 @@
     background-color: rgb(0, 0, 0, 0.3);
     padding: 2px;
 }
+
+.construccion{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+/* <div class="construccion">
+    <div  class="">
+        <img class="" height="300" src="images/Pagina-en-obras.jpg" alt="Pagina-en-obras">
+    </div>
+</div> */
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 1;
+    align-content: center;justify-content: center;
+    flex-wrap: wrap;    display: flex;
+}
+
+.z-10{
+    z-index: 10;
+}

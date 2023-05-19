@@ -1,5 +1,6 @@
 <?php require_once("head.php") ?>
 
+
 <div class="container">
     <br><br>
     <br><br>
@@ -50,7 +51,6 @@
                     </div>
                 </a>
             </div>
-
 
             <div class="col-md-5 col-lg-3 p-0 p-1">
                 <a href="./visitas/visitas.php">

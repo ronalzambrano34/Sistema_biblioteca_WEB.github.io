@@ -1,5 +1,5 @@
 <!-- Page Content  -->
-<div class="menu">
+<div class="menu z-10">
     <nav class="p-2 navbar navbar-expand-lg navbar-light color">
         <div class="container-fluid">
             <i class="fas fa-align-left"></i>

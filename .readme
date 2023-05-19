@@ -1,4 +1,12 @@
-
+Swal.fire({
+	toast: true,
+	timerProgressBar: true,
+	position: 'bottom-end',
+	icon: 'success',
+	title: 'Your work has been saved',
+	showConfirmButton: false,
+	timer: 1500
+  })
 
 
 

@@ -1,10 +1,11 @@
 /*
     DEMO STYLE
 */
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
 /* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
 body {
     font-family: 'Poppins', sans-serif;
@@ -65,7 +66,7 @@ a:focus {
     background: #38393E;
     color: #fff;
     transition: all 0.3s;
-    min-height:  100vh;
+    min-height: 100vh;
 }
 
 #sidebar.active {
@@ -78,8 +79,9 @@ a:focus {
     position: relative;
     top: 70px;
     margin-bottom: 60px;
-    
+
 }
+
 #sidebar ul.components {
     padding: 20px 0;
 }
@@ -95,6 +97,7 @@ a:focus {
     display: block;
     color: #fff;
 }
+
 #sidebar ul li a:hover {
     background: #FFC107;
     color: #fff;
@@ -108,6 +111,7 @@ a[aria-expanded="true"] {
     font-weight: bold;
     border-left: 4px solid #fff;
 }
+
 a[data-toggle="collapse"] {
     position: relative;
 }
@@ -115,6 +119,7 @@ a[data-toggle="collapse"] {
 #sidebar .dropdown-toggle::after {
     display: none;
 }
+
 .dropdown-toggle::after {
     color: #FFF;
     font-size: 20px;
@@ -170,34 +175,40 @@ a.article:hover {
     #sidebar {
         margin-left: -220px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
         display: none;
     }
 }
+
 /* ---------------------------------------------------
     Estatus
 ----------------------------------------------------- */
-.menu{
+.menu {
     position: fixed;
     width: 100%;
     z-index: 1;
     height: 10px;
 }
-.formulario{
- -webkit-box-shadow: 3px 6px 16px -8px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 6px 16px -8px rgba(0,0,0,0.75);
-box-shadow: 3px 6px 16px -8px rgba(0,0,0,0.75);
+
+.formulario {
+    -webkit-box-shadow: 3px 6px 16px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 6px 16px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 6px 16px -8px rgba(0, 0, 0, 0.75);
 }
-#perfil{
+
+#perfil {
     position: relative;
     top: -5px;
     padding: 0;
     margin: 0;
 }
-#sidebar li a>i{
+
+#sidebar li a>i {
     display: block;
     position: absolute;
     top: 50%;
@@ -205,6 +216,7 @@ box-shadow: 3px 6px 16px -8px rgba(0,0,0,0.75);
     transform: translateY(-50%);
 
 }
-footer{
+
+footer {
     background: #38393E;
 }

@@ -48,7 +48,7 @@ if ($id == null || $id = '') {
 <body>
     <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar">
+        <nav class="z-10" id="sidebar">
             <div class="sidebar-header">
                 <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45"
                             src="images/logo.png" alt="">Biblioteca
