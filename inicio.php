@@ -1,5 +1,8 @@
 <?php require_once("head.php") ?>
-
+<?php
+// $ruta =!empty($_GET['url']) ? $_GET['url']:"inicio";
+// echo $_GET['url'];
+?>
 
 <div class="container">
     <br><br>

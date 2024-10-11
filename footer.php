@@ -265,7 +265,8 @@
                       <!-- <h5 class="card-title"></h5> -->
                       <p class="card-text">
                         <summary>Implementar la <b>gestión</b> y <b>venta</b> de <b>libros digitales.</b></summary>
-                        <summary>Expandir el sistema para que los asociados puedan acceder a la biblioteca, via remota, a través de la conexión local del centro.</b></summary>
+                        <summary>Expandir el sistema para que los asociados puedan acceder a la biblioteca, via remota,
+                          a través de la conexión local del centro.</b></summary>
                         <summary>Agregar <b>monedero virtual</b> a los asociados.</summary>
                         <summary>Alojar sistema en servidor y abrir las puertas para el mundo.</summary>
                         <summary>Otros...</summary>

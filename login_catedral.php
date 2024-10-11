@@ -8,8 +8,9 @@
 
 <?php
 session_start();
-if (!empty($_SESSION['active'])) {
-	header('location: inicio.php');
+if (isset($_SESSION['active']) && $_SESSION['active'] && $_SESSION == basename($_SERVER['PHP_SELF'])) {
+    header('Location: inicio.php');
+    exit();
 } else {
 	if (!empty($_POST)) {
 		$alert = '';

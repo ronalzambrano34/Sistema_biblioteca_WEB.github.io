@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Biblioteca Catedral</title>
+
+    <!--ICO-->
+    <link rel="icon" href="images/logo.png" sizes="32x32" />
+    <link rel="icon" href="images/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/style.css">
+    <link rel="stylesheet" type="text/css" href="icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav class="z-10" id="sidebar">
+            <div class="sidebar-header">
+                <div class="card bg-transparent logo_nav"><a href="inicio.php"><img width="55" height="45"
+                            src="images/logo.png" alt="">Biblioteca
+                        <b>Catedral</b></a>
+                </div>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="Libros">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-library mr-3 h4 text-white"></span>Libros<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="./libros/registrar_libros.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./libros/libros.php">Consultar</a>
+                        </li>
+                        <li>
+                            <a onClick='abrirReporte()' href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Asociados">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-people mr-3 h4 text-white"></span>Asociados<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="./personas/registrar_personas.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./personas/personas.php">Consultar</a>
+                        </li>
+                        <li>
+                            <!-- <a onClick='abrirReporte1()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Autores">
+                    <a href="#autoresSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-read-book-alt mr-3 h4 text-white"></span>Autores<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="autoresSubmenu">
+                        <li>
+                            <a href="./autores/registrar_autores.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./autores/autores.php">Consultar</a>
+                        </li>
+                        <li>
+                            <!-- <a onClick='abrirReporte2()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Empleados" hidden>
+                    <a href="#empleadosSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle"><span class="icofont-business-man mr-3 h4 text-white"></span>Empleados<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="empleadosSubmenu">
+                        <li>
+                            <a href="./empleados/registrar_empleados.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./empleados/empleados.php">Consultar</a>
+                        </li>
+                        <li>
+                            <a onClick='abrirReporte3()' href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Visitas">
+                    <a href="#visitaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-learn mr-3 h4 text-white"></span>Visitas<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="visitaSubmenu">
+                        <li>
+                            <a href="./visitas/registrar_visitas.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./visitas/visitas.php">Consultar</a>
+                        </li>
+                        <li>
+                            <!-- <a onClick='abrirReporte4()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Prestamos">
+                    <a href="#prestamoSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle"><span class="icofont-paper mr-3 h4 text-white"></span>Prestamos<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="prestamoSubmenu">
+                        <li>
+                            <a href="./prestamos/registrar_prestamos.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./prestamos/prestamos.php">Consultar</a>
+                        </li>
+                        <li>
+                            <!-- <a onClick='abrirReporte5()' href="#">Reportes</a> -->
+                            <a href="#">Reportes</a>
+                        </li>
+                    </ul>
+                </li>
+                <hr style="border-top: 1px dotted white;">
+                <li class="Puestos">
+                    <a href="#puestoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-tick-boxed mr-3 h4 text-white"></span>Puestos<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="puestoSubmenu">
+                        <li>
+                            <a href="./puestos/registrar_puesto.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./puestos/puestos.php">Consultar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="Usuarios">
+                    <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span
+                            class="icofont-users-alt-4 mr-3 h4 text-white"></span>Usuarios<i
+                            class="icofont-rounded-down text-white"></i></a>
+                    <ul class="collapse list-unstyled" id="userSubmenu">
+                        <li>
+                            <a href="./usuarios/registrar_usuarios.php">Registrar</a>
+                        </li>
+                        <li>
+                            <a href="./usuarios/usuarios.php">Consultar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <!-- Page Content  -->
+        <div class="menu z-10">
+            <nav class="p-2 navbar navbar-expand-lg navbar-light color">
+                <div class="container-fluid">
+                    <i class="fas fa-align-left"></i>
+                    <a href="#"><span id="sidebarCollapse" class="text-white h3 icofont-navigation-menu"></span></a>
+                    <div class="ml-3 text-center text-white">
+                        <!-- <div class="spinner-grow text-light" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div> -->
+                    </div>
+                    <button class="btn d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                        <span class="text-white h3 icofont-circled-down"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a data-toggle="modal" data-target="#exampleModalScrollable2"
+                                    class="text-white h5 nav-link" href="#" title="white list"><i
+                                        class="mr-2 icofont-chart-histogram-alt "></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="modal" data-target="#exampleModalScrollable1"
+                                    class="text-white h5 nav-link" href="#" title="Nuestra empresa"><i
+                                        class="mr-2 icofont-building-alt"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a data-toggle="modal" data-target="#exampleModalScrollable"
+                                    class="text-white h5 nav-link" href="#" title="Contactanos"><i
+                                        class="mr-2 icofont-search-map"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="text-white h5 nav-link" href="inicio.php"><i class="icofont-ui-home"
+                                        title="Inicio"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="prestamos/pendientes.php" class="text-white h5 nav-link" href="#"><i
+                                        class="icofont-notification" title="Notificaciones"><span
+                                            style="position: relative; top: -8px;" class="bg-warning badge count">
+                                            <?php
+                                    require_once("conexion/conexion.php");
+                                    $buscar_pend = "SELECT COUNT(prestamos.Id_prestamo) AS numero FROM prestamos,personas WHERE prestamos.Fecha_devolucion < NOW() AND prestamos.Estatus = 'Pendiente' AND prestamos.Id_persona=personas.Id_persona AND personas.Activo=1";
+                                    $confirmar = $conexion->query($buscar_pend);
+                                    $rows = $confirmar->fetch_assoc();
+                                    echo $rows['numero'];
+                                    ?>
+                                        </span></i></a>
+                            </li>
+                            <!-- Example single danger button -->
+                            <li class="nav-item">
+                                <div class="btn-group">
+                                    <button type="button" id="perfil" class="btn dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img width="43" height="43" src="images/user.png" alt="">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small text-light">
+                                            <?php echo $_SESSION['Nombre_usuario']; ?>
+                                        </span>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a href="usuarios/perfil.php"><button class="dropdown-item"
+                                                type="button">Actualizar
+                                                perfil</button></a>
+                                        <a href="usuarios/modificar_contrasena.php"><button class="dropdown-item"
+                                                type="button">Cambiar contraseña</button></a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="conexion/cerrar_sesion.php"><button class="dropdown-item"
+                                                type="button">Cerrar
+                                                sesión</button></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <br><br>
+            <br><br>
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-5 col-lg-3 p-0 p-1">
+                        <a href="./libros/libros.php">
+                            <div class="row no-gutters bg-white shadow-sm">
+                                <div class="col-md-3 bg-danger p-3">
+                                    <span class="icofont-library h1 text-white"></span>
+                                </div>
+                                <div class="col-md-9 pt-2">
+                                    <small class="ml-3 h3 text-secondary border-danger"><b class="count">
+                                            <?php
+                                            require_once("conexion/conexion.php");
+                                            $query = "SELECT COUNT(Id_libro) AS Total FROM libros WHERE Activo=1";
+                                            $resultado = $conexion->query($query);
+                                            $fila = $resultado->fetch_assoc();
+                                            echo $fila['Total'];
+                                            ?>
+                                        </b></small>
+                                    <br>
+                                    <small class="ml-3 h6 text-secondary">Total de libros</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-5 col-lg-3 p-0 p-1">
+                        <a href="./personas/personas.php">
+                            <div class="row no-gutters bg-white shadow-sm">
+                                <div class="col-md-3 bg-info p-3">
+                                    <span class="icofont-business-man-alt-1 h1 text-white"></span>
+                                </div>
+                                <div class="col-md-9 pt-2">
+                                    <small class="ml-3 h3 text-secondary border-info"><b class="count">
+                                            <?php
+                                            require_once("conexion/conexion.php");
+                                            $query = "SELECT COUNT(Id_persona) AS Total FROM personas WHERE Activo=1";
+                                            $resultado = $conexion->query($query);
+                                            $fila = $resultado->fetch_assoc();
+                                            echo $fila['Total'];
+                                            ?>
+                                        </b></small>
+                                    <br>
+                                    <small class="ml-3 h6 text-secondary">Total de Personas</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-5 col-lg-3 p-0 p-1">
+                        <a href="./visitas/visitas.php">
+                            <div class="row no-gutters bg-white shadow-sm">
+                                <div class="col-md-3 bg-warning p-3">
+                                    <span class="icofont-learn h1 text-white"></span>
+                                </div>
+                                <div class="col-md-9 pt-2">
+                                    <small class="ml-3 h3 text-secondary border-warning"><b class="count">
+                                            <?php
+                                            require_once("conexion/conexion.php");
+                                            $query = "SELECT COUNT(Id_consulta) AS Total FROM consulta";
+                                            $resultado = $conexion->query($query);
+                                            $fila = $resultado->fetch_assoc();
+                                            echo $fila['Total'];
+                                            ?>
+                                        </b></small>
+                                    <br>
+                                    <small class="ml-3 h6 text-secondary">Total de visitas</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-5 col-lg-3 p-0 p-1">
+                        <a href="./prestamos/prestamos.php">
+                            <div class="row no-gutters bg-white shadow-sm">
+                                <div class="col-md-3 bg-success p-3">
+                                    <span class="icofont-handshake-deal h1 text-white"></span>
+                                </div>
+                                <div class="col-md-9 pt-2">
+                                    <small class="ml-3 h3 text-secondary border-success"><b class="count">
+                                            <?php
+                                            require_once("conexion/conexion.php");
+                                            $query = "SELECT COUNT(Id_prestamo) AS Total FROM prestamos";
+                                            $resultado = $conexion->query($query);
+                                            $fila = $resultado->fetch_assoc();
+                                            echo $fila['Total'];
+                                            ?>
+                                        </b></small>
+                                    <br>
+                                    <small class="ml-3 h6 text-secondary">Total de prestamos</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class=" ">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="text-white pt-3"><small><b>Copyright &copy; 2023 </b>Todos los derechos
+                            reservados</small></p>
+                </div>
+                <div class="col-md-4 text-white mt-3 mb-2">
+                    <div class="contaiter">
+                        <!-- <a href="../conexion/desarolladores.php">Ronal Zambrano Ferrer</a> -->
+                        <a>Ronal Zambrano Ferrer</a>
+                        <br>
+                        <small>Version 2</small>
+                    </div>
+                </div>
+                <div class="col-md-4 text-white mt-3 mb-2">
+                    <div class="container">
+                        <div class="d-inline">
+                            <a href="#" class="rounded-lg border border-info pt-2 p-2"><span
+                                    class="icofont-brand-whatsapp text-white h6"></span></a>
+                        </div>
+                        <div class="d-inline">
+                            <a href="#" class="rounded-lg border border-info pt-2 p-2"><span
+                                    class="icofont-paper-plane text-white h6"></span></a>
+                        </div>
+                        <div class="d-inline">
+                            <a href="#" class="rounded-lg border border-info pt-2 p-2"><span
+                                    class="icofont-instagram text-white h6"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Contáctanos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-sm-6 p-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-envelope h1"></span>
+                                    <br>
+                                    <small>Name: Ronal Zambrano Ferrer.</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-map h1"></span>
+                                    <br>
+                                    <small>Pais: Cuba</small>
+                                    <br>
+                                    <small>Provincia: Santiago de Cuba</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-envelope h1"></span>
+                                    <br>
+                                    <small>Email: ronalzambrano34@gmail.com</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-brand-whatsapp h1"></span>
+                                    <br>
+                                    <small>Tel: +53 53843778</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Quiénes somos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-hat h1"></span>
+                                    <p class="card-title"><b>Misión</b></p>
+                                    <small>Nuestra misión es poder dar a conocer toda la sabiduría a través de
+                                        nuestros
+                                        libros. Tener un repertorio digno para todas las personas; clases sociales,
+                                        edades, grados y campos de estudio. Que nuestros libros sean del mayor
+                                        agrado de
+                                        nuestros visitadores, contando la mejor calidad de servicio en préstamos de
+                                        títulos. Siempre con el cello de la casa.</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-eye h1"></span>
+                                    <p class="card-title"><b>Visión</b></p>
+                                    <small>Nuestra visión es siempre tener una atención del público a pesar
+                                        del
+                                        tiempo en el que estamos, ser una de las instituciones de títulos literarios
+                                        más
+                                        conocidos del mundo. Tener instalaciones de calidad para preservar el buen
+                                        espacio para leer, contar con el mejor trato de visitante-empleado, ya que
+                                        nuestro público lo merece.</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <span class="text-info icofont-chart-histogram-alt h1"></span>
+                                    <p class="card-title"><b>Objetivo General</b></p>
+                                    <small>Tener un sistema para poder llevar a cabo la administración de los
+                                        registros
+                                        que se generan día con día y hacer más fácil la búsqueda de visitantes, las
+                                        personas que tienen préstamos y los adeudos de libros. También llevar un
+                                        registro de los libros que puedan estar dañados y así hacer una petición de
+                                        cambios.</small>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-transparent">
+                    <h5 class="modal-title icofont-abc h2" id="exampleModalScrollableTitle"> Acerca de ...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="row">
+                        <div class="col-sm-12 mb-3">
+
+                            <div class="card bg-white">
+                                <div class="card-header text-white bg-info icofont-puzzle h2"><small> Misión</small>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title"></h5> -->
+                                    <small class="card-text"><b> Dar a conocer</b> al personal de la biblioteca, las
+                                        <b>ventajas</b> de la
+                                        tecnología
+                                        y los <b>Sistemas informatizados</b>.</small>
+                                </div>
+                            </div>
+
+                            <div class="card bg-white">
+                                <div class="card-header text-white bg-info icofont-chart-histogram h2"><small>
+                                        Objetivo</small></div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title"></h5> -->
+                                    <small class="card-text">Mejorar la gestión de la biblioteca a través de un sistema
+                                        informático
+                                        eficiente, ofreciendo
+                                        una experiencia moderna y actualizada a los usuarios, permitiendo una búsqueda
+                                        rápida y precisa de los
+                                        materiales disponibles, estadísticas precisas sobre su uso, personalización de
+                                        las búsquedas y
+                                        recomendaciones para cada usuario, comunicación fácil entre usuarios y personal,
+                                        y facilitando la
+                                        gestión de préstamos, devoluciones, compras y adquisiciones de nuevos
+                                        materiales. Además, se ayuda al
+                                        personal de la biblioteca en el control y gestión de los materiales..</small>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <div class="m-2"></div> -->
+
+                        <div class="col-sm-12">
+                            <div class="card bg-dark">
+                                <div class="card-header text-white bg-dark text-center icofont-tasks h2"><small> White
+                                        List</small>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+                                        <div class="card m-1 mb-3 ml-3 text-white bg-danger" style="height: 350px;">
+                                            <div class="card-header icofont-brainstorming h2"><small> Versión 1.</small>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- <h5 class="card-title"></h5> -->
+                                                <p class="card-text">
+                                                    <summary>Permitir la gestion de <b>libros</b>,<br>
+                                                        <b>prestamos</b><br> y <b>asociados</b>.</br>
+                                                    </summary>
+                                                    <summary>Alertar al personal de la biblioteca, sobre Prestamos con
+                                                        retraso de entrega. .</br>
+                                                    </summary>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="card m-1 mb-3 mr-3 text-white bg-warning" style="height: 350px;">
+                                            <div class="card-header icofont-free-delivery h2"><small> Versión 2.</small>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- <h5 class="card-title"></h5> -->
+                                                <p class="card-text">
+                                                    <summary>Mejorar <b>diseño</b>, para ofrecer un entorno <b>más
+                                                            agradable</b> para el usuario.
+                                                    </summary>
+                                                    <summary>Ofrecer una búsqueda rápida y precisa de los materiales
+                                                        disponibles en la
+                                                        biblioteca.</b></summary>
+                                                    <summary>Proporcionar <b>estadísticas precisas</b> sobre el uso de
+                                                        los materiales de la
+                                                        biblioteca.</summary>
+                                                    <summary>Agregar portal de usuario con <b>usuario y contraseña</b>.
+                                                    </summary>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="card m-1 mb-3 ml-3 text-white bg-success" style="height: 380px;">
+                                            <div class="card-header icofont-money h2"><small> Versión 3</small></div>
+                                            <div class="card-body  text-white">
+                                                <!-- <h5 class="card-title"></h5> -->
+                                                <p class="card-text">
+                                                    <summary>Desbloquear la funcionalidad <b>Reportes</b>.</summary>
+                                                    <summary><b>Funcionalidad de Roles de usuarios:</b><br>
+                                                        <small> Los usuarios <b>Admin</b> podrán elegir los permisos de
+                                                            <b>lectura (Ver)</b> y
+                                                            <b>escritura (Modificar/Eliminar)</b> de los
+                                                            trabajadores.</small>
+                                                    </summary>
+                                                    <summary><b>Encriptar las contraseñas</b> en la base de datos.
+                                                    </summary>
+                                                    <summary>Adaptar/modificar el sistema para las necesidades del
+                                                        cliente.</summary>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card m-1 mb-3 mr-3 text-white bg-primary" style="height: 380px;">
+                                            <div class="card-header icofont-telescope h2"><small> Futuro.</small></div>
+                                            <div class="card-body">
+                                                <!-- <h5 class="card-title"></h5> -->
+                                                <p class="card-text">
+                                                    <summary>Implementar la <b>gestión</b> y <b>venta</b> de <b>libros
+                                                            digitales.</b></summary>
+                                                    <summary>Expandir el sistema para que los asociados puedan acceder a
+                                                        la biblioteca, via remota,
+                                                        a través de la conexión local del centro.</b></summary>
+                                                    <summary>Agregar <b>monedero virtual</b> a los asociados.</summary>
+                                                    <summary>Alojar sistema en servidor y abrir las puertas para el
+                                                        mundo.</summary>
+                                                    <summary>Otros...</summary>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
